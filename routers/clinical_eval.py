@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Dict, Any
 
 # Cargar catálogo real
-from masesora_backend.database.engine.clinical_engine.loader import load_symptoms
+from database.engine.clinical_engine.loader import load_symptoms
 
 # Motor clínico MAS real
 from masesora_backend.database.engine.clinical_engine.run_clinical_model import evaluar_sintoma
