@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from database.database import get_collection
-from models.client import Client
+from masesora_backend.database.database import get_collection
+from masesora_backend.models.client import Client
 
 router = APIRouter(prefix="/clients", tags=["clients"])
 

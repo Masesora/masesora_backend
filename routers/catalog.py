@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from database.engine.catalog_loader import validate_catalog
+from masesora_backend.database.engine.catalog_loader import validate_catalog
 
 router = APIRouter(
     prefix="/catalog",

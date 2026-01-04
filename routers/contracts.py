@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from datetime import datetime
-from database.database import get_collection
-from models.contract import Contract
+from masesora_backend.database.database import get_collection
+from masesora_backend.models.contract import Contract
 
 router = APIRouter(prefix="/contracts", tags=["contracts"])
 

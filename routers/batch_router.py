@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from database.engine.clinical_engine.run_clinical_model import run_clinical_batch
+from masesora_backend.database.engine.clinical_engine.run_clinical_model import run_clinical_batch
 
 router = APIRouter()
 
