@@ -1,0 +1,11 @@
+database/
+  engine/
+    clinical_engine/
+      __init__.py
+      loader.py                  ← carga de symptoms.json
+      run_clinical_model.py      ← batch clínico global
+      services/
+        kpi_engine.py            ← ya está perfecto
+        treatment_engine.py      ← lo creamos ahora
+        impact_engine.py         ← si quieres medir impacto
+        progress_engine.py       ← si quieres seguimiento

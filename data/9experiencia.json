@@ -1,0 +1,656 @@
+{
+  "specialty": "experiencia",
+  "symptoms": [
+  {
+
+  "id": "TER-S1",
+  "name": "Experiencia Irregular",
+  "specialty": "experiencia",
+  "plan": "PIE",
+  "domain": "consistencia",
+  "description": "La experiencia del cliente varía según el día, la persona o el canal, generando percepciones inconsistentes.",
+
+  "kpi": {
+    "question": "¿Tu experiencia es consistente o depende de la suerte del cliente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Estandarización de experiencia",
+    "decision_explanation": "Crear una experiencia estable y repetible",
+    "action": "Definir protocolo de experiencia mínima viable",
+    "action_explanation": "Aumenta consistencia y satisfacción",
+    "tool": "Mapa de Experiencia Mínima",
+    "tool_explanation": "Define pasos obligatorios en cada interacción",
+
+    "objective": "Aumentar consistencia",
+    "kpi_target": "Consistencia > 75%",
+    "activation_condition": "Consistencia < 55%",
+    "success_condition": "Experiencia estable en todos los canales",
+    "risk_if_ignored": "Clientes confundidos y pérdida de confianza",
+    "sequence": [
+      "Auditar experiencia actual",
+      "Definir pasos mínimos",
+      "Aplicar protocolo en todos los canales"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1-2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Experiencia",
+    "master_decision_explanation": "Mantener experiencia estable",
+    "master_action": "Optimizar protocolo trimestralmente",
+    "master_action_explanation": "Evita variaciones futuras",
+    "master_tool": "Radar de Consistencia",
+    "master_tool_explanation": "Monitoriza estabilidad de experiencia"
+  },
+
+  "inputs": {
+    "input_a": "Interacciones Consistentes",
+    "input_b": "Interacciones Totales",
+    "formula": "(Consistentes / Totales) x 100",
+    "impact": "% Consistencia: Nivel de estabilidad de la experiencia"
+  },
+
+  "review": {
+    "input_revised_1": "Consistentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Experiencia Estabilizada"
+  }
+},
+{
+  "id": "TER-S2",
+  "name": "Baja Percepción de Valor",
+  "specialty": "experiencia",
+  "plan": "PIE",
+  "domain": "valor",
+  "description": "El cliente no percibe el valor real del servicio, generando dudas, comparaciones y resistencia al precio.",
+
+  "kpi": {
+    "question": "¿Tu cliente entiende tu valor o solo tu precio?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Refuerzo de valor",
+    "decision_explanation": "Hacer visible el valor real",
+    "action": "Rediseñar narrativa de valor",
+    "action_explanation": "Aumenta percepción y confianza",
+    "tool": "Guía de Valor Percibido",
+    "tool_explanation": "Define mensajes clave de valor",
+
+    "objective": "Aumentar percepción de valor",
+    "kpi_target": "Valor > 75%",
+    "activation_condition": "Valor < 55%",
+    "success_condition": "Cliente que entiende y valora la oferta",
+    "risk_if_ignored": "Comparación por precio y pérdida de ventas",
+    "sequence": [
+      "Auditar narrativa actual",
+      "Redefinir mensajes de valor",
+      "Aplicar narrativa en todos los puntos"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Valor",
+    "master_decision_explanation": "Mantener percepción alta",
+    "master_action": "Optimizar narrativa de valor",
+    "master_action_explanation": "Evita pérdida de percepción",
+    "master_tool": "Radar de Valor",
+    "master_tool_explanation": "Monitoriza percepción real"
+  },
+
+  "inputs": {
+    "input_a": "Mensajes de Valor Claros",
+    "input_b": "Mensajes Totales",
+    "formula": "(Claros / Totales) x 100",
+    "impact": "% Claridad de Valor: Nivel de comprensión del cliente"
+  },
+
+  "review": {
+    "input_revised_1": "Claros Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Valor Percibido Mejorado"
+  }
+},
+{
+  "id": "TER-S3",
+  "name": "Experiencia Fragmentada por Canales",
+  "specialty": "experiencia",
+  "plan": "PIE",
+  "domain": "multicanalidad",
+  "description": "El cliente recibe experiencias distintas según el canal: web, WhatsApp, presencial, redes o email.",
+
+  "kpi": {
+    "question": "¿Tu experiencia es omnicanal o un rompecabezas?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Unificación multicanal",
+    "decision_explanation": "Crear una experiencia coherente en todos los canales",
+    "action": "Definir guion unificado de interacción",
+    "action_explanation": "Aumenta coherencia y confianza",
+    "tool": "Guion Omnicanal",
+    "tool_explanation": "Define mensajes y pasos por canal",
+
+    "objective": "Aumentar coherencia omnicanal",
+    "kpi_target": "Coherencia > 75%",
+    "activation_condition": "Coherencia < 55%",
+    "success_condition": "Experiencia igual en todos los canales",
+    "risk_if_ignored": "Confusión, errores y pérdida de confianza",
+    "sequence": [
+      "Auditar canales actuales",
+      "Definir guion unificado",
+      "Aplicar coherencia en todos los puntos"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Omnicanal",
+    "master_decision_explanation": "Mantener coherencia multicanal",
+    "master_action": "Optimizar guion omnicanal",
+    "master_action_explanation": "Evita fragmentación futura",
+    "master_tool": "Radar Omnicanal",
+    "master_tool_explanation": "Monitoriza coherencia por canal"
+  },
+
+  "inputs": {
+    "input_a": "Canales Coherentes",
+    "input_b": "Canales Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Coherencia Omnicanal: Nivel de experiencia unificada"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Omnicanalidad Mejorada"
+  }
+},
+{
+  "id": "TER-S4",
+  "name": "Reputación Débil",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "reputación",
+  "description": "La empresa no proyecta autoridad, confianza ni prestigio en su sector o comunidad.",
+
+  "kpi": {
+    "question": "¿Tu reputación te abre puertas o te las cierra?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Refuerzo reputacional",
+    "decision_explanation": "Aumentar autoridad y confianza externa",
+    "action": "Diseñar estrategia de reputación activa",
+    "action_explanation": "Aumenta prestigio y atracción",
+    "tool": "Plan de Reputación 360",
+    "tool_explanation": "Define acciones de autoridad y visibilidad",
+
+    "objective": "Aumentar reputación",
+    "kpi_target": "Reputación > 75%",
+    "activation_condition": "Reputación < 55%",
+    "success_condition": "Marca respetada y reconocida",
+    "risk_if_ignored": "Desconfianza y baja atracción",
+    "sequence": [
+      "Auditar reputación actual",
+      "Definir acciones de autoridad",
+      "Aplicar estrategia 360"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Reputación",
+    "master_decision_explanation": "Mantener prestigio sostenido",
+    "master_action": "Optimizar acciones de autoridad",
+    "master_action_explanation": "Evita caída reputacional",
+    "master_tool": "Radar de Reputación",
+    "master_tool_explanation": "Monitoriza prestigio real"
+  },
+
+  "inputs": {
+    "input_a": "Acciones de Autoridad",
+    "input_b": "Acciones Totales",
+    "formula": "(Autoridad / Totales) x 100",
+    "impact": "% Autoridad: Nivel de prestigio proyectado"
+  },
+
+  "review": {
+    "input_revised_1": "Autoridad Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Reputación Mejorada"
+  }
+},
+{
+  "id": "TER-S5",
+  "name": "Digitalización Inútil",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "digitalización",
+  "description": "La empresa ha implementado herramientas digitales que no aportan valor real y complican la experiencia del cliente.",
+
+  "kpi": {
+    "question": "¿Tu digitalización ayuda o estorba al cliente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Depuración digital",
+    "decision_explanation": "Eliminar herramientas que no aportan valor",
+    "action": "Auditar herramientas y flujos digitales",
+    "action_explanation": "Simplifica la experiencia",
+    "tool": "Mapa de Digitalización Útil",
+    "tool_explanation": "Clasifica herramientas por valor real",
+
+    "objective": "Aumentar utilidad digital",
+    "kpi_target": "Utilidad > 75%",
+    "activation_condition": "Utilidad < 55%",
+    "success_condition": "Digitalización simple, útil y fluida",
+    "risk_if_ignored": "Experiencia complicada y frustrante",
+    "sequence": [
+      "Auditar herramientas",
+      "Eliminar lo inútil",
+      "Optimizar lo que aporta valor"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Digital",
+    "master_decision_explanation": "Mantener digitalización útil",
+    "master_action": "Optimizar ecosistema digital",
+    "master_action_explanation": "Evita complejidad innecesaria",
+    "master_tool": "Radar Digital",
+    "master_tool_explanation": "Monitoriza utilidad real"
+  },
+
+  "inputs": {
+    "input_a": "Herramientas Útiles",
+    "input_b": "Herramientas Totales",
+    "formula": "(Útiles / Totales) x 100",
+    "impact": "% Utilidad Digital: Nivel de aporte real al cliente"
+  },
+
+  "review": {
+    "input_revised_1": "Útiles Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Digitalización Optimizada"
+  }
+},
+{
+  "id": "TER-S6",
+  "name": "Cliente Desorientado",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "claridad",
+  "description": "El cliente no entiende claramente qué hacer, cómo avanzar o cómo funciona el servicio, generando fricción y abandono.",
+
+  "kpi": {
+    "question": "¿Tu cliente avanza con claridad o se pierde en el camino?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Clarificación del recorrido",
+    "decision_explanation": "Eliminar dudas y pasos confusos",
+    "action": "Diseñar mapa de recorrido del cliente",
+    "action_explanation": "Aumenta claridad y reduce fricción",
+    "tool": "Customer Journey Simplificado",
+    "tool_explanation": "Define pasos claros y visuales",
+
+    "objective": "Aumentar claridad del proceso",
+    "kpi_target": "Claridad > 75%",
+    "activation_condition": "Claridad < 55%",
+    "success_condition": "Cliente que avanza sin dudas",
+    "risk_if_ignored": "Abandono, frustración y pérdida de ventas",
+    "sequence": [
+      "Auditar recorrido actual",
+      "Eliminar pasos confusos",
+      "Diseñar recorrido claro y visual"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Claridad",
+    "master_decision_explanation": "Mantener procesos claros",
+    "master_action": "Optimizar recorrido del cliente",
+    "master_action_explanation": "Evita confusión futura",
+    "master_tool": "Radar de Claridad",
+    "master_tool_explanation": "Monitoriza comprensión del cliente"
+  },
+
+  "inputs": {
+    "input_a": "Pasos Claros",
+    "input_b": "Pasos Totales",
+    "formula": "(Claros / Totales) x 100",
+    "impact": "% Claridad: Nivel de comprensión del proceso"
+  },
+
+  "review": {
+    "input_revised_1": "Claros Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Claridad Mejorada"
+  }
+},
+{
+  "id": "TER-S7",
+  "name": "Baja Fidelización",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "fidelización",
+  "description": "Los clientes no repiten, no recomiendan y no desarrollan relación a largo plazo con la empresa.",
+
+  "kpi": {
+    "question": "¿Tus clientes vuelven porque quieren o porque no tienen alternativa?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Activación de fidelización",
+    "decision_explanation": "Crear relación a largo plazo",
+    "action": "Diseñar programa de fidelización emocional",
+    "action_explanation": "Aumenta recurrencia",
+    "tool": "Plan de Fidelización 3C",
+    "tool_explanation": "Conexión, Cuidado y Continuidad",
+
+    "objective": "Aumentar recurrencia",
+    "kpi_target": "Fidelización > 70%",
+    "activation_condition": "Fidelización < 50%",
+    "success_condition": "Clientes que repiten y recomiendan",
+    "risk_if_ignored": "Pérdida de ingresos recurrentes",
+    "sequence": [
+      "Analizar motivos de abandono",
+      "Diseñar programa de fidelización",
+      "Aplicar acciones de seguimiento"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Fidelización",
+    "master_decision_explanation": "Mantener clientes a largo plazo",
+    "master_action": "Optimizar programa de fidelización",
+    "master_action_explanation": "Evita pérdida de recurrencia",
+    "master_tool": "Radar de Fidelización",
+    "master_tool_explanation": "Monitoriza recurrencia real"
+  },
+
+  "inputs": {
+    "input_a": "Clientes Recurrentes",
+    "input_b": "Clientes Totales",
+    "formula": "(Recurrentes / Totales) x 100",
+    "impact": "% Recurrencia: Nivel de fidelización real"
+  },
+
+  "review": {
+    "input_revised_1": "Recurrentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Fidelización Mejorada"
+  }
+},
+{
+  "id": "TER-S8",
+  "name": "Experiencia Lenta",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "velocidad",
+  "description": "El cliente percibe tiempos de espera largos, procesos lentos o respuestas tardías.",
+
+  "kpi": {
+    "question": "¿Tu experiencia fluye o desespera al cliente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Aceleración de experiencia",
+    "decision_explanation": "Reducir tiempos y fricciones",
+    "action": "Optimizar tiempos de respuesta y procesos clave",
+    "action_explanation": "Aumenta satisfacción",
+    "tool": "Mapa de Velocidad del Cliente",
+    "tool_explanation": "Identifica cuellos de botella temporales",
+
+    "objective": "Aumentar velocidad de experiencia",
+    "kpi_target": "Velocidad > 75%",
+    "activation_condition": "Velocidad < 55%",
+    "success_condition": "Experiencia rápida y fluida",
+    "risk_if_ignored": "Abandono y frustración del cliente",
+    "sequence": [
+      "Auditar tiempos actuales",
+      "Eliminar esperas innecesarias",
+      "Optimizar procesos lentos"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Velocidad",
+    "master_decision_explanation": "Mantener experiencia ágil",
+    "master_action": "Optimizar tiempos de respuesta",
+    "master_action_explanation": "Evita lentitud futura",
+    "master_tool": "Radar de Velocidad",
+    "master_tool_explanation": "Monitoriza rapidez real"
+  },
+
+  "inputs": {
+    "input_a": "Procesos Rápidos",
+    "input_b": "Procesos Totales",
+    "formula": "(Rápidos / Totales) x 100",
+    "impact": "% Velocidad: Nivel de agilidad de la experiencia"
+  },
+
+  "review": {
+    "input_revised_1": "Rápidos Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Velocidad Mejorada"
+  }
+},
+{
+  "id": "TER-S9",
+  "name": "Experiencia Poco Emocional",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "emocional",
+  "description": "La experiencia no genera conexión emocional, sorpresa ni recuerdo positivo en el cliente.",
+
+  "kpi": {
+    "question": "¿Tu experiencia emociona o solo cumple?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Activación emocional",
+    "decision_explanation": "Crear momentos memorables",
+    "action": "Diseñar micro‑momentos WOW",
+    "action_explanation": "Aumenta conexión emocional",
+    "tool": "Guía de Momentos WOW",
+    "tool_explanation": "Define gestos emocionales clave",
+
+    "objective": "Aumentar conexión emocional",
+    "kpi_target": "Conexión > 75%",
+    "activation_condition": "Conexión < 55%",
+    "success_condition": "Experiencia memorable y emocional",
+    "risk_if_ignored": "Clientes indiferentes y baja recomendación",
+    "sequence": [
+      "Identificar puntos fríos",
+      "Diseñar micro‑momentos WOW",
+      "Aplicar gestos emocionales"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Emocional",
+    "master_decision_explanation": "Mantener conexión emocional",
+    "master_action": "Optimizar momentos WOW",
+    "master_action_explanation": "Evita experiencias frías",
+    "master_tool": "Radar Emocional",
+    "master_tool_explanation": "Monitoriza conexión emocional"
+  },
+
+  "inputs": {
+    "input_a": "Momentos WOW",
+    "input_b": "Momentos Totales",
+    "formula": "(WOW / Totales) x 100",
+    "impact": "% Emoción: Nivel de conexión emocional"
+  },
+
+  "review": {
+    "input_revised_1": "WOW Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Conexión Emocional Mejorada"
+  }
+},
+{
+  "id": "TER-S10",
+  "name": "Experiencia de Alto Impacto",
+  "specialty": "experiencia",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: experiencia rápida, clara, emocional, coherente y con una percepción de valor excepcional en todos los puntos de contacto.",
+
+  "kpi": {
+    "question": "¿Tu experiencia deja huella real en el cliente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación de experiencia",
+    "decision_explanation": "Validar excelencia en todos los puntos",
+    "action": "Auditoría completa de experiencia, valor y emoción",
+    "action_explanation": "Garantiza excelencia total",
+    "tool": "Certificado S10 Experiencia",
+    "tool_explanation": "Evalúa impacto, emoción y coherencia",
+
+    "objective": "Aumentar excelencia de experiencia",
+    "kpi_target": "Índice S10 > 90%",
+    "activation_condition": "Índice < 80%",
+    "success_condition": "Experiencia icónica y memorable",
+    "risk_if_ignored": "Experiencia promedio y poco diferenciada",
+    "sequence": [
+      "Auditar experiencia completa",
+      "Corregir desviaciones",
+      "Certificar S10"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia de Experiencia",
+    "master_decision_explanation": "Mantener experiencia icónica",
+    "master_action": "Optimizar impacto emocional y funcional",
+    "master_action_explanation": "Evita pérdida de excelencia",
+    "master_tool": "Radar S10 Experiencia",
+    "master_tool_explanation": "Monitoriza excelencia real"
+  },
+
+  "inputs": {
+    "input_a": "Pilares de Experiencia",
+    "input_b": "Pilares Cumplidos",
+    "formula": "(Cumplidos / Pilares) x 100",
+    "impact": "Índice S10 Experiencia: Nivel de excelencia emocional y funcional"
+  },
+
+  "review": {
+    "input_revised_1": "Pilares Post",
+    "input_revised_2": "Cumplidos Post",
+    "result_revised": "Excelencia de Experiencia Alcanzada"
+  }
+}
+  ]
+}

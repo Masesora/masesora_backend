@@ -1,0 +1,656 @@
+{
+  "specialty": "personas",
+  "symptoms": [
+  {
+
+  "id": "RES-S1",
+  "name": "Crecimiento Desordenado",
+  "specialty": "personas",
+  "plan": "PIE",
+  "domain": "estructura",
+  "description": "La empresa crece en ventas o tamaño, pero sin estructura clara, generando caos y sobrecarga.",
+
+  "kpi": {
+    "question": "¿Tu crecimiento te fortalece o te rompe por dentro?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Estructuración urgente",
+    "decision_explanation": "Crear orden antes de seguir creciendo",
+    "action": "Definir estructura mínima viable",
+    "action_explanation": "Evita colapsos operativos",
+    "tool": "Mapa de Estructura Sostenible",
+    "tool_explanation": "Define roles, flujos y límites",
+
+    "objective": "Aumentar estabilidad del crecimiento",
+    "kpi_target": "Estabilidad > 70%",
+    "activation_condition": "Estabilidad < 50%",
+    "success_condition": "Crecimiento ordenado y sostenible",
+    "risk_if_ignored": "Caos, errores y desgaste del equipo",
+    "sequence": [
+      "Auditar estructura actual",
+      "Definir estructura mínima viable",
+      "Asignar roles y límites"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1-2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Crecimiento",
+    "master_decision_explanation": "Mantener crecimiento sano",
+    "master_action": "Optimizar estructura trimestralmente",
+    "master_action_explanation": "Evita crecimiento enfermo",
+    "master_tool": "Radar de Crecimiento Sano",
+    "master_tool_explanation": "Monitoriza estabilidad estructural"
+  },
+
+  "inputs": {
+    "input_a": "Procesos Estables",
+    "input_b": "Procesos Totales",
+    "formula": "(Estables / Totales) x 100",
+    "impact": "% Estabilidad: Nivel de crecimiento sano"
+  },
+
+  "review": {
+    "input_revised_1": "Estables Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Crecimiento Ordenado"
+  }
+},
+{
+  "id": "RES-S2",
+  "name": "Sobrecarga del Equipo",
+  "specialty": "personas",
+  "plan": "PIE",
+  "domain": "carga",
+  "description": "El equipo está saturado, asumiendo más tareas de las que puede gestionar sin perder calidad.",
+
+  "kpi": {
+    "question": "¿Tu equipo trabaja o sobrevive cada semana?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Redistribución de carga",
+    "decision_explanation": "Equilibrar tareas y responsabilidades",
+    "action": "Auditar carga por rol",
+    "action_explanation": "Evita agotamiento",
+    "tool": "Mapa de Carga Operativa",
+    "tool_explanation": "Visualiza saturación por persona",
+
+    "objective": "Aumentar bienestar y rendimiento",
+    "kpi_target": "Carga equilibrada > 70%",
+    "activation_condition": "Carga equilibrada < 50%",
+    "success_condition": "Equipo con carga sostenible",
+    "risk_if_ignored": "Burnout, errores y rotación",
+    "sequence": [
+      "Auditar carga por persona",
+      "Redistribuir tareas",
+      "Revisar carga semanalmente"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Carga",
+    "master_decision_explanation": "Mantener carga sostenible",
+    "master_action": "Optimizar distribución de tareas",
+    "master_action_explanation": "Evita saturación futura",
+    "master_tool": "Radar de Carga",
+    "master_tool_explanation": "Monitoriza saturación del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Tareas Sostenibles",
+    "input_b": "Tareas Totales",
+    "formula": "(Sostenibles / Totales) x 100",
+    "impact": "% Sostenibilidad: Nivel de carga saludable"
+  },
+
+  "review": {
+    "input_revised_1": "Sostenibles Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Carga Equilibrada"
+  }
+},
+{
+  "id": "RES-S3",
+  "name": "Incorporaciones Caóticas",
+  "specialty": "personas",
+  "plan": "PIE",
+  "domain": "onboarding",
+  "description": "Las nuevas incorporaciones entran sin guía, sin estructura y sin claridad, generando errores y frustración.",
+
+  "kpi": {
+    "question": "¿Tus nuevas personas aterrizan o se estrellan al entrar?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Onboarding estructurado",
+    "decision_explanation": "Crear un aterrizaje seguro",
+    "action": "Diseñar protocolo de incorporación",
+    "action_explanation": "Reduce errores y acelera adaptación",
+    "tool": "Kit de Onboarding Sano",
+    "tool_explanation": "Define pasos, tiempos y responsables",
+
+    "objective": "Aumentar adaptación inicial",
+    "kpi_target": "Adaptación > 80%",
+    "activation_condition": "Adaptación < 60%",
+    "success_condition": "Incorporaciones fluidas y rápidas",
+    "risk_if_ignored": "Errores, frustración y rotación temprana",
+    "sequence": [
+      "Definir pasos del onboarding",
+      "Asignar responsables",
+      "Revisar adaptación a los 30 días"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Onboarding",
+    "master_decision_explanation": "Mantener incorporaciones sanas",
+    "master_action": "Optimizar protocolo de entrada",
+    "master_action_explanation": "Evita caos en nuevas contrataciones",
+    "master_tool": "Radar de Onboarding",
+    "master_tool_explanation": "Monitoriza adaptación inicial"
+  },
+
+  "inputs": {
+    "input_a": "Tareas Completadas",
+    "input_b": "Tareas Onboarding",
+    "formula": "(Completadas / Onboarding) x 100",
+    "impact": "% Adaptación: Nivel de integración inicial"
+  },
+
+  "review": {
+    "input_revised_1": "Completadas Post",
+    "input_revised_2": "Onboarding Post",
+    "result_revised": "Adaptación Mejorada"
+  }
+},
+{
+  "id": "RES-S4",
+  "name": "Escalado Frágil",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "escalabilidad",
+  "description": "La empresa crece pero la estructura no soporta el ritmo, generando cuellos de botella y errores.",
+
+  "kpi": {
+    "question": "¿Tu empresa escala o se rompe al intentarlo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Refuerzo estructural",
+    "decision_explanation": "Fortalecer la base antes de crecer más",
+    "action": "Definir roles, límites y procesos críticos",
+    "action_explanation": "Aumenta capacidad de escala",
+    "tool": "Blueprint de Escalabilidad",
+    "tool_explanation": "Define estructura para crecer sin romperse",
+
+    "objective": "Aumentar capacidad de escala",
+    "kpi_target": "Escalabilidad > 70%",
+    "activation_condition": "Escalabilidad < 50%",
+    "success_condition": "Crecimiento estable y sin fricción",
+    "risk_if_ignored": "Colapso operativo y desgaste del equipo",
+    "sequence": [
+      "Auditar puntos frágiles",
+      "Reforzar procesos críticos",
+      "Revisar capacidad de escala"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Escalabilidad",
+    "master_decision_explanation": "Mantener crecimiento sano",
+    "master_action": "Optimizar estructura de escala",
+    "master_action_explanation": "Evita fragilidad futura",
+    "master_tool": "Radar de Escalabilidad",
+    "master_tool_explanation": "Monitoriza capacidad de crecimiento"
+  },
+
+  "inputs": {
+    "input_a": "Procesos Escalables",
+    "input_b": "Procesos Totales",
+    "formula": "(Escalables / Totales) x 100",
+    "impact": "% Escalabilidad: Capacidad real de crecer sin romperse"
+  },
+
+  "review": {
+    "input_revised_1": "Escalables Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Escalabilidad Mejorada"
+  }
+},
+{
+  "id": "RES-S5",
+  "name": "Cultura en Riesgo",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "cultura",
+  "description": "El crecimiento está debilitando la cultura: se pierden valores, hábitos y comportamientos clave.",
+
+  "kpi": {
+    "question": "¿Tu cultura crece contigo o se diluye al escalar?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Preservación cultural",
+    "decision_explanation": "Proteger valores y comportamientos esenciales",
+    "action": "Definir rituales culturales obligatorios",
+    "action_explanation": "Aumenta coherencia",
+    "tool": "Manual de Cultura Sostenible",
+    "tool_explanation": "Define rituales y comportamientos clave",
+
+    "objective": "Aumentar coherencia cultural",
+    "kpi_target": "Coherencia > 75%",
+    "activation_condition": "Coherencia < 55%",
+    "success_condition": "Cultura fuerte y estable",
+    "risk_if_ignored": "Pérdida de identidad y cohesión",
+    "sequence": [
+      "Definir valores esenciales",
+      "Crear rituales culturales",
+      "Revisar coherencia mensual"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Cultural",
+    "master_decision_explanation": "Mantener cultura sólida al crecer",
+    "master_action": "Optimizar rituales culturales",
+    "master_action_explanation": "Evita dilución cultural",
+    "master_tool": "Radar Cultural",
+    "master_tool_explanation": "Monitoriza coherencia cultural"
+  },
+
+  "inputs": {
+    "input_a": "Rituales Activos",
+    "input_b": "Rituales Totales",
+    "formula": "(Activos / Totales) x 100",
+    "impact": "% Cultura Viva: Nivel de coherencia cultural"
+  },
+
+  "review": {
+    "input_revised_1": "Activos Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Cultura Reforzada"
+  }
+},
+{
+  "id": "RES-S6",
+  "name": "Roles Saturados",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "roles",
+  "description": "Los roles han crecido más rápido que las personas, acumulando tareas que ya no son sostenibles ni coherentes.",
+
+  "kpi": {
+    "question": "¿Tus roles están definidos o son cajones de desastre?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Redefinición de roles",
+    "decision_explanation": "Ajustar roles al crecimiento real",
+    "action": "Reestructurar responsabilidades por nivel de valor",
+    "action_explanation": "Reduce saturación y errores",
+    "tool": "Ficha de Rol Sostenible",
+    "tool_explanation": "Define tareas, límites y métricas",
+
+    "objective": "Aumentar claridad y sostenibilidad",
+    "kpi_target": "Claridad > 75%",
+    "activation_condition": "Claridad < 55%",
+    "success_condition": "Roles claros, sostenibles y equilibrados",
+    "risk_if_ignored": "Burnout, errores y baja calidad",
+    "sequence": [
+      "Auditar tareas por rol",
+      "Eliminar tareas impropias",
+      "Redefinir responsabilidades"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Roles",
+    "master_decision_explanation": "Mantener roles sanos y actualizados",
+    "master_action": "Optimizar estructura de roles trimestralmente",
+    "master_action_explanation": "Evita saturación futura",
+    "master_tool": "Radar de Roles",
+    "master_tool_explanation": "Monitoriza claridad y carga"
+  },
+
+  "inputs": {
+    "input_a": "Tareas Coherentes",
+    "input_b": "Tareas Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Coherencia de Rol: Nivel de sostenibilidad del puesto"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Roles Sostenibles"
+  }
+},
+{
+  "id": "RES-S7",
+  "name": "Falta de Sucesión Interna",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "sucesión",
+  "description": "No existen personas preparadas para asumir roles clave si alguien se marcha o asciende.",
+
+  "kpi": {
+    "question": "Si mañana falta alguien clave, ¿tu empresa sigue o se detiene?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Plan de sucesión",
+    "decision_explanation": "Preparar reemplazos internos",
+    "action": "Identificar roles críticos y formar sucesores",
+    "action_explanation": "Aumenta continuidad operativa",
+    "tool": "Mapa de Sucesión",
+    "tool_explanation": "Define suplentes y rutas de desarrollo",
+
+    "objective": "Aumentar continuidad del negocio",
+    "kpi_target": "Sucesión > 70%",
+    "activation_condition": "Sucesión < 50%",
+    "success_condition": "Roles críticos cubiertos",
+    "risk_if_ignored": "Parálisis operativa ante bajas o salidas",
+    "sequence": [
+      "Identificar roles críticos",
+      "Asignar sucesores",
+      "Formar y evaluar progresos"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Sucesión",
+    "master_decision_explanation": "Mantener continuidad operativa",
+    "master_action": "Optimizar rutas de sucesión",
+    "master_action_explanation": "Evita vacíos críticos",
+    "master_tool": "Radar de Sucesión",
+    "master_tool_explanation": "Monitoriza preparación interna"
+  },
+
+  "inputs": {
+    "input_a": "Roles con Sucesor",
+    "input_b": "Roles Críticos",
+    "formula": "(Sucesor / Críticos) x 100",
+    "impact": "% Sucesión: Nivel de continuidad operativa"
+  },
+
+  "review": {
+    "input_revised_1": "Sucesor Post",
+    "input_revised_2": "Críticos Post",
+    "result_revised": "Sucesión Asegurada"
+  }
+},
+{
+  "id": "RES-S8",
+  "name": "Falta de Escalabilidad Humana",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "escalabilidad",
+  "description": "El equipo no puede asumir más volumen sin contratar más personas, lo que limita el crecimiento.",
+
+  "kpi": {
+    "question": "¿Tu equipo escala o necesita duplicarse para crecer?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Optimización de capacidad",
+    "decision_explanation": "Aumentar escalabilidad sin aumentar plantilla",
+    "action": "Rediseñar flujos y eliminar tareas de bajo valor",
+    "action_explanation": "Aumenta capacidad real",
+    "tool": "Mapa de Capacidad Humana",
+    "tool_explanation": "Identifica cuellos de carga humana",
+
+    "objective": "Aumentar capacidad de escala",
+    "kpi_target": "Escalabilidad > 70%",
+    "activation_condition": "Escalabilidad < 50%",
+    "success_condition": "Equipo capaz de asumir más volumen",
+    "risk_if_ignored": "Crecimiento limitado y costes crecientes",
+    "sequence": [
+      "Auditar carga humana",
+      "Eliminar tareas de bajo valor",
+      "Optimizar flujos de trabajo"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Capacidad",
+    "master_decision_explanation": "Mantener escalabilidad humana",
+    "master_action": "Optimizar flujos y automatizaciones",
+    "master_action_explanation": "Evita saturación futura",
+    "master_tool": "Radar de Capacidad",
+    "master_tool_explanation": "Monitoriza escalabilidad real"
+  },
+
+  "inputs": {
+    "input_a": "Tareas de Alto Valor",
+    "input_b": "Tareas Totales",
+    "formula": "(AltoValor / Totales) x 100",
+    "impact": "% Capacidad: Nivel de escalabilidad humana"
+  },
+
+  "review": {
+    "input_revised_1": "AltoValor Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Escalabilidad Aumentada"
+  }
+},
+{
+  "id": "RES-S9",
+  "name": "Desgaste Cultural",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "cultura",
+  "description": "El crecimiento está erosionando los valores, hábitos y comportamientos que antes definían a la empresa.",
+
+  "kpi": {
+    "question": "¿Tu cultura se fortalece o se desgasta con el crecimiento?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Reforzamiento cultural",
+    "decision_explanation": "Proteger y revitalizar la cultura",
+    "action": "Redefinir comportamientos esenciales",
+    "action_explanation": "Aumenta coherencia",
+    "tool": "Código Cultural Sostenible",
+    "tool_explanation": "Define comportamientos y rituales clave",
+
+    "objective": "Aumentar coherencia cultural",
+    "kpi_target": "Coherencia > 75%",
+    "activation_condition": "Coherencia < 55%",
+    "success_condition": "Cultura fuerte y estable",
+    "risk_if_ignored": "Pérdida de identidad y cohesión",
+    "sequence": [
+      "Auditar cultura actual",
+      "Redefinir comportamientos esenciales",
+      "Aplicar rituales culturales"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Cultural",
+    "master_decision_explanation": "Mantener cultura sólida al crecer",
+    "master_action": "Optimizar rituales culturales",
+    "master_action_explanation": "Evita desgaste futuro",
+    "master_tool": "Radar Cultural",
+    "master_tool_explanation": "Monitoriza coherencia cultural"
+  },
+
+  "inputs": {
+    "input_a": "Comportamientos Coherentes",
+    "input_b": "Comportamientos Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Cultura Viva: Nivel de coherencia cultural"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Cultura Reforzada"
+  }
+},
+{
+  "id": "RES-S10",
+  "name": "Crecimiento Sano",
+  "specialty": "personas",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: crecimiento estable, sostenible, con estructura sólida, cultura fuerte y roles equilibrados.",
+
+  "kpi": {
+    "question": "¿Tu empresa crece como un organismo sano y estructurado?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación de crecimiento sano",
+    "decision_explanation": "Validar estructura, cultura y escalabilidad",
+    "action": "Auditoría completa de crecimiento y estructura",
+    "action_explanation": "Garantiza crecimiento sostenible",
+    "tool": "Certificado S10 Crecimiento",
+    "tool_explanation": "Evalúa salud estructural y cultural",
+
+    "objective": "Aumentar madurez de crecimiento",
+    "kpi_target": "Índice S10 > 90%",
+    "activation_condition": "Índice < 80%",
+    "success_condition": "Crecimiento sano, estable y sostenible",
+    "risk_if_ignored": "Crecimiento enfermo y colapsos operativos",
+    "sequence": [
+      "Auditar crecimiento",
+      "Corregir desviaciones",
+      "Certificar S10"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia en Crecimiento",
+    "master_decision_explanation": "Mantener crecimiento sano a largo plazo",
+    "master_action": "Optimizar estructura y cultura",
+    "master_action_explanation": "Evita recaídas",
+    "master_tool": "Radar S10 Crecimiento",
+    "master_tool_explanation": "Monitoriza excelencia estructural"
+  },
+
+  "inputs": {
+    "input_a": "Pilares de Crecimiento",
+    "input_b": "Pilares Cumplidos",
+    "formula": "(Cumplidos / Pilares) x 100",
+    "impact": "Índice S10 Crecimiento: Nivel de salud estructural y cultural"
+  },
+
+  "review": {
+    "input_revised_1": "Pilares Post",
+    "input_revised_2": "Cumplidos Post",
+    "result_revised": "Crecimiento Sano Alcanzado"
+  }
+}
+  ]
+}

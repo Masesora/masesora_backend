@@ -1,0 +1,655 @@
+{
+  "specialty": "marca",
+  "symptoms": [
+  {
+  "id": "CIR-S1",
+  "name": "Imagen Desactualizada",
+  "specialty": "marca",
+  "plan": "PIE",
+  "domain": "identidad",
+  "description": "La estética visual de la empresa transmite antigüedad, poca profesionalidad o desconexión con el mercado actual.",
+
+  "kpi": {
+    "question": "¿Tu marca parece de este año o de hace diez?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Lifting de identidad",
+    "decision_explanation": "Actualizar la estética para alinearla con el mercado actual",
+    "action": "Rediseñar elementos visuales clave",
+    "action_explanation": "Genera impacto inmediato",
+    "tool": "Kit de Identidad Express",
+    "tool_explanation": "Define colores, tipografías y estilo actualizado",
+
+    "objective": "Aumentar percepción de valor",
+    "kpi_target": "Percepción > 80%",
+    "activation_condition": "Percepción < 60%",
+    "success_condition": "Marca moderna y coherente",
+    "risk_if_ignored": "Sensación de empresa obsoleta",
+    "sequence": [
+      "Auditar identidad actual",
+      "Actualizar elementos visuales",
+      "Aplicar coherencia en todos los puntos de contacto"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Identidad",
+    "master_decision_explanation": "Mantener la marca siempre actualizada",
+    "master_action": "Optimizar coherencia visual anual",
+    "master_action_explanation": "Evita envejecimiento de marca",
+    "master_tool": "Radar de Identidad",
+    "master_tool_explanation": "Monitoriza percepción visual"
+  },
+
+  "inputs": {
+    "input_a": "Elementos Modernos",
+    "input_b": "Elementos Totales",
+    "formula": "(Modernos / Totales) x 100",
+    "impact": "% Actualización: Nivel de modernidad visual"
+  },
+
+  "review": {
+    "input_revised_1": "Modernos Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Identidad Actualizada"
+  }
+},
+{
+  "id": "CIR-S2",
+  "name": "Presentación Pobre",
+  "specialty": "marca",
+  "plan": "PIE",
+  "domain": "presentación",
+  "description": "La empresa presenta sus productos o servicios de forma débil, confusa o poco atractiva.",
+
+  "kpi": {
+    "question": "¿Tu presentación enamora o duerme?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Reanimación estética",
+    "decision_explanation": "Mejorar la presentación para aumentar impacto",
+    "action": "Rediseñar presentación comercial",
+    "action_explanation": "Aumenta conversión",
+    "tool": "Plantilla WOW",
+    "tool_explanation": "Estructura visual de alto impacto",
+
+    "objective": "Aumentar conversión comercial",
+    "kpi_target": "Conversión > 20%",
+    "activation_condition": "Conversión < 10%",
+    "success_condition": "Presentación clara y atractiva",
+    "risk_if_ignored": "Clientes que no entienden el valor",
+    "sequence": [
+      "Auditar presentación actual",
+      "Rediseñar estructura visual",
+      "Aplicar narrativa clara"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Presentación",
+    "master_decision_explanation": "Asegurar impacto visual continuo",
+    "master_action": "Optimizar presentaciones trimestralmente",
+    "master_action_explanation": "Evita presentaciones obsoletas",
+    "master_tool": "Radar de Presentación",
+    "master_tool_explanation": "Monitoriza impacto visual"
+  },
+
+  "inputs": {
+    "input_a": "Elementos Claros",
+    "input_b": "Elementos Totales",
+    "formula": "(Claros / Totales) x 100",
+    "impact": "% Claridad: Nivel de comprensión del mensaje"
+  },
+
+  "review": {
+    "input_revised_1": "Claros Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Presentación Mejorada"
+  }
+},
+{
+  "id": "CIR-S3",
+  "name": "Marca Incoherente",
+  "specialty": "marca",
+  "plan": "PIE",
+  "domain": "coherencia",
+  "description": "La marca se percibe distinta en cada punto de contacto: web, redes, documentos, mensajes.",
+
+  "kpi": {
+    "question": "¿Tu marca parece una o parece cinco distintas?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Unificación estética",
+    "decision_explanation": "Alinear todos los puntos de contacto",
+    "action": "Crear guía de estilo unificada",
+    "action_explanation": "Aumenta coherencia",
+    "tool": "Manual de Marca Express",
+    "tool_explanation": "Define reglas visuales y de tono",
+
+    "objective": "Aumentar coherencia de marca",
+    "kpi_target": "Coherencia > 80%",
+    "activation_condition": "Coherencia < 60%",
+    "success_condition": "Marca sólida y reconocible",
+    "risk_if_ignored": "Percepción de desorden y poca profesionalidad",
+    "sequence": [
+      "Auditar puntos de contacto",
+      "Unificar estilo visual",
+      "Aplicar guía de marca"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Coherencia",
+    "master_decision_explanation": "Mantener identidad sólida",
+    "master_action": "Revisión trimestral de coherencia",
+    "master_action_explanation": "Evita desviaciones",
+    "master_tool": "Radar de Coherencia",
+    "master_tool_explanation": "Monitoriza consistencia"
+  },
+
+  "inputs": {
+    "input_a": "Puntos Coherentes",
+    "input_b": "Puntos Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Coherencia: Fuerza de identidad visual"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Coherencia Mejorada"
+  }
+},
+{
+  "id": "CIR-S4",
+  "name": "Mensaje Visual Débil",
+  "specialty": "marca",
+  "plan": "PIE",
+  "domain": "comunicación",
+  "description": "El mensaje visual no transmite valor, urgencia ni diferenciación.",
+
+  "kpi": {
+    "question": "¿Tu marca comunica o solo decora?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Refuerzo visual",
+    "decision_explanation": "Convertir estética en comunicación",
+    "action": "Rediseñar mensajes visuales clave",
+    "action_explanation": "Aumenta impacto y claridad",
+    "tool": "Guía de Mensaje Visual",
+    "tool_explanation": "Define mensajes visuales estratégicos",
+
+    "objective": "Aumentar impacto comunicativo",
+    "kpi_target": "Impacto > 70%",
+    "activation_condition": "Impacto < 50%",
+    "success_condition": "Mensajes claros y potentes",
+    "risk_if_ignored": "Clientes que no entienden el valor",
+    "sequence": [
+      "Auditar mensajes visuales",
+      "Rediseñar piezas clave",
+      "Aplicar narrativa visual"
+    ],
+    "impact_level": "medio",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Mensaje Visual",
+    "master_decision_explanation": "Asegurar comunicación potente",
+    "master_action": "Optimizar narrativa visual",
+    "master_action_explanation": "Evita mensajes débiles",
+    "master_tool": "Radar de Mensaje Visual",
+    "master_tool_explanation": "Monitoriza impacto comunicativo"
+  },
+
+  "inputs": {
+    "input_a": "Mensajes Claros",
+    "input_b": "Mensajes Totales",
+    "formula": "(Claros / Totales) x 100",
+    "impact": "% Claridad Visual: Fuerza del mensaje"
+  },
+
+  "review": {
+    "input_revised_1": "Claros Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Mensaje Visual Mejorado"
+  }
+},
+{
+  "id": "CIR-S5",
+  "name": "Primera Impresión Débil",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "impacto",
+  "description": "El cliente no siente un efecto WOW inmediato al conocer la marca.",
+
+  "kpi": {
+    "question": "¿Tu marca enamora en 3 segundos?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Shock de impacto",
+    "decision_explanation": "Generar un WOW inmediato",
+    "action": "Optimizar portada, hero y primeras piezas visuales",
+    "action_explanation": "Aumenta atracción instantánea",
+    "tool": "Kit de Impacto Inicial",
+    "tool_explanation": "Define elementos de alto impacto",
+
+    "objective": "Aumentar atracción inicial",
+    "kpi_target": "Impacto > 80%",
+    "activation_condition": "Impacto < 60%",
+    "success_condition": "WOW inmediato",
+    "risk_if_ignored": "Clientes que se van en 3 segundos",
+    "sequence": [
+      "Auditar primera impresión",
+      "Rediseñar elementos iniciales",
+      "Testear impacto"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Impacto",
+    "master_decision_explanation": "Asegurar efecto WOW continuo",
+    "master_action": "Optimizar impacto anual",
+    "master_action_explanation": "Evita pérdida de atracción",
+    "master_tool": "Radar de Impacto",
+    "master_tool_explanation": "Monitoriza fuerza del WOW"
+  },
+
+  "inputs": {
+    "input_a": "Elementos WOW",
+    "input_b": "Elementos Totales",
+    "formula": "(WOW / Totales) x 100",
+    "impact": "% WOW: Nivel de atracción inicial"
+  },
+
+  "review": {
+    "input_revised_1": "WOW Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Impacto Mejorado"
+  }
+},
+{
+  "id": "CIR-S6",
+  "name": "Estética Inconsistente",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "estética",
+  "description": "La estética visual cambia según quién la crea, generando una marca irregular y poco profesional.",
+
+  "kpi": {
+    "question": "¿Tu marca tiene un estilo reconocible o depende de quién diseñe?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Homogeneización estética",
+    "decision_explanation": "Unificar criterios visuales",
+    "action": "Crear sistema visual modular",
+    "action_explanation": "Aumenta consistencia",
+    "tool": "Sistema Visual MASESORA",
+    "tool_explanation": "Define módulos visuales reutilizables",
+
+    "objective": "Aumentar coherencia estética",
+    "kpi_target": "Coherencia > 80%",
+    "activation_condition": "Coherencia < 60%",
+    "success_condition": "Estética uniforme en todos los soportes",
+    "risk_if_ignored": "Marca amateur y poco confiable",
+    "sequence": [
+      "Auditar estética actual",
+      "Definir módulos visuales",
+      "Aplicar sistema en todos los soportes"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Estético",
+    "master_decision_explanation": "Mantener estética sólida y reconocible",
+    "master_action": "Revisión estética trimestral",
+    "master_action_explanation": "Evita desviaciones visuales",
+    "master_tool": "Radar Estético",
+    "master_tool_explanation": "Monitoriza consistencia visual"
+  },
+
+  "inputs": {
+    "input_a": "Piezas Coherentes",
+    "input_b": "Piezas Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Coherencia Estética: Nivel de uniformidad visual"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Estética Unificada"
+  }
+},
+{
+  "id": "CIR-S7",
+  "name": "Materiales de Baja Calidad",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "materiales",
+  "description": "Los materiales visuales (PDF, presentaciones, catálogos, redes) se perciben baratos, pixelados o poco profesionales.",
+
+  "kpi": {
+    "question": "¿Tus materiales parecen premium o hechos con prisas?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Upgrade visual",
+    "decision_explanation": "Elevar la calidad de todos los materiales",
+    "action": "Rediseñar materiales clave en alta calidad",
+    "action_explanation": "Aumenta percepción de valor",
+    "tool": "Kit Premium de Materiales",
+    "tool_explanation": "Define estándares de calidad visual",
+
+    "objective": "Aumentar percepción premium",
+    "kpi_target": "Calidad > 80%",
+    "activation_condition": "Calidad < 60%",
+    "success_condition": "Materiales profesionales y consistentes",
+    "risk_if_ignored": "Sensación de marca barata",
+    "sequence": [
+      "Auditar materiales actuales",
+      "Rediseñar piezas clave",
+      "Aplicar estándares premium"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Calidad Visual",
+    "master_decision_explanation": "Mantener materiales premium",
+    "master_action": "Optimizar estándares visuales",
+    "master_action_explanation": "Evita caída de calidad",
+    "master_tool": "Radar de Calidad Visual",
+    "master_tool_explanation": "Monitoriza calidad de materiales"
+  },
+
+  "inputs": {
+    "input_a": "Materiales Premium",
+    "input_b": "Materiales Totales",
+    "formula": "(Premium / Totales) x 100",
+    "impact": "% Calidad: Nivel de profesionalidad visual"
+  },
+
+  "review": {
+    "input_revised_1": "Premium Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Calidad Elevada"
+  }
+},
+{
+  "id": "CIR-S8",
+  "name": "Marca Sin Personalidad",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "personalidad",
+  "description": "La marca no transmite una identidad clara, diferenciada o memorable.",
+
+  "kpi": {
+    "question": "¿Tu marca tiene alma o solo colores bonitos?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Definición de personalidad",
+    "decision_explanation": "Crear una identidad emocional clara",
+    "action": "Diseñar arquetipo y tono de marca",
+    "action_explanation": "Aumenta diferenciación",
+    "tool": "Arquetipo de Marca MASESORA",
+    "tool_explanation": "Define personalidad y tono",
+
+    "objective": "Aumentar diferenciación",
+    "kpi_target": "Diferenciación > 70%",
+    "activation_condition": "Diferenciación < 50%",
+    "success_condition": "Marca con personalidad clara",
+    "risk_if_ignored": "Ser una marca más del montón",
+    "sequence": [
+      "Definir arquetipo",
+      "Diseñar tono emocional",
+      "Aplicar personalidad en todos los puntos"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Personalidad",
+    "master_decision_explanation": "Mantener identidad emocional sólida",
+    "master_action": "Optimizar tono y narrativa",
+    "master_action_explanation": "Evita pérdida de personalidad",
+    "master_tool": "Radar de Personalidad",
+    "master_tool_explanation": "Monitoriza fuerza emocional"
+  },
+
+  "inputs": {
+    "input_a": "Elementos con Personalidad",
+    "input_b": "Elementos Totales",
+    "formula": "(Personales / Totales) x 100",
+    "impact": "% Personalidad: Nivel de identidad emocional"
+  },
+
+  "review": {
+    "input_revised_1": "Personales Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Personalidad Definida"
+  }
+},
+{
+  "id": "CIR-S9",
+  "name": "Marca Sin Diferenciación",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "diferenciación",
+  "description": "La marca no destaca frente a la competencia y se percibe como una opción más.",
+
+  "kpi": {
+    "question": "¿Tu marca destaca o se pierde entre las demás?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Posicionamiento quirúrgico",
+    "decision_explanation": "Definir un espacio único en la mente del cliente",
+    "action": "Crear propuesta de valor diferenciada",
+    "action_explanation": "Aumenta ventaja competitiva",
+    "tool": "Mapa de Posicionamiento",
+    "tool_explanation": "Visualiza huecos competitivos",
+
+    "objective": "Aumentar diferenciación",
+    "kpi_target": "Diferenciación > 70%",
+    "activation_condition": "Diferenciación < 50%",
+    "success_condition": "Marca única y reconocible",
+    "risk_if_ignored": "Competencia te sustituye fácilmente",
+    "sequence": [
+      "Analizar competencia",
+      "Definir propuesta única",
+      "Aplicar posicionamiento en la comunicación"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Posicionamiento",
+    "master_decision_explanation": "Mantener ventaja competitiva",
+    "master_action": "Optimizar propuesta de valor",
+    "master_action_explanation": "Evita ser copiable",
+    "master_tool": "Radar de Posicionamiento",
+    "master_tool_explanation": "Monitoriza diferenciación real"
+  },
+
+  "inputs": {
+    "input_a": "Elementos Únicos",
+    "input_b": "Elementos Totales",
+    "formula": "(Únicos / Totales) x 100",
+    "impact": "% Diferenciación: Nivel de unicidad de la marca"
+  },
+
+  "review": {
+    "input_revised_1": "Únicos Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Diferenciación Mejorada"
+  }
+},
+{
+  "id": "CIR-S10",
+  "name": "Marca de Alto Impacto",
+  "specialty": "marca",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: marca sólida, coherente, moderna y con un WOW inmediato en todos los puntos de contacto.",
+
+  "kpi": {
+    "question": "¿Tu marca genera un WOW inmediato y sostenido?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación de marca",
+    "decision_explanation": "Validar excelencia visual y comunicativa",
+    "action": "Auditoría completa de identidad, coherencia y diferenciación",
+    "action_explanation": "Garantiza excelencia total",
+    "tool": "Certificado S10 Marca",
+    "tool_explanation": "Evalúa impacto y coherencia",
+
+    "objective": "Aumentar valor percibido",
+    "kpi_target": "Impacto > 90%",
+    "activation_condition": "Impacto < 80%",
+    "success_condition": "Marca icónica y memorable",
+    "risk_if_ignored": "Pérdida de competitividad visual",
+    "sequence": [
+      "Auditar marca completa",
+      "Corregir desviaciones",
+      "Certificar S10"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia de Marca",
+    "master_decision_explanation": "Convertir la marca en un activo estratégico",
+    "master_action": "Optimizar impacto visual anual",
+    "master_action_explanation": "Mantiene excelencia continua",
+    "master_tool": "Radar S10 Marca",
+    "master_tool_explanation": "Monitoriza excelencia visual"
+  },
+
+  "inputs": {
+    "input_a": "Pilares de Marca",
+    "input_b": "Pilares Cumplidos",
+    "formula": "(Cumplidos / Pilares) x 100",
+    "impact": "Índice S10 Marca: Nivel de excelencia visual y comunicativa"
+  },
+
+  "review": {
+    "input_revised_1": "Pilares Post",
+    "input_revised_2": "Cumplidos Post",
+    "result_revised": "Excelencia Alcanzada"
+  }
+}
+  ]
+}

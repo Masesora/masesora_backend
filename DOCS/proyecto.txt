@@ -1,0 +1,180 @@
+Perfecto, Maite.  
+Si lo que quieres ahora es **ver todo el proyecto**, vamos a hacerlo de la forma más útil, clara y estratégica posible —sin ruido, sin perder tiempo, y sin que tengas que pegar archivos gigantes aquí.
+
+Voy a darte **una visión completa del proyecto MAS@FRAME**, tal como está estructurado ahora mismo en tu backend, para que puedas “verlo entero” sin abrir mil carpetas.
+
+---
+
+# 🧩 **VISIÓN COMPLETA DEL PROYECTO (BACKEND MAS@FRAME)**  
+*(Esto es un mapa maestro: técnico, clínico y operativo. Tu referencia total.)*
+
+## 📁 **1. Raíz del proyecto**
+```
+masesora_backend/
+│
+├── main.py
+├── routers/
+├── database/
+├── models/
+├── schemas/
+├── utils/
+└── ...
+```
+
+---
+
+# 📡 **2. main.py**
+El punto de entrada del backend.
+
+- Carga FastAPI  
+- Registra routers  
+- Configura CORS  
+- Arranca el servidor  
+
+Es el “cerebro operativo” que conecta todo.
+
+---
+
+# 🔀 **3. Routers (API pública)**  
+Aquí viven los endpoints que usa Swagger y el frontend.
+
+```
+routers/
+│
+├── clinical_eval.py      → Evalúa un síntoma individual
+├── batch_eval.py         → Evalúa un batch completo (PMV)
+└── ...
+```
+
+### **clinical_eval.py**
+- Recibe un síntoma  
+- Llama al motor KPI  
+- Llama al motor de interpretación  
+- Devuelve estado clínico  
+
+### **batch_eval.py**
+- Recibe un PMV completo  
+- Itera síntomas  
+- Calcula KPIs  
+- Devuelve el mapa clínico completo  
+
+---
+
+# 🧠 **4. Motor clínico (clinical_engine)**  
+Aquí está la lógica real del PMV.
+
+```
+database/engine/clinical_engine/
+│
+├── services/
+│   ├── kpi_engine.py          → Fórmulas KPI
+│   ├── interpretation_engine.py → Estados clínicos
+│   └── post_treatment.py      → Evaluación post‑tratamiento
+│
+└── data/
+    ├── symptoms.json          → Catálogo maestro de síntomas
+    ├── categories.json        → Categorías (TER, OPE, COM…)
+    └── thresholds.json        → Umbrales clínicos
+```
+
+### **kpi_engine.py**
+- Todas las fórmulas KPI  
+- match/case por síntoma  
+- Validación de inputs  
+- Prevención de división por cero  
+
+### **interpretation_engine.py**
+- Usa thresholds  
+- Devuelve: critical, recommended, optimizer, elite  
+
+### **post_treatment.py**
+- Recalcula estado después del tratamiento  
+
+---
+
+# 📚 **5. Data clínica (JSONs)**
+Tu **PMV real** está aquí.
+
+```
+data/
+│
+├── symptoms.json
+├── categories.json
+└── thresholds.json
+```
+
+### symptoms.json
+Cada síntoma tiene:
+
+- id  
+- name  
+- description  
+- inputs  
+- thresholds  
+- category  
+- formula (implícita en kpi_engine)  
+
+Este archivo es el **corazón del PMV**.
+
+---
+
+# 🏗️ **6. Models y Schemas**
+Validación Pydantic.
+
+```
+models/
+schemas/
+```
+
+- Definen cómo debe llegar un síntoma  
+- Cómo debe salir un KPI  
+- Cómo se valida un batch  
+
+---
+
+# 🧰 **7. Utils**
+Funciones auxiliares:
+
+- carga de JSON  
+- normalización  
+- logs  
+- helpers  
+
+---
+
+# 🔥 **8. Flujo completo del PMV**
+Así funciona todo junto:
+
+1. **Frontend / Swagger** envía inputs  
+2. Router recibe  
+3. Carga el síntoma desde `symptoms.json`  
+4. Llama a `calcular_kpi()`  
+5. Llama a `interpretar_kpi()`  
+6. Devuelve estado clínico  
+7. Si es batch → repite para todos  
+8. Devuelve el mapa clínico completo  
+
+---
+
+# ⭐ ¿Qué quieres ver AHORA MISMO?
+
+Dime cuál de estas opciones quieres abrir:
+
+### **A. Ver el mapa completo del PMV (todos los síntomas)**  
+Te lo presento limpio, ordenado y navegable.
+
+### **B. Ver todas las fórmulas KPI**  
+Te hago un documento maestro con todas las fórmulas.
+
+### **C. Ver el flujo clínico completo**  
+Entrada → KPI → Estado → Tratamiento.
+
+### **D. Ver la estructura del backend en formato árbol**  
+Con cada archivo explicado.
+
+### **E. Ver el PMV como un diagrama**  
+Arquitectura visual.
+
+---
+
+

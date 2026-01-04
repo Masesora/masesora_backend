@@ -1,0 +1,655 @@
+{
+  "specialty": "gestion",
+  "symptoms": [
+  {
+  "id": "CLI-S1",
+  "name": "Infarto por Urgencias",
+  "specialty": "gestion",
+  "plan": "PIE",
+  "domain": "operativa",
+  "description": "La empresa vive apagando fuegos y reaccionando tarde a los problemas.",
+
+  "kpi": {
+    "question": "¿Cierras el mes el día 1 o el día 20?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Drenaje de incendios",
+    "decision_explanation": "Separar operar de gestionar",
+    "action": "Clasificar tareas en Operar vs. Gestionar",
+    "action_explanation": "Reduce urgencias y caos",
+    "tool": "Matriz de Intervención Crítica",
+    "tool_explanation": "Identifica tareas que generan incendios",
+
+    "objective": "Aumentar velocidad de datos",
+    "kpi_target": "Cierre < 5 días",
+    "activation_condition": "Cierre > 10 días",
+    "success_condition": "Cierre mensual rápido y estable",
+    "risk_if_ignored": "Ceguera financiera y decisiones tardías",
+    "sequence": [
+      "Clasificar tareas",
+      "Eliminar urgencias recurrentes",
+      "Crear agenda de gestión"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Operativo",
+    "master_decision_explanation": "Asegurar control del negocio",
+    "master_action": "Optimizar sistema de cierre",
+    "master_action_explanation": "Evita retrasos futuros",
+    "master_tool": "Radar de Cierre",
+    "master_tool_explanation": "Monitoriza velocidad de datos"
+  },
+
+  "inputs": {
+    "input_a": "Día de Cierre",
+    "input_b": "Día 1",
+    "formula": "Día de Cierre - Día 1",
+    "impact": "Velocidad de Datos: Capacidad de reaccionar antes del desastre"
+  },
+
+  "review": {
+    "input_revised_1": "Cierre Post",
+    "input_revised_2": "Inicio Mes Post",
+    "result_revised": "Velocidad Mejorada"
+  }
+},
+{
+  "id": "CLI-S2",
+  "name": "Esclerosis Documental",
+  "specialty": "gestion",
+  "plan": "PIE",
+  "domain": "información",
+  "description": "La información está dispersa y no se encuentra cuando se necesita.",
+
+  "kpi": {
+    "question": "¿Tu cuadro de mandos es útil o es basura?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Fluidez de información",
+    "decision_explanation": "Organizar el cerebro digital",
+    "action": "Unificar nube y estructura documental",
+    "action_explanation": "Evita pérdidas de tiempo",
+    "tool": "Estructura de Archivo Único",
+    "tool_explanation": "Centraliza la información",
+
+    "objective": "Aumentar utilidad del cuadro de mandos",
+    "kpi_target": "% Utilidad > 50%",
+    "activation_condition": "% Utilidad < 30%",
+    "success_condition": "Datos útiles y accesibles",
+    "risk_if_ignored": "Decisiones basadas en datos incorrectos",
+    "sequence": [
+      "Auditar archivos",
+      "Unificar estructura",
+      "Eliminar duplicados"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Información",
+    "master_decision_explanation": "Asegurar datos limpios",
+    "master_action": "Optimizar cuadro de mandos",
+    "master_action_explanation": "Evita ruido informativo",
+    "master_tool": "Radar de KPIs",
+    "master_tool_explanation": "Monitoriza utilidad real"
+  },
+
+  "inputs": {
+    "input_a": "Indicadores Totales",
+    "input_b": "Decisiones Tomadas",
+    "formula": "(Decisiones / Datos) x 100",
+    "impact": "% de Utilidad: Eficiencia del sistema de control"
+  },
+
+  "review": {
+    "input_revised_1": "Indicadores Post",
+    "input_revised_2": "Decisiones Post",
+    "result_revised": "Utilidad Mejorada"
+  }
+},
+{
+  "id": "CLI-S3",
+  "name": "Atrofia de Tiempos",
+  "specialty": "gestion",
+  "plan": "PIE",
+  "domain": "tiempo",
+  "description": "El dueño pierde horas en tareas que no generan valor.",
+
+  "kpi": {
+    "question": "¿Estás al día con Hacienda y normativas?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Recuperación de autonomía",
+    "decision_explanation": "Liberar tiempo del dueño",
+    "action": "Identificar tareas que roban el 80% del tiempo",
+    "action_explanation": "Aumenta productividad",
+    "tool": "Cronograma de Rescate",
+    "tool_explanation": "Detecta ladrones de tiempo",
+
+    "objective": "Aumentar seguridad legal",
+    "kpi_target": "Índice de seguridad > 90%",
+    "activation_condition": "Índice < 70%",
+    "success_condition": "Obligaciones al día",
+    "risk_if_ignored": "Multas, sanciones y estrés",
+    "sequence": [
+      "Listar obligaciones",
+      "Revisar cumplimiento",
+      "Crear calendario legal"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Legal",
+    "master_decision_explanation": "Evitar riesgos legales",
+    "master_action": "Optimizar sistema de cumplimiento",
+    "master_action_explanation": "Evita sustos futuros",
+    "master_tool": "Radar Legal",
+    "master_tool_explanation": "Monitoriza cumplimiento"
+  },
+
+  "inputs": {
+    "input_a": "Obligaciones",
+    "input_b": "Presentados",
+    "formula": "(Presentados / Obligaciones) x 100",
+    "impact": "Índice de Seguridad: Protección legal frente a multas"
+  },
+
+  "review": {
+    "input_revised_1": "Obligaciones Post",
+    "input_revised_2": "Presentados Post",
+    "result_revised": "Seguridad Mejorada"
+  }
+},
+{
+  "id": "CLI-S4",
+  "name": "Memoria Volátil",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "conocimiento",
+  "description": "La empresa depende de la memoria del dueño o del equipo.",
+
+  "kpi": {
+    "question": "¿Cuánto dinero pierdes por gasto hormiga?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Fijación de conocimiento",
+    "decision_explanation": "Evitar errores por memoria",
+    "action": "Protocolizar las 5 acciones que más errores generan",
+    "action_explanation": "Aumenta consistencia",
+    "tool": "Manual de Supervivencia Operativa",
+    "tool_explanation": "Documenta procesos clave",
+
+    "objective": "Reducir fuga silenciosa",
+    "kpi_target": "% Fuga < 5%",
+    "activation_condition": "% Fuga > 15%",
+    "success_condition": "Gasto hormiga controlado",
+    "risk_if_ignored": "Pérdida de liquidez sin detectar",
+    "sequence": [
+      "Identificar gastos varios",
+      "Clasificar fugas",
+      "Protocolizar acciones"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Conocimiento",
+    "master_decision_explanation": "Asegurar procesos estables",
+    "master_action": "Optimizar documentación",
+    "master_action_explanation": "Evita dependencia de memoria",
+    "master_tool": "Radar de Conocimiento",
+    "master_tool_explanation": "Monitoriza fugas"
+  },
+
+  "inputs": {
+    "input_a": "Gastos Varios",
+    "input_b": "Gasto Total",
+    "formula": "(Varios / Total) x 100",
+    "impact": "% de Fuga Silenciosa: Dinero que se pierde por falta de orden"
+  },
+
+  "review": {
+    "input_revised_1": "Varios Post",
+    "input_revised_2": "Total Post",
+    "result_revised": "Fuga Reducida"
+  }
+},
+{
+  "id": "CLI-S5",
+  "name": "Músculo Agotado",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "automatización",
+  "description": "Procesos manuales que consumen energía y tiempo del equipo.",
+
+  "kpi": {
+    "question": "¿Tus reuniones sirven o son perder el tiempo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Sustitución mecánica",
+    "decision_explanation": "Automatizar lo repetitivo",
+    "action": "Sustituir 1 proceso manual por uno automático",
+    "action_explanation": "Aumenta eficiencia",
+    "tool": "Diseño de Sinapsis Digital",
+    "tool_explanation": "Define automatizaciones clave",
+
+    "objective": "Aumentar operatividad",
+    "kpi_target": "Ratio operatividad > 50%",
+    "activation_condition": "Operatividad < 30%",
+    "success_condition": "Reuniones productivas",
+    "risk_if_ignored": "Tiempo perdido y baja eficiencia",
+    "sequence": [
+      "Identificar procesos manuales",
+      "Diseñar automatización",
+      "Implementar flujo automático"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Automatización",
+    "master_decision_explanation": "Asegurar eficiencia continua",
+    "master_action": "Optimizar flujos digitales",
+    "master_action_explanation": "Evita desgaste operativo",
+    "master_tool": "Radar de Reuniones",
+    "master_tool_explanation": "Monitoriza operatividad real"
+  },
+
+  "inputs": {
+    "input_a": "Horas de Reunión",
+    "input_b": "Acuerdos en Acta",
+    "formula": "Acuerdos / Horas",
+    "impact": "Ratio de Operatividad: Rentabilidad del tiempo de gestión"
+  },
+
+  "review": {
+    "input_revised_1": "Horas Post",
+    "input_revised_2": "Acuerdos Post",
+    "result_revised": "Operatividad Mejorada"
+  }
+},
+{
+  "id": "CLI-S6",
+  "name": "Ceguera de Costes",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "costes",
+  "description": "La empresa desconoce el coste real de sus operaciones y servicios.",
+
+  "kpi": {
+    "question": "¿Sabes cuánto te cuesta producir lo que vendes?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Radiografía de costes",
+    "decision_explanation": "Identificar costes ocultos",
+    "action": "Escandallo de procesos clave",
+    "action_explanation": "Revela fugas de rentabilidad",
+    "tool": "Mapa de Costes Operativos",
+    "tool_explanation": "Desglosa costes reales",
+
+    "objective": "Aumentar control de costes",
+    "kpi_target": "Desviación < 10%",
+    "activation_condition": "Desviación > 20%",
+    "success_condition": "Costes controlados y predecibles",
+    "risk_if_ignored": "Pérdida de margen sin explicación",
+    "sequence": [
+      "Listar procesos clave",
+      "Asignar costes reales",
+      "Detectar fugas"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Costes",
+    "master_decision_explanation": "Asegurar rentabilidad sostenible",
+    "master_action": "Optimizar estructura de costes",
+    "master_action_explanation": "Evita erosión de margen",
+    "master_tool": "Radar de Costes",
+    "master_tool_explanation": "Monitoriza desviaciones"
+  },
+
+  "inputs": {
+    "input_a": "Coste Estimado",
+    "input_b": "Coste Real",
+    "formula": "((Real - Estimado) / Estimado) x 100",
+    "impact": "% Desviación: Nivel de control sobre tus operaciones"
+  },
+
+  "review": {
+    "input_revised_1": "Estimado Post",
+    "input_revised_2": "Real Post",
+    "result_revised": "Desviación Reducida"
+  }
+},
+{
+  "id": "CLI-S7",
+  "name": "Parálisis de Delegación",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "roles",
+  "description": "El dueño retiene tareas que deberían estar delegadas.",
+
+  "kpi": {
+    "question": "¿Cuánto tiempo pierdes haciendo tareas que no deberías hacer?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Liberación de carga",
+    "decision_explanation": "Delegar tareas impropias del dueño",
+    "action": "Crear matriz de delegación",
+    "action_explanation": "Aumenta tiempo estratégico",
+    "tool": "Matriz RACI",
+    "tool_explanation": "Define quién hace qué",
+
+    "objective": "Aumentar tiempo estratégico del dueño",
+    "kpi_target": "Tiempo estratégico > 30%",
+    "activation_condition": "Tiempo estratégico < 15%",
+    "success_condition": "Dueño liberado de tareas operativas",
+    "risk_if_ignored": "Estancamiento y agotamiento",
+    "sequence": [
+      "Listar tareas del dueño",
+      "Clasificar por valor",
+      "Delegar tareas operativas"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Delegación",
+    "master_decision_explanation": "Asegurar continuidad operativa",
+    "master_action": "Optimizar estructura de roles",
+    "master_action_explanation": "Evita dependencia del dueño",
+    "master_tool": "Radar de Delegación",
+    "master_tool_explanation": "Monitoriza carga del dueño"
+  },
+
+  "inputs": {
+    "input_a": "Horas Dueño",
+    "input_b": "Horas Estrategia",
+    "formula": "(Estrategia / Dueño) x 100",
+    "impact": "% Tiempo Estratégico: Capacidad de liderar el futuro"
+  },
+
+  "review": {
+    "input_revised_1": "Dueño Post",
+    "input_revised_2": "Estrategia Post",
+    "result_revised": "Delegación Mejorada"
+  }
+},
+{
+  "id": "CLI-S8",
+  "name": "Reuniones Tóxicas",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "reuniones",
+  "description": "Reuniones largas, improductivas y sin acuerdos claros.",
+
+  "kpi": {
+    "question": "¿Tus reuniones generan acuerdos o solo ruido?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Cirugía de reuniones",
+    "decision_explanation": "Eliminar reuniones inútiles",
+    "action": "Implementar agenda obligatoria",
+    "action_explanation": "Aumenta productividad",
+    "tool": "Acta de Reunión Efectiva",
+    "tool_explanation": "Define acuerdos y responsables",
+
+    "objective": "Aumentar operatividad",
+    "kpi_target": "Operatividad > 50%",
+    "activation_condition": "Operatividad < 30%",
+    "success_condition": "Reuniones productivas y breves",
+    "risk_if_ignored": "Pérdida de tiempo y desgaste del equipo",
+    "sequence": [
+      "Eliminar reuniones sin agenda",
+      "Aplicar acta obligatoria",
+      "Revisar acuerdos semanalmente"
+    ],
+    "impact_level": "medio",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Reuniones",
+    "master_decision_explanation": "Asegurar reuniones de alto valor",
+    "master_action": "Optimizar rituales de gestión",
+    "master_action_explanation": "Evita reuniones tóxicas",
+    "master_tool": "Radar de Reuniones",
+    "master_tool_explanation": "Monitoriza operatividad real"
+  },
+
+  "inputs": {
+    "input_a": "Horas Reunión",
+    "input_b": "Acuerdos",
+    "formula": "Acuerdos / Horas",
+    "impact": "Ratio de Operatividad: Valor generado por hora de reunión"
+  },
+
+  "review": {
+    "input_revised_1": "Horas Post",
+    "input_revised_2": "Acuerdos Post",
+    "result_revised": "Operatividad Mejorada"
+  }
+},
+{
+  "id": "CLI-S9",
+  "name": "Falta de Ritmos de Gestión",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "ritmos",
+  "description": "La empresa no tiene rituales de control, revisión y planificación.",
+
+  "kpi": {
+    "question": "¿Tu negocio avanza por sistema o por inercia?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Implantación de rituales",
+    "decision_explanation": "Crear ritmos de control",
+    "action": "Implementar reunión semanal de gestión",
+    "action_explanation": "Aumenta control operativo",
+    "tool": "Rituales MASESORA",
+    "tool_explanation": "Define cadencias de gestión",
+
+    "objective": "Aumentar control del negocio",
+    "kpi_target": "Control > 70%",
+    "activation_condition": "Control < 40%",
+    "success_condition": "Negocio gestionado por sistema",
+    "risk_if_ignored": "Descontrol y caos operativo",
+    "sequence": [
+      "Definir rituales",
+      "Asignar responsables",
+      "Revisar semanalmente"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Ritmos",
+    "master_decision_explanation": "Asegurar gestión continua",
+    "master_action": "Optimizar cadencias",
+    "master_action_explanation": "Evita recaídas",
+    "master_tool": "Radar de Ritmos",
+    "master_tool_explanation": "Monitoriza cumplimiento"
+  },
+
+  "inputs": {
+    "input_a": "Rituales Planificados",
+    "input_b": "Rituales Cumplidos",
+    "formula": "(Cumplidos / Planificados) x 100",
+    "impact": "% Control: Nivel real de gestión del negocio"
+  },
+
+  "review": {
+    "input_revised_1": "Planificados Post",
+    "input_revised_2": "Cumplidos Post",
+    "result_revised": "Control Mejorado"
+  }
+},
+{
+  "id": "CLI-S10",
+  "name": "Gestión de Alto Rendimiento",
+  "specialty": "gestion",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: gestión impecable, rituales sólidos y control total del negocio.",
+
+  "kpi": {
+    "question": "¿Tu negocio funciona como un reloj suizo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación de gestión",
+    "decision_explanation": "Validar excelencia operativa",
+    "action": "Auditoría de ritmos, roles y datos",
+    "action_explanation": "Garantiza control total",
+    "tool": "Certificado S10 Gestión",
+    "tool_explanation": "Evalúa excelencia real",
+
+    "objective": "Aumentar valor del negocio",
+    "kpi_target": "Índice S10 > 90%",
+    "activation_condition": "Índice < 80%",
+    "success_condition": "Gestión de alto rendimiento",
+    "risk_if_ignored": "Pérdida de competitividad",
+    "sequence": [
+      "Auditar gestión",
+      "Corregir desviaciones",
+      "Certificar S10"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia Operativa",
+    "master_decision_explanation": "Convertir la gestión en una ventaja competitiva",
+    "master_action": "Optimizar sistema de gestión",
+    "master_action_explanation": "Aumenta valor del negocio",
+    "master_tool": "Radar S10 Gestión",
+    "master_tool_explanation": "Monitoriza excelencia real"
+  },
+
+  "inputs": {
+    "input_a": "Ritmos",
+    "input_b": "Roles",
+    "formula": "(Ritmos + Roles) / 2",
+    "impact": "Índice S10 Gestión: Nivel de excelencia operativa"
+  },
+
+  "review": {
+    "input_revised_1": "Ritmos Post",
+    "input_revised_2": "Roles Post",
+    "result_revised": "Excelencia Alcanzada"
+  }
+}
+  ]
+}

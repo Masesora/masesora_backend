@@ -1,0 +1,655 @@
+{
+  "specialty": "procesos",
+  "symptoms": [
+    {
+    "id": "UNI-S1",
+    "name": "Esclerosis de Esperas",
+    "specialty": "procesos",
+    "plan": "PIE",
+    "domain": "tiempos",
+    "description": "Tiempos muertos entre pasos que ralentizan la entrega al cliente.",
+
+    "kpi": {
+      "question": "¿Cuántos días tardas en cumplir tu promesa al cliente?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Mapeo de tiempos muertos",
+      "decision_explanation": "Detectar dónde se pierde tiempo",
+      "action": "Cronometrar pasos entre puestos",
+      "action_explanation": "Permite eliminar esperas innecesarias",
+      "tool": "Diagrama de Valor",
+      "tool_explanation": "Visualiza cuellos de botella",
+
+      "objective": "Reducir el lead time total del proceso",
+      "kpi_target": "Lead time < 5 días",
+      "activation_condition": "Lead time > 10 días",
+      "success_condition": "Lead time estabilizado por debajo de 5 días",
+      "risk_if_ignored": "Pérdida de clientes por lentitud",
+      "sequence": [
+        "Medir tiempos entre pasos",
+        "Identificar esperas críticas",
+        "Eliminar pasos sin valor"
+      ],
+      "impact_level": "alto",
+      "timeframe": "1 semana"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Flujo",
+      "master_decision_explanation": "Asegurar velocidad operativa",
+      "master_action": "Optimizar secuencia de procesos",
+      "master_action_explanation": "Reduce tiempos de entrega",
+      "master_tool": "Radar de Flujo",
+      "master_tool_explanation": "Monitoriza lead time real"
+    },
+
+    "inputs": {
+      "input_a": "Día de Pedido",
+      "input_b": "Día de Entrega",
+      "formula": "Día Entrega - Día Pedido",
+      "impact": "Lead Time: Días que tardas en cumplir tu promesa"
+    },
+
+    "review": {
+      "input_revised_1": "Pedido Revisado",
+      "input_revised_2": "Entrega Revisada",
+      "result_revised": "Lead Time Optimizado"
+    }
+  },
+  {
+    "id": "UNI-S2",
+    "name": "Colapso de Agendas",
+    "specialty": "procesos",
+    "plan": "PIE",
+    "domain": "productividad",
+    "description": "Tareas ruido y cuellos de botella que saturan la agenda.",
+
+    "kpi": {
+      "question": "¿Cuánto dinero quema el error y la repetición?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Priorización de valor",
+      "decision_explanation": "Eliminar tareas que no aportan",
+      "action": "Auditoría de tiempos de gerencia",
+      "action_explanation": "Detecta saturación real",
+      "tool": "Regla 5/25 de Tareas",
+      "tool_explanation": "Identifica tareas críticas",
+
+      "objective": "Reducir tareas ruido y liberar agenda",
+      "kpi_target": "Desperdicio < 10%",
+      "activation_condition": "Desperdicio > 25%",
+      "success_condition": "Agenda con > 60% tareas de valor",
+      "risk_if_ignored": "Colapso operativo y retrasos",
+      "sequence": [
+        "Auditar tareas",
+        "Eliminar tareas ruido",
+        "Reorganizar agenda"
+      ],
+      "impact_level": "alto",
+      "timeframe": "1 semana"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Agenda",
+      "master_decision_explanation": "Liberar tiempo de alto valor",
+      "master_action": "Rediseñar agenda operativa",
+      "master_action_explanation": "Aumenta productividad real",
+      "master_tool": "Radar de Agenda",
+      "master_tool_explanation": "Monitoriza carga de trabajo"
+    },
+
+    "inputs": {
+      "input_a": "Nº Errores",
+      "input_b": "Coste Medio",
+      "formula": "Nº Errores x Coste Medio",
+      "impact": "Tasa de Desperdicio: Dinero tirado por falta de proceso"
+    },
+
+    "review": {
+      "input_revised_1": "Errores Post",
+      "input_revised_2": "Coste Post",
+      "result_revised": "Desperdicio Reducido"
+    }
+  },
+  {
+    "id": "UNI-S3",
+    "name": "Fugas de Calidad",
+    "specialty": "procesos",
+    "plan": "PIE",
+    "domain": "calidad",
+    "description": "Errores recurrentes por falta de estandarización.",
+
+    "kpi": {
+      "question": "¿Tu equipo está saturado o infrautilizado?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Estandarización crítica",
+      "decision_explanation": "Eliminar errores repetitivos",
+      "action": "Redactar protocolos de fallos recurrentes",
+      "action_explanation": "Reduce variabilidad",
+      "tool": "Checklist de Calidad",
+      "tool_explanation": "Evita errores por falta de información",
+
+      "objective": "Reducir errores operativos",
+      "kpi_target": "Errores < 5%",
+      "activation_condition": "Errores > 15%",
+      "success_condition": "Errores estabilizados por debajo del 5%",
+      "risk_if_ignored": "Pérdida de clientes por mala calidad",
+      "sequence": [
+        "Identificar fallos recurrentes",
+        "Crear protocolos",
+        "Aplicar checklist"
+      ],
+      "impact_level": "alto",
+      "timeframe": "2 semanas"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Calidad",
+      "master_decision_explanation": "Asegurar consistencia operativa",
+      "master_action": "Crear manual base",
+      "master_action_explanation": "Evita fallos estructurales",
+      "master_tool": "Radar de Calidad",
+      "master_tool_explanation": "Monitoriza saturación real"
+    },
+
+    "inputs": {
+      "input_a": "Horas Equipo",
+      "input_b": "Horas Tarea",
+      "formula": "(Horas Tarea / Horas Equipo) x 100",
+      "impact": "% Saturación: Riesgo de infarto en la operativa"
+    },
+
+    "review": {
+      "input_revised_1": "Horas Equipo Post",
+      "input_revised_2": "Horas Tarea Post",
+      "result_revised": "Saturación Reducida"
+    }
+  },
+  {
+    "id": "UNI-S4",
+    "name": "Micro-Fugas de Tiempo",
+    "specialty": "procesos",
+    "plan": "PRE",
+    "domain": "eficiencia",
+    "description": "Pasos innecesarios que no aportan valor al cliente.",
+
+    "kpi": {
+      "question": "¿Cuántos pasos de tu proceso no aportan valor?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Eliminación de desperdicio",
+      "decision_explanation": "Eliminar pasos inútiles",
+      "action": "Auditoría de desperdicios LEAN",
+      "action_explanation": "Detecta grasa operativa",
+      "tool": "Hoja de Desperdicios",
+      "tool_explanation": "Clasifica pasos por valor",
+
+      "objective": "Eliminar pasos sin valor",
+      "kpi_target": "Grasa operativa < 10%",
+      "activation_condition": "Grasa > 25%",
+      "success_condition": "Proceso con > 70% pasos de valor",
+      "risk_if_ignored": "Procesos lentos y costosos",
+      "sequence": [
+        "Mapear proceso",
+        "Clasificar pasos",
+        "Eliminar pasos sin valor"
+      ],
+      "impact_level": "medio",
+      "timeframe": "1 semana"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Flujo",
+      "master_decision_explanation": "Asegurar eficiencia máxima",
+      "master_action": "Balanceo de cargas",
+      "master_action_explanation": "Reduce tiempos muertos",
+      "master_tool": "Radar de Valor",
+      "master_tool_explanation": "Monitoriza pasos críticos"
+    },
+
+    "inputs": {
+      "input_a": "Nº Pasos Totales",
+      "input_b": "Nº Pasos Valor",
+      "formula": "Pasos Totales - Pasos Valor",
+      "impact": "Grasa Operativa: Pasos sobrantes que hay que extirpar"
+    },
+
+    "review": {
+      "input_revised_1": "Pasos Totales Post",
+      "input_revised_2": "Pasos Valor Post",
+      "result_revised": "Grasa Reducida"
+    }
+  },
+  {
+    "id": "UNI-S5",
+    "name": "Obsolescencia de Método",
+    "specialty": "procesos",
+    "plan": "PRE",
+    "domain": "mejora continua",
+    "description": "Métodos antiguos que generan errores y baja calidad.",
+
+    "kpi": {
+      "question": "¿Qué tan sana está tu producción?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Actualización de técnica",
+      "decision_explanation": "Eliminar métodos obsoletos",
+      "action": "Implementar una mejora semanal",
+      "action_explanation": "Aumenta calidad real",
+      "tool": "Círculo de Mejora Continua",
+      "tool_explanation": "Sistema de mejora constante",
+
+      "objective": "Aumentar calidad operativa",
+      "kpi_target": "Índice de salud > 90%",
+      "activation_condition": "Índice < 75%",
+      "success_condition": "Índice estabilizado por encima del 90%",
+      "risk_if_ignored": "Errores recurrentes y pérdida de clientes",
+      "sequence": [
+        "Identificar fallos",
+        "Aplicar mejora semanal",
+        "Revisar impacto"
+      ],
+      "impact_level": "medio",
+      "timeframe": "4 semanas"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Método",
+      "master_decision_explanation": "Asegurar calidad sostenible",
+      "master_action": "Actualizar procesos clave",
+      "master_action_explanation": "Evita errores repetitivos",
+      "master_tool": "Radar de Método",
+      "master_tool_explanation": "Monitoriza salud operativa"
+    },
+
+    "inputs": {
+      "input_a": "Total Pedidos",
+      "input_b": "Quejas",
+      "formula": "((Total - Quejas) / Total) x 100",
+      "impact": "Índice de Salud: Calidad real de tu producción"
+    },
+
+    "review": {
+      "input_revised_1": "Pedidos Post",
+      "input_revised_2": "Quejas Post",
+      "result_revised": "Salud Mejorada"
+    }
+  },
+  {
+    "id": "UNI-S6",
+    "name": "Despilfarro",
+    "specialty": "procesos",
+    "plan": "PRE",
+    "domain": "desperdicio",
+    "description": "Desperdicios por movimientos, esperas o stock innecesario.",
+
+    "kpi": {
+      "question": "¿Cuánta dependencia tienes de la memoria individual?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Eliminación de grasa",
+      "decision_explanation": "Reducir desperdicios",
+      "action": "Localizar desperdicios en el flujo",
+      "action_explanation": "Evita pérdidas ocultas",
+      "tool": "Sistema Kan-Ban",
+      "tool_explanation": "Optimiza reposición",
+
+      "objective": "Reducir desperdicios operativos",
+      "kpi_target": "Autonomía > 80%",
+      "activation_condition": "Autonomía < 60%",
+      "success_condition": "Autonomía estabilizada por encima del 80%",
+      "risk_if_ignored": "Dependencia de personas clave",
+      "sequence": [
+        "Identificar desperdicios",
+        "Aplicar Kan-Ban",
+        "Estandarizar reposición"
+      ],
+      "impact_level": "medio",
+      "timeframe": "2 semanas"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Desperdicio",
+      "master_decision_explanation": "Eliminar pérdidas estructurales",
+      "master_action": "Estandarizar reposición",
+      "master_action_explanation": "Evita roturas de stock",
+      "master_tool": "Radar de Mudas",
+      "master_tool_explanation": "Monitoriza desperdicios"
+    },
+
+    "inputs": {
+      "input_a": "Tareas Críticas",
+      "input_b": "Tareas Escritas",
+      "formula": "Tareas Escritas / Tareas Críticas",
+      "impact": "Ratio Autonomía: Seguridad si falta una persona clave"
+    },
+
+    "review": {
+      "input_revised_1": "Críticas Post",
+      "input_revised_2": "Escritas Post",
+      "result_revised": "Autonomía Mejorada"
+    }
+  },
+  {
+    "id": "UNI-S7",
+    "name": "Dependencia",
+    "specialty": "procesos",
+    "plan": "PRE",
+    "domain": "roles",
+    "description": "Dependencia excesiva de personas clave.",
+
+    "kpi": {
+      "question": "¿Cuántas horas podrías recuperar con tecnología adecuada?",
+      "scale_min": 1,
+      "scale_max": 4
+    },
+
+    "thresholds": {
+      "critical": 70,
+      "recommended": 85,
+      "optimizer": 95,
+      "elite": 100
+    },
+
+    "treatment": {
+      "decision": "Protocolización de roles",
+      "decision_explanation": "Independizar cargos",
+      "action": "Crear fichas de puesto con KPIs claros",
+      "action_explanation": "Reduce dependencia",
+      "tool": "Matriz de Polivalencia",
+      "tool_explanation": "Evalúa cobertura de roles",
+
+      "objective": "Reducir dependencia de personas clave",
+      "kpi_target": "Horas recuperables > 20%",
+      "activation_condition": "Dependencia > 40%",
+      "success_condition": "Dependencia reducida por debajo del 20%",
+      "risk_if_ignored": "Parálisis operativa si falta una persona",
+      "sequence": [
+        "Identificar roles críticos",
+        "Crear fichas de puesto",
+        "Redistribuir cargas"
+      ],
+      "impact_level": "alto",
+      "timeframe": "3 semanas"
+    },
+
+    "master_treatment": {
+      "master_decision": "Gobierno de Roles",
+      "master_decision_explanation": "Asegurar continuidad operativa",
+      "master_action": "Redistribuir cargas",
+      "master_action_explanation": "Evita cuellos de botella humanos",
+      "master_tool": "Radar de Roles",
+      "master_tool_explanation": "Monitoriza dependencia real"
+    },
+
+    "inputs": {
+      "input_a": "Tiempo a Mano",
+      "input_b": "Tiempo Auto",
+      "formula": "Tiempo Mano - Tiempo Auto",
+      "impact": "Potencial Mejora: Horas de vida recuperables al mes"
+    },
+
+    "review": {
+      "input_revised_1": "Mano Post",
+      "input_revised_2": "Auto Post",
+      "result_revised": "Horas Recuperadas"
+    }
+  },
+  {
+  "id": "UNI-S8",
+  "name": "Comunicación Interna Deficiente",
+  "specialty": "procesos",
+  "plan": "PRE",
+  "domain": "comunicación",
+  "description": "Órdenes dispersas y falta de canal oficial.",
+
+  "kpi": {
+    "question": "¿Decides por datos o por olfato?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Ritmos de gestión",
+    "decision_explanation": "Centralizar órdenes",
+    "action": "Implementar stand-up meeting diario",
+    "action_explanation": "Aumenta claridad",
+    "tool": "Manual de Comunicación Interna",
+    "tool_explanation": "Define canales oficiales",
+
+    "objective": "Aumentar claridad operativa",
+    "kpi_target": "Nivel de control > 80%",
+    "activation_condition": "Control < 60%",
+    "success_condition": "Comunicación estable y centralizada",
+    "risk_if_ignored": "Ruido operativo y errores por mala comunicación",
+    "sequence": [
+      "Definir canal oficial",
+      "Implementar reunión diaria",
+      "Eliminar órdenes por WhatsApp"
+    ],
+    "impact_level": "medio",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Comunicación",
+    "master_decision_explanation": "Evitar ruido operativo",
+    "master_action": "Estandarizar reuniones",
+    "master_action_explanation": "Aumenta alineación",
+    "master_tool": "Radar de Comunicación",
+    "master_tool_explanation": "Monitoriza control real"
+  },
+
+  "inputs": {
+    "input_a": "Datos Necesarios",
+    "input_b": "Datos Reales",
+    "formula": "Datos Reales / Datos Necesarios",
+    "impact": "Nivel de Control: Capacidad real de pilotar el negocio"
+  },
+
+  "review": {
+    "input_revised_1": "Datos Necesarios Post",
+    "input_revised_2": "Datos Reales Post",
+    "result_revised": "Control Mejorado"
+  }
+},
+{
+  "id": "UNI-S9",
+  "name": "Mantenimiento Deficiente",
+  "specialty": "procesos",
+  "plan": "PRE",
+  "domain": "mantenimiento",
+  "description": "Activos sin revisión que generan averías y paradas.",
+
+  "kpi": {
+    "question": "¿Cuánto dependes del dueño para operar?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Plan preventivo",
+    "decision_explanation": "Evitar paradas por avería",
+    "action": "Calendario de revisiones de activos clave",
+    "action_explanation": "Evita fallos críticos",
+    "tool": "Plan de Prevención",
+    "tool_explanation": "Estructura mantenimiento",
+
+    "objective": "Aumentar autonomía operativa",
+    "kpi_target": "Libertad > 60%",
+    "activation_condition": "Libertad < 40%",
+    "success_condition": "Dueño fuera de la operativa diaria",
+    "risk_if_ignored": "Paradas críticas y dependencia extrema",
+    "sequence": [
+      "Identificar activos clave",
+      "Programar revisiones",
+      "Automatizar recordatorios"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Activos",
+    "master_decision_explanation": "Asegurar continuidad operativa",
+    "master_action": "Automatizar revisiones",
+    "master_action_explanation": "Evita fallos humanos",
+    "master_tool": "Radar de Activos",
+    "master_tool_explanation": "Monitoriza estado real"
+  },
+
+  "inputs": {
+    "input_a": "Tiempo Dueño",
+    "input_b": "Horas Mes",
+    "formula": "100 - ((Dueño / Mes) x 100)",
+    "impact": "Sello S10 Operativo: % de Libertad del dueño"
+  },
+
+  "review": {
+    "input_revised_1": "Dueño Post",
+    "input_revised_2": "Mes Post",
+    "result_revised": "Libertad Aumentada"
+  }
+},
+{
+  "id": "UNI-S10",
+  "name": "Techo Operativo",
+  "specialty": "procesos",
+  "plan": "PRE",
+  "domain": "capacidad",
+  "description": "Capacidad insuficiente que limita crecimiento.",
+
+  "kpi": {
+    "question": "¿Cuánta energía se pierde en el atasco operativo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Ingeniería de costes",
+    "decision_explanation": "Optimizar capacidad productiva",
+    "action": "Rediseñar procesos para reducir coste unitario",
+    "action_explanation": "Aumenta eficiencia",
+    "tool": "Mapa de Valorización S10",
+    "tool_explanation": "Identifica cuellos de botella",
+
+    "objective": "Aumentar eficiencia operativa",
+    "kpi_target": "Eficiencia > 80%",
+    "activation_condition": "Eficiencia < 60%",
+    "success_condition": "Capacidad alineada con demanda",
+    "risk_if_ignored": "Estancamiento y pérdida de ventas",
+    "sequence": [
+      "Medir capacidad real",
+      "Identificar cuello de botella",
+      "Rediseñar proceso"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Capacidad",
+    "master_decision_explanation": "Asegurar escalabilidad operativa",
+    "master_action": "Optimizar recursos",
+    "master_action_explanation": "Evita saturación",
+    "master_tool": "Radar de Capacidad",
+    "master_tool_explanation": "Monitoriza eficiencia real"
+  },
+
+  "inputs": {
+    "input_a": "Capacidad",
+    "input_b": "Realidad",
+    "formula": "(Realidad / Capacidad) x 100",
+    "impact": "% Eficiencia: Cuánta energía se pierde en el atasco"
+  },
+
+  "review": {
+    "input_revised_1": "Capacidad Post",
+    "input_revised_2": "Realidad Post",
+    "result_revised": "Eficiencia Mejorada"
+  }
+}
+  ]
+}

@@ -1,0 +1,259 @@
+
+- Qué es MASESORA de verdad (identidad y promesa).
+- Cómo está construido por dentro (componentes).
+- El flujo de trabajo, fase a fase, paso a paso, con actores, datos y decisiones.
+🧩 VISIÓN COMPLETA DEL PROYECTO (BACKEND MAS@FRAME)(Esto es un mapa maestro: técnico, clínico y operativo. Tu referencia total.)1. Identidad y promesa de MASESORAMASESORA es una clínica de empresas que lleva a una organización desde una empresa en crisis, desordenada, sin control ni liquidez, hasta alcanzar una empresa resiliente, con continuidad operativa, caja blindada y excelencia sistematizada, mediante un sistema que combina:- escaner de salud empresarial
+- diagnóstico clínico empresarial,
+- decisiones operativas guiadas,
+- herramientas concretas de intervención,
+- y validación cuantitativa antes/después con garantía.
+No es un “software de KPIs” ni un “ERP de consultoría”. Es:- Un método clínico codificado: 10 especialidades × 10 síntomas = 100 “enfermedades” empresariales claramente definidas, cada una con su tratamiento.
+- Una máquina de decisiones: el ACI nunca se queda en blanco; siempre sabe qué hacer, con qué herramienta y qué impacto se busca.
+- Un sistema de garantía: los datos se definen para que la mejora sea medible, defendible. La promesa al cliente:
+“Si aplicas el tratamiento que define MASESORA, tus KPIs mejoran; si no mejoran, la responsabilidad queda trazable (datos, acciones, evidencias, colaboración).”
+2. Arquitectura funcional del sistema MASESORA2.1 Estructura operativa visible para el usuario (las 4 pestañas)- Pestaña 0 – Control y contrato
+- Gestión de roles: Optimizador (CC), ACI, cliente.
+- Activación de planes (PIE, PRE) por especialidad.
+- Gestión de contratos, pagos y garantías.
+- Configuración de qué módulos y síntomas están disponibles para cada cliente.
+- Pestaña 1 – Diagnóstico inicial y foto clínica
+- El ACI introduce los inputs iniciales por síntoma.
+- El sistema calcula KPI inicial y resulta el estado clínico (rojo/ámbar/verde/elite), y una narrativa.
+- Se ve el mapa de salud empresarial inicial por especialidad y síntoma.
+- Se identifica qué síntomas requieren tratamiento.
+- Pestaña 2 – Tratamiento (FRAME: las herramientas MASESORA)
+- Para cada síntoma con necesidad de tratamiento, el sistema muestra:
+- Decisión clínica (“qué hay que hacer”).
+- Acción operativa (“cómo se hace en la empresa”).
+- Herramienta MASESORA (“con qué plantilla / instrumento concreto”).
+- El ACI:
+- aplica "accion" con la "herramienta", y le lleva a la "toma decisiones"
+- Pestaña 3 – Validación, resultado y Sello S10
+- Tras el periodo de trabajo (ej. 6 semanas), el ACI y el CC se reúnen e introducen inputs revisados.
+- El sistema recalcula KPIs, compara antes/después y muestra:
+- mejora o empeoramiento,
+- impacto cuantitativo,
+- cumplimiento o no de los criterios de garantía.
+(AQUI NECESITAMOS AMPLIAR EXACTAMENTE COMO FUNCIONA EL TRATAMIENTO)
+2.2 Especialidades, Departamentos, Síntomas y Planes- **Especialidades y departamentos "UCI FINANCIERA": "FINANZAS", "UNIDAD DE PROCESOS": "PROCESOS", "CARDIOLOGIA COMERCIAL": "COMERCIAL", "NEUROLOGIA ESTRATÉGICA": "ESTRATÉGIA", "GESTION CLINICA": "GESTION", "CIRUJIA DE MARCA": "MARCA", "PSIQUIATRÍA ORGANIZACIONAL": "ORGANIZACIONAL", "RESCATE DEPERSONAS": "PERSONAS", "TERAPIA DE EXPERIENCIA": "EXPERIENCIA", "EXCELENCIA OPERATIVA": "EXCELENCIA" "EXCELENCIA" ]
+- Síntomas (S1–S10 por especialidad):
+- Cada síntoma es:
+- una “patología” concreta (“Hemorragia de Caja”, “Dependencia del Dueño”, “Cuellos de Botella”, etc.),
+- con inputs, fórmula, umbrales y herramientas asociadas.
+- Planes comerciales:
+- PIE: intervención mínima pero potente — 3 síntomas críticos por especialidad.
+- PRE: intervención completa — los 10 síntomas por especialidad.
+- Roles:
+- Optimizador / Consultor Certificado: diseña el contrato, asigna ACI, hace seguimiento del progreso del ACI en el sistema, da de alta y certifica.
+- ACI: ejecuta el tratamiento dentro de la empresa, alimenta el sistema con datos y acciones.
+- Cliente (empresa): ve resultados, contratos y altas.
+- Admin (Masesora): asigna Optimizador (Consultor Certificado) a un cliente. Asigna planes (pagados) al cliente y acceso al sistema.
+2.3 Modelo clínico-datos de un síntomaCada síntoma se codifica como una unidad clínica con:- Identidad:
+- id (p.ej. FIN-S1, OPE-S3, TER-S1),
+- name (nombre de la patología),
+- specialty (finanzas, excelencia, etc.),
+- domain (sub-área: liquidez, continuidad, flujo, etc.),
+- plan (PIE/PRE).
+- Modelo de cálculo:
+- Inputs definidos para el ACI:
+- input_a, input_b, etc.,
+- definidos con precisión para que no rompan la garantía:
+- ej. “ingresos promedio 3 últimos meses”, “gastos fijos promedio”.
+- Fórmula KPI clara (ej. input_a / input_b, índices, ratios, etc.).
+- Modelo clínico:
+- kpi_value: resultado numérico.
+- diagnosis.state: critical / recommended / optimizer / elite.
+- diagnosis.treatment_required: true/false (¿hay que intervenir?).
+- Modelo de tratamiento:
+- treatment_code: referencia a la herramienta.
+- treatment: descripción de la intervención (decisión + acción).
+- master_treatment: integración con un plan más global (por módulo o por empresa).
+- Modelo de narrativa:
+- Texto que explica:
+- qué significa el KPI,
+- en qué estado está la empresa,
+- qué se va a hacer,
+- qué se espera lograr.
+- Modelo de progreso (antes/después):
+- progress.kpi_before, progress.kpi_after.
+- progress.impact.raw_text: relato del impacto conseguido.
+- Campos para vincular acciones y herramientas usadas.
+2.4 Arquitectura técnica alineada con esto
+- Backend:
+  - Endpoints “de negocio” (clientes, planes, ACIs, contratos, dashboard).  
+  - Motor clínico (síntomas, KPIs, estados, narrativas, antes/después).
+- Frontend:
+  - Implementa las 4 pestañas.
+  - Se alimenta del motor clínico y de los endpoints de negocio.  
+- Base de datos:
+  - `clients`, `plans`, `acis`, `specialities`, `symptoms`,  
+  - `symptom_data` (datos iniciales y revisados por cliente/síntoma),  
+  - `evidences` (trabajo real),  
+  - `contracts` (estado jurídico y económico).
+3. Flujo de trabajo detallado del sistema MASESORA
+Fase 1: Escáner y decisión de intervención (antes del SaaS “de uso diario”)
+**Objetivo:** decidir dónde intervenir, cuánto intervenir y con qué plan (PIE/PRE).
+1. **Escáner de salud empresarial** HERRAMIENTA EXTERNA que aplica un cuestionario  y su resultado identifica las **especialidades** donde hay síntomas que hay que tratar. TRAS PRESUPUESTO, CLIENTE PAGA LOS PLANES ELEGIDOS. 
+ 
+2. **Propuesta de intervención**
+   - Actores: Admin da acceso al cliente a los planes comprados y asigna Optimizador. 
+   - **Acción:** traduce el escáner en una propuesta de especialidades a trabajar,
+     - plan PIE o PRE en cada una. Ejemplo:   
+     - Finanzas: PRE (10 síntomas).  
+     - Procesos: PIE (3 síntomas).  
+     - Personas: PIE (3 síntomas).
+
+3. **Definición de contrato y garantía**
+   - **Actor:** Optimizador.  
+   - **Acción:** configura:
+     - qué se incluye,  
+     - qué se promete,  
+     - qué se mide,  
+     - en qué plazo.  
+   - **Resultado esperado:** documento de contrato con cláusula de garantía y definición de qué se considerará “mejora verificable”.
+
+> Esta fase aún no está 100% en el backend, pero es el contexto lógico de /api/clients, /api/plans, /api/contracts.
+Fase 2: Onboarding en la plataforma (Pestaña 0)
+**Objetivo:** preparar el entorno digital para que el ACI pueda trabajar.
+4. **Creación de cliente en el sistema**
+   - **Actor:** Optimizador.  
+   - **Acción:** crea el cliente en `/api/clients`.  
+   - **Datos clave:**  
+     - datos de la empresa,  
+     - optimizador responsable (CC),  
+     - contacto principal
+     - pagado: sí/no,  
+
+
+5. **Configuración de planes y especialidades**
+   - **Actor:** Admin.  
+   - **Acción:** en `/api/plans` y `/api/modules`, asigna:
+     - especialidades activas (finanzas, procesos, etc.),  
+     - plan PIE/PRE para cada una.  
+   - **Resultado:** el sistema sabe qué síntomas se van a evaluar para ese cliente.
+
+6. **Asignación de ACI**
+   - **Actor:** Optimizador.  
+   - **Acción:** crea o asigna el ACI del cliente en `/api/acis`.  
+   - **Permisos:** el ACI solo podrá ver y trabajar sobre:
+     - su empresa,  
+     - las especialidades y síntomas contratados.
+
+7. **Contrato **
+   - **Actor:** Cliente (firma), Optimizador (emisión).  
+   - **Acción:** se formaliza el contrato en `/api/contracts`:
+     - firmado: sí/no,  
+     - garantía activa: sí/no.  
+   - **Resultado:** acceso al sistema. 
+Fase 3: Evaluación inicial por síntomas (Pestaña 1)
+**Objetivo:** construir la foto clínica inicial de la empresa, por síntoma.
+8. **ACI entra a la pestaña 1 y ve los síntomas activos**
+   - **Actor:** ACI.  
+   - **Interfaz:** lista de módulos y síntomas disponibles (según plan).  
+   - **Ejemplo:**  
+     - Finanzas – S1 Hemorragia de Caja, S2 Infección de Margen, etc.  
+     - Excelencia – S3 Falta de Continuidad Operativa, etc.
+
+9. **ACI introduce inputs iniciales por síntoma**
+   - **Actor:** ACI.  
+   - **Acción:** para cada síntoma:
+     - rellena los campos que el sistema pide (`input_a`, `input_b`, …) con definiciones claras (ingresos promedio, stock medio, etc.).  
+   - **Backend:** se envía una request al motor clínico (`/clinical-eval` o batch) con:
+     - `symptom_id`,  
+     - `inputs`,  
+     - `post_treatment: false`.
+
+10. **El motor clínico calcula KPI y diagnóstico inicial**
+    - **Backend:**  
+      - `kpi_engine` aplica la fórmula.  
+      - `interpretation_engine` determina el estado (critical / recommended / optimizer / elite).  
+      - se genera narrativa clínica mínima:
+        - “El KPI actual indica un estado CRÍTICO dentro de X…”  
+    - **Datos guardados:**  
+      - en `symptom_data` se graban:
+        - `kpi_before`,  
+        - estado inicial,  
+        - fecha,  
+        - quién (ACI).
+11. **El sistema arma el mapa de salud inicial**
+    - **Frontend (pestaña 1 / dashboard inicial):**
+      - semáforos por síntoma,  
+      - resumen por módulo,  
+      - priorización de qué tratar primero (los rojos).
+> Aquí es donde Swagger, hoy, ya entra: estás probando este cálculo y diagnóstico.
+Fase 4: Tratamiento con herramientas MASESORA (Pestaña 2)
+**Objetivo:** no solo medir, sino actuar y registrar el trabajo real.
+12. **Identificación de síntomas a tratar**
+    - **Actor:** ACI + Optimizador (si quiere priorizar).  
+    - los síntomas en estado(THRESHOLD) CRITICAL/RECOMMENDED/OPTIMIZED HACEN TRATAMIENTO. OPTIMIZED PUEDEN ELEGIR EL TRATAMIENTO MASTER 2.0 SI PREFIEREN.   
+
+13. **El sistema propone decisiones, acciones y herramientas. Sera un artefacto visual atractivo para el ACi, intuitivo. 
+    - **Backend:** cada síntoma tiene asociadas:
+      - decisiones (“qué hacer”),  
+      - acciones (“cómo hacerlo”),  
+      - herramientas (“con qué instrumento”).  
+    - **Ejemplo en Finanzas – Hemorragia de Caja:**
+      - Decisión: Priorización de pagos.  
+      - Acción: Arqueo de caja y plan de cobro inmediato.  
+      - Herramienta: Matriz de Tesorería.
+
+14. **El ACI ejecuta y registra el tratamiento**
+    - **Actor:** ACI.  
+    - **Acciones:**
+      - abre la herramienta (plantilla, matriz, hoja, lo que sea).  
+      - realiza el trabajo con el cliente.  
+      - registra:
+        - qué decisión se tomó,  
+        - qué acción se ejecutó,  
+        - qué herramienta se usó,  
+        - evidencias (archivos, fotos, PDFs, notas).  
+    - **Backend:**  
+      - `evidences` almacena las herramientas usadas y sus resultados.  
+      - `symptom_data` se enriquece con información de tratamiento aplicado.
+
+15. **Seguimiento intermedio** PREVIO PERMISO A ADMIN Y DE  FORMA Opcional: el sistema puede permitir recalcular KPIs intermedios si hay cambios relevantes en los inputs antes de la revisión final.
+
+Fase 5: Revisión, Alta y Recomendación (descuento otra especialidad) (Pestaña 3)
+Objetivo:** demostrar, con datos, que el tratamiento ha funcionado (si o si).
+16. **ACI introduce inputs revisados**
+    - **Actor:** ACI y Optimizador
+    - **Momento:** al cabo de X semanas de trabajo.  
+    - **Acción:** para cada síntoma trabajado:
+      - introduce la nueva foto (mismos inputs, nuevos valores).  
+    - **Backend:** se envía una request con:
+      - `symptom_id`,  
+      - `inputs_revised`,  
+      - `post_treatment: true`.
+
+17. **El motor clínico recalcula y compara**
+    - **Backend:**  
+      - recalcula `kpi_after`,  
+      - compara con `kpi_before`,  
+      - determina:
+        - mejora, estancamiento o empeoramiento,  
+        - estado clínico final.  
+      - llena `progress`:
+        - `kpi_before`, `kpi_after`,  
+        - posible texto de impacto (“Se ha mejorado X puntos, pasando de crítico a recomendado…”).
+
+18. **El dashboard final muestra la historia clínica**
+    - **Frontend (pestaña 3 / dashboard S10):**
+      - comparativa antes/después por síntoma y módulo,  
+      - visión agregada (por especialidad y empresa):  
+        - % síntomas mejorados,  
+        - % síntomas en verde,  
+        - evolución global.  
+
+19. Alta y Recomendación (descuento otra especialidad). Aplicación de la garantía y sello S10**    - **Actor:** Optimizador.  
+    - **Acción:** revisa el dashboard,  
+      - verifica si se han cumplido los criterios de garantía (definidos en contrato).  
+    - **Resultado:**
+      - si sí → se activa el Sello S10 (y queda registrado en `contracts` / `clients`).  
+      - si no → se dispara la lógica acordada (extensión, revisión, devolución, etc.).
+- si excellence: acceso al Club de Personas Excelentes. 
+
+
+- qué parte del flujo ya podemos simular y validar en Swagger,  
+- qué endpoints tocar,  
+- con qué inputs,  
+- y qué conclusiones sacar para el proyecto (no solo “funciona / no funciona”).

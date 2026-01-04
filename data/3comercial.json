@@ -1,0 +1,655 @@
+{
+  "specialty": "comercial",
+  "symptoms": [
+  {
+  "id": "CARDIO-S1",
+  "name": "Arritmia de Ventas",
+  "specialty": "comercial",
+  "plan": "PIE",
+  "domain": "ventas",
+  "description": "Irregularidad en la entrada de clientes y ventas mensuales.",
+
+  "kpi": {
+    "question": "¿Tu esfuerzo comercial trae suficientes clientes nuevos?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Radiografía de cartera",
+    "decision_explanation": "Detectar clientes activos, dormidos y perdidos",
+    "action": "Clasificación de clientes",
+    "action_explanation": "Permite priorizar esfuerzos",
+    "tool": "Matriz ABC de Clientes",
+    "tool_explanation": "Identifica clientes de alto valor",
+
+    "objective": "Aumentar tasa de cierre",
+    "kpi_target": "Tasa de cierre > 20%",
+    "activation_condition": "Tasa de cierre < 10%",
+    "success_condition": "Crecimiento estable de clientes nuevos",
+    "risk_if_ignored": "Caída de ventas y dependencia de pocos clientes",
+    "sequence": [
+      "Clasificar cartera",
+      "Detectar clientes dormidos",
+      "Reactivar clientes perdidos"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Comercial",
+    "master_decision_explanation": "Asegurar flujo constante de clientes",
+    "master_action": "Optimizar pipeline completo",
+    "master_action_explanation": "Evita dientes de sierra",
+    "master_tool": "Radar Comercial",
+    "master_tool_explanation": "Monitoriza salud de ventas"
+  },
+
+  "inputs": {
+    "input_a": "Nº Prospectos",
+    "input_b": "Nº Ventas",
+    "formula": "(Ventas / Prospectos) x 100",
+    "impact": "Tasa de Cierre: % de efectividad de tu mensaje"
+  },
+
+  "review": {
+    "input_revised_1": "Prospectos Post",
+    "input_revised_2": "Ventas Post",
+    "result_revised": "Tasa de Cierre Mejorada"
+  }
+},
+{
+  "id": "CARDIO-S2",
+  "name": "Fuga de Pacientes",
+  "specialty": "comercial",
+  "plan": "PIE",
+  "domain": "retención",
+  "description": "Clientes que dejan de comprar durante largos periodos.",
+
+  "kpi": {
+    "question": "¿Qué riesgo tienes si tu cliente principal se va?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Protocolo de rescate",
+    "decision_explanation": "Evitar pérdida de clientes",
+    "action": "Contacto inmediato con clientes inactivos",
+    "action_explanation": "Recupera ventas perdidas",
+    "tool": "Plan de Recuperación Flash",
+    "tool_explanation": "Activa clientes dormidos",
+
+    "objective": "Reducir dependencia del cliente top",
+    "kpi_target": "Riesgo < 20%",
+    "activation_condition": "Riesgo > 35%",
+    "success_condition": "Cartera diversificada",
+    "risk_if_ignored": "Riesgo de quiebra si el cliente top se va",
+    "sequence": [
+      "Identificar clientes inactivos",
+      "Ejecutar protocolo de rescate",
+      "Reactivar ventas"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Cartera Comercial",
+    "master_decision_explanation": "Evitar dependencia peligrosa",
+    "master_action": "Diversificar cartera",
+    "master_action_explanation": "Aumenta estabilidad",
+    "master_tool": "Radar de Riesgo Comercial",
+    "master_tool_explanation": "Monitoriza concentración de ventas"
+  },
+
+  "inputs": {
+    "input_a": "Venta Cliente Top",
+    "input_b": "Venta Total",
+    "formula": "(Cliente Top / Venta Total) x 100",
+    "impact": "% de Riesgo: Nivel de peligro si ese cliente se va"
+  },
+
+  "review": {
+    "input_revised_1": "Venta Top Post",
+    "input_revised_2": "Venta Total Post",
+    "result_revised": "Riesgo Reducido"
+  }
+},
+{
+  "id": "CARDIO-S3",
+  "name": "Oferta Confusa",
+  "specialty": "comercial",
+  "plan": "PIE",
+  "domain": "producto",
+  "description": "El cliente no entiende qué vendes ni por qué debería comprarte.",
+
+  "kpi": {
+    "question": "¿Vendes por sistema o por suerte?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Inyección de producto estrella",
+    "decision_explanation": "Claridad absoluta en la oferta",
+    "action": "Reempaquetar el producto de mayor margen",
+    "action_explanation": "Aumenta conversión",
+    "tool": "Script de Valor Único",
+    "tool_explanation": "Define mensaje claro",
+
+    "objective": "Aumentar estabilidad de ventas",
+    "kpi_target": "Ratio estabilidad > 70%",
+    "activation_condition": "Ventas muy irregulares",
+    "success_condition": "Ventas predecibles",
+    "risk_if_ignored": "Dientes de sierra y falta de control",
+    "sequence": [
+      "Identificar producto estrella",
+      "Reempaquetar oferta",
+      "Reescribir mensaje comercial"
+    ],
+    "impact_level": "medio",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Oferta Comercial",
+    "master_decision_explanation": "Asegurar claridad estratégica",
+    "master_action": "Rediseñar catálogo",
+    "master_action_explanation": "Evita confusión del cliente",
+    "master_tool": "Radar de Oferta Comercial",
+    "master_tool_explanation": "Monitoriza estabilidad de ventas"
+  },
+
+  "inputs": {
+    "input_a": "Ventas Mes 1",
+    "input_b": "Ventas Mes 2",
+    "formula": "Mes 2 / Mes 1",
+    "impact": "Ratio Estabilidad: Nivel de dientes de sierra"
+  },
+
+  "review": {
+    "input_revised_1": "Ventas Altas Post",
+    "input_revised_2": "Ventas Bajas Post",
+    "result_revised": "Estabilidad Mejorada"
+  }
+},
+{
+  "id": "CARDIO-S4",
+  "name": "Pipeline Obstruido",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "captación",
+  "description": "Leads basura y prospección sin calidad.",
+
+  "kpi": {
+    "question": "¿Te cuesta más captar un cliente que lo que te deja?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Limpieza de prospección",
+    "decision_explanation": "Eliminar leads basura",
+    "action": "Priorizar leads de alto potencial",
+    "action_explanation": "Aumenta eficiencia comercial",
+    "tool": "Embudo de Conversión",
+    "tool_explanation": "Evalúa calidad de leads",
+
+    "objective": "Reducir CAC",
+    "kpi_target": "CAC < 50€",
+    "activation_condition": "CAC > 100€",
+    "success_condition": "Prospección rentable",
+    "risk_if_ignored": "Pérdida de dinero en captación",
+    "sequence": [
+      "Analizar leads actuales",
+      "Eliminar leads basura",
+      "Optimizar embudo"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Captación",
+    "master_decision_explanation": "Asegurar rentabilidad comercial",
+    "master_action": "Optimizar canales",
+    "master_action_explanation": "Reduce coste de adquisición",
+    "master_tool": "Radar de CAC",
+    "master_tool_explanation": "Monitoriza coste real por cliente"
+  },
+
+  "inputs": {
+    "input_a": "Gasto Comercial",
+    "input_b": "Nº Clientes Nuevos",
+    "formula": "Gasto / Clientes Nuevos",
+    "impact": "CAC: Coste real de adquirir un cliente"
+  },
+
+  "review": {
+    "input_revised_1": "Gasto Post",
+    "input_revised_2": "Clientes Nuevos Post",
+    "result_revised": "CAC Reducido"
+  }
+},
+{
+  "id": "CARDIO-S5",
+  "name": "Recurrencia Débil",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "fidelización",
+  "description": "Clientes que no repiten compra con regularidad.",
+
+  "kpi": {
+    "question": "¿Tus clientes actuales están vivos o muertos?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Plan de fidelización",
+    "decision_explanation": "Crear hábito de compra",
+    "action": "Implementar ciclos de recompra automática",
+    "action_explanation": "Aumenta recurrencia",
+    "tool": "Calendario de Contacto",
+    "tool_explanation": "Activa recordatorios",
+
+    "objective": "Aumentar ventas recurrentes",
+    "kpi_target": "Fidelización > 40%",
+    "activation_condition": "Fidelización < 25%",
+    "success_condition": "Clientes activos y recurrentes",
+    "risk_if_ignored": "Dependencia de clientes nuevos",
+    "sequence": [
+      "Identificar clientes antiguos",
+      "Crear plan de recompra",
+      "Automatizar recordatorios"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Fidelización",
+    "master_decision_explanation": "Aumentar valor de vida del cliente",
+    "master_action": "Optimizar ciclo de recompra",
+    "master_action_explanation": "Aumenta recurrencia sostenible",
+    "master_tool": "Radar de Fidelización",
+    "master_tool_explanation": "Monitoriza ventas recurrentes"
+  },
+
+  "inputs": {
+    "input_a": "Ventas Clientes Antiguos",
+    "input_b": "Venta Total",
+    "formula": "(Ventas Ant. / Total) x 100",
+    "impact": "% Fidelización: Salud de tu cartera recurrente"
+  },
+
+  "review": {
+    "input_revised_1": "Ventas Antiguos Post",
+    "input_revised_2": "Ventas Totales Post",
+    "result_revised": "Fidelización Mejorada"
+  }
+},
+{
+  "id": "CARDIO-S6",
+  "name": "Ticket Medio Bajo",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "precio",
+  "description": "El valor medio de cada venta es demasiado bajo para sostener el negocio.",
+
+  "kpi": {
+    "question": "¿Tu precio está fuera de mercado o es demasiado bajo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Estrategia de upsell/cross-sell",
+    "decision_explanation": "Vender más al mismo cliente",
+    "action": "Diseñar ofertas complementarias",
+    "action_explanation": "Aumenta ticket medio",
+    "tool": "Matriz de Venta Cruzada",
+    "tool_explanation": "Detecta combinaciones rentables",
+
+    "objective": "Aumentar ticket medio",
+    "kpi_target": "Ticket medio > 20% del actual",
+    "activation_condition": "Ticket medio estancado",
+    "success_condition": "Ticket medio creciente y estable",
+    "risk_if_ignored": "Necesidad de captar más clientes para sobrevivir",
+    "sequence": [
+      "Analizar productos complementarios",
+      "Crear combos de valor",
+      "Ofrecer upsell en cada venta"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Precio",
+    "master_decision_explanation": "Asegurar precios alineados al valor",
+    "master_action": "Optimizar estrategia de precios",
+    "master_action_explanation": "Evita ser demasiado barato",
+    "master_tool": "Radar de Precio",
+    "master_tool_explanation": "Monitoriza aceptación del mercado"
+  },
+
+  "inputs": {
+    "input_a": "Presupuestos Aceptados",
+    "input_b": "Presupuestos Totales",
+    "formula": "(Aceptados / Totales) x 100",
+    "impact": "Termómetro Precio: Si cierras el 100%, eres demasiado barato"
+  },
+
+  "review": {
+    "input_revised_1": "Aceptados Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Precio Optimizado"
+  }
+},
+{
+  "id": "CARDIO-S7",
+  "name": "Seguimiento Inexistente",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "postventa",
+  "description": "No existe un sistema de seguimiento tras la primera venta.",
+
+  "kpi": {
+    "question": "¿Sabes cuánto vale cada operación realmente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Automatización de hitos",
+    "decision_explanation": "Evitar olvidos y pérdidas de clientes",
+    "action": "Configurar secuencias de seguimiento",
+    "action_explanation": "Aumenta recurrencia",
+    "tool": "Protocolo de Post-Venta",
+    "tool_explanation": "Define pasos claros",
+
+    "objective": "Aumentar ticket medio y recurrencia",
+    "kpi_target": "Ticket medio > 15% del actual",
+    "activation_condition": "Ticket medio bajo",
+    "success_condition": "Seguimiento consistente",
+    "risk_if_ignored": "Clientes que no vuelven",
+    "sequence": [
+      "Definir hitos postventa",
+      "Automatizar recordatorios",
+      "Medir recurrencia"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Postventa",
+    "master_decision_explanation": "Aumentar valor de vida del cliente",
+    "master_action": "Optimizar experiencia postventa",
+    "master_action_explanation": "Aumenta fidelización",
+    "master_tool": "Radar de Postventa",
+    "master_tool_explanation": "Monitoriza recurrencia real"
+  },
+
+  "inputs": {
+    "input_a": "Facturación Total",
+    "input_b": "Nº Facturas",
+    "formula": "Facturación / Nº Facturas",
+    "impact": "Ticket Medio: Valor real de cada operación"
+  },
+
+  "review": {
+    "input_revised_1": "Facturación Post",
+    "input_revised_2": "Facturas Post",
+    "result_revised": "Ticket Medio Mejorado"
+  }
+},
+{
+  "id": "CARDIO-S8",
+  "name": "Dependencia de Canal",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "captación",
+  "description": "Dependencia excesiva de un único canal de captación.",
+
+  "kpi": {
+    "question": "¿Cuánto tardas en enamorar al cliente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Diversificación comercial",
+    "decision_explanation": "Abrir nuevas vías de captación",
+    "action": "Testar un nuevo canal",
+    "action_explanation": "Reduce riesgo",
+    "tool": "Mapa de Canales de Ingreso",
+    "tool_explanation": "Evalúa canales alternativos",
+
+    "objective": "Reducir dependencia de un solo canal",
+    "kpi_target": "Ciclo de venta < 20 días",
+    "activation_condition": "Ciclo de venta > 30 días",
+    "success_condition": "Captación diversificada",
+    "risk_if_ignored": "Riesgo extremo si el canal principal falla",
+    "sequence": [
+      "Analizar canal actual",
+      "Testar canal alternativo",
+      "Medir conversión"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Canales",
+    "master_decision_explanation": "Asegurar flujo estable de clientes",
+    "master_action": "Diversificar canales",
+    "master_action_explanation": "Evita dependencia peligrosa",
+    "master_tool": "Radar de Canales",
+    "master_tool_explanation": "Monitoriza rendimiento por canal"
+  },
+
+  "inputs": {
+    "input_a": "Día 1er Contacto",
+    "input_b": "Día de Pago",
+    "formula": "Día Pago - Día Contacto",
+    "impact": "Ciclo de Venta: Días que tarda tu dinero en volver a casa"
+  },
+
+  "review": {
+    "input_revised_1": "Contacto Post",
+    "input_revised_2": "Pago Post",
+    "result_revised": "Ciclo Reducido"
+  }
+},
+{
+  "id": "CARDIO-S9",
+  "name": "Mensaje Inefectivo",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "comunicación",
+  "description": "El mensaje comercial no conecta con el cliente ideal.",
+
+  "kpi": {
+    "question": "¿Sabes por qué no te compran?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Optimización de conversión",
+    "decision_explanation": "Hablar al dolor real del cliente",
+    "action": "Cambiar enfoque de 'lo que hago' a 'lo que resuelvo'",
+    "action_explanation": "Aumenta conversión",
+    "tool": "Guía de Objeciones y Cierre",
+    "tool_explanation": "Mejora argumentario",
+
+    "objective": "Aumentar aprendizaje comercial",
+    "kpi_target": "Nivel de aprendizaje > 50%",
+    "activation_condition": "Motivos identificados < 20%",
+    "success_condition": "Mensaje alineado al cliente ideal",
+    "risk_if_ignored": "Pérdida de ventas por mala comunicación",
+    "sequence": [
+      "Registrar objeciones",
+      "Clasificar motivos de no compra",
+      "Reescribir mensaje"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Mensaje",
+    "master_decision_explanation": "Asegurar claridad y persuasión",
+    "master_action": "Optimizar narrativa comercial",
+    "master_action_explanation": "Aumenta conversión sostenible",
+    "master_tool": "Radar de Mensaje",
+    "master_tool_explanation": "Monitoriza efectividad del discurso"
+  },
+
+  "inputs": {
+    "input_a": "Ventas Perdidas",
+    "input_b": "Motivos Identificados",
+    "formula": "(Motivos / Perdidas) x 100",
+    "impact": "Nivel de Aprendizaje: Capacidad de mejorar el producto"
+  },
+
+  "review": {
+    "input_revised_1": "Perdidas Post",
+    "input_revised_2": "Motivos Post",
+    "result_revised": "Aprendizaje Mejorado"
+  }
+},
+{
+  "id": "CARDIO-S10",
+  "name": "Venta Errática",
+  "specialty": "comercial",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Ventas inestables y dependientes del azar o del dueño.",
+
+  "kpi": {
+    "question": "¿Cuánta fuerza tiene tu marca sin que tú estés presente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Optimización del LTV",
+    "decision_explanation": "Aumentar valor de vida del cliente",
+    "action": "Implementar sistema de lealtad",
+    "action_explanation": "Aumenta recurrencia",
+    "tool": "Pirámide de Fidelización",
+    "tool_explanation": "Define niveles de lealtad",
+
+    "objective": "Aumentar ventas orgánicas",
+    "kpi_target": "Referidos > 20%",
+    "activation_condition": "Referidos < 10%",
+    "success_condition": "Marca que se recomienda sola",
+    "risk_if_ignored": "Dependencia del dueño para vender",
+    "sequence": [
+      "Crear programa de referidos",
+      "Incentivar recomendaciones",
+      "Medir ventas orgánicas"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Marca Comercial",
+    "master_decision_explanation": "Aumentar reputación y autoridad",
+    "master_action": "Optimizar reputación",
+    "master_action_explanation": "Aumenta ventas orgánicas",
+    "master_tool": "Radar de Marca",
+    "master_tool_explanation": "Monitoriza reputación real"
+  },
+
+  "inputs": {
+    "input_a": "Ventas de Referidos",
+    "input_b": "Venta Total",
+    "formula": "(Referidos / Total) x 100",
+    "impact": "Sello S10 Comercial: Poder de tu marca"
+  },
+
+  "review": {
+    "input_revised_1": "Referidos Post",
+    "input_revised_2": "Total Post",
+    "result_revised": "Marca Fortalecida"
+  }
+}
+  ]
+}

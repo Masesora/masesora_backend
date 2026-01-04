@@ -1,0 +1,598 @@
+**Plan para poner todo en forma**
+
+Voy a estructurar mi respuesta de la siguiente manera: primero un mapeo de la arquitectura actual y las conexiones entre los archivos mencionados, aclarando que la confusión entre *clinical_eval.py* y el archivo correcto podría ser un problema en nombre. Luego, identificaré los problemas estructurales detectados, agrupándolos según sea necesario. Después, elaboraré un plan de refactorización con pasos claros sin entrar en detalles de código, solo tipos de cambios esperados. Al final, resaltaré lo que se espera para la Fase 4 (tratamiento) una vez finalizado.
+Tú lo que quieres ahora es **la foto completa** y un **plan quirúrgico**, no ir parche por parche.
+
+Voy a hacerlo en dos bloques:
+
+1. **Radiografía de lo que tienes ahora** (cómo se conectan los archivos y dónde se rompen).  
+2. **Plan directo para poner el motor a punto y poder seguir con Fase 4**.
+
+---
+
+## 1. Radiografía de la arquitectura actual
+
+### 1.1. Entrada del sistema
+
+**Archivo:** `main.py`  
+
+Conecta:
+
+- `/clients`, `/contracts`, `/symptom-master`, `/catalog`
+- `/clinical` (router antiguo de cliente)
+- `/clinical-eval` (router que tú pretendes usar para Fase 3, pero en `main.py` lo incluyes sin prefix)
+- `/batch` → `batch_router`
+- `/onboarding`, `/intake`, `/review`, `/s10` (fases avanzadas aún no alineadas)
+
+Resultado: Swagger carga **motores antiguos + motores nuevos + flujos avanzados** todo junto.
+
+---
+
+### 1.2. Motor clínico “global” (correcto pero mal usado)
+
+**Archivos claves:**
+
+- `run_clinical_model.py`
+- `loader.py`
+- `kpi_engine.py`
+- `treatment_engine`, `impact_engine`, `ProgressModel`
+
+**Conexiones:**
+
+- `batch_router.py` → `run_clinical_batch`
+- `run_clinical_batch` → `load_symptoms` (catálogo `symptoms.json`)
+- `evaluar_sintoma` → `calcular_kpi`, `interpretar_kpi` / `evaluar_post_tratamiento`
+- Usa:
+  - thresholds del catálogo  
+  - treatment + master_treatment  
+  - impacto  
+  - progress model  
+  - narrativa MAS por síntoma
+
+Este conjunto es **tu motor clínico MAS bien diseñado**, a nivel de lógica.
+
+---
+
+### 1.3. Motor clínico “por síntoma / por cliente” (antiguo, desalineado)
+
+**Archivo que has pasado como `clinical_eval.py` pero en realidad es un router de otra capa:**
+
+- `router = APIRouter(prefix="/clinical", tags=["clinical"])`
+- Endpoint: `/client/{client_id}/symptom/{code}`
+
+Conexiones:
+
+- Usa `symptom_master` en Mongo, no el `symptoms.json`.
+- Usa `ClientSymptomState` y guarda en `client_symptom_states`.
+- Hardcodea:
+  - `department="UCI"`
+  - `specialty="S1"`
+- Llama a `compute_kpi` cuando el motor expone `calcular_kpi`.
+- Calcula un `overview` del cliente con verdes/ámbar/rojos y sello S10.
+
+Este router pertenece a **otra versión de arquitectura**:
+
+- ligada a cliente
+- ligada a una sola unidad (UCI)
+- con nombres incoherentes (`compute_kpi` vs `calcular_kpi`)
+
+---
+
+### 1.4. El batch clínico
+
+**Archivo:** `batch_router.py`  
+Conexión:
+
+- Endpoint `/batch/evaluate-batch`
+- Llama a `run_clinical_batch(user_inputs, post_treatment)`
+
+**Archivo:** `run_clinical_model.py`
+
+- `load_symptoms()` carga todo el catálogo (100 síntomas).
+- Para cada síntoma, llama a `evaluar_sintoma(s, user_inputs, post_treatment)`.
+
+Problema estructural:
+
+- `user_inputs` es un diccionario plano con `input_a`, `input_b`.
+- Se pasa el mismo input a todos los síntomas.
+- El batch evalúa SIEMPRE TODOS los síntomas del catálogo.
+
+---
+
+### 1.5. Loader y KPI
+
+**Archivo:** `loader.py`
+
+- Carga `data/symptoms.json`.
+- Aplana por specialty.
+- Devuelve un listado limpio de síntomas.
+
+**Archivo:** `kpi_engine.py`
+
+- `calcular_kpi(symptom_id, input_a, input_b)` → correcto.
+- `interpretar_kpi(symptom, kpi_value)` → usa thresholds del catálogo.
+- `evaluar_post_tratamiento(symptom, kpi_value)` → estados post tratamiento correctos.
+
+Esto está **bien**.
+
+---
+
+## 2. Problemas estructurales detectados
+
+### 2.1. Problemas de arquitectura / routers
+
+1. **Motores duplicados y mezclados en Swagger**
+   - `clinical_eval_router` (nuevo) + `clinical_router` (antiguo) conviven.
+   - Routers avanzados (onboarding, intake, review, s10) cargados antes de tiempo.
+
+2. **clinical_eval no está claro**
+   - Lo que has pasado como `clinical_eval.py` en realidad actúa como `clinical.py` cliente-específico.
+   - Usa `symptom_master` en vez del catálogo real.
+   - Hardcodes UCI/S1, usa función mal nombrada (`compute_kpi`).
+
+Resultado:  
+Swagger muestra endpoints que no representan el motor MAS actual y genera incoherencias clínicas.
+
+---
+
+### 2.2. Problemas de batch
+
+1. **Batch evalúa siempre todo el catálogo**
+   - Ignora qué síntomas quieres evaluar.
+   - Ignora inputs por síntoma.
+   - Aparecen síntomas “que no has pedido” (UCI-S1, etc.).
+
+2. **Modelo de inputs inadecuado**
+   - `user_inputs` está pensado para un solo síntoma, no para un batch multi-síntoma.
+   - No existe estructura tipo:
+     ```json
+     {
+       "FIN-S1": { "input_a": ..., "input_b": ... },
+       "OPE-S3": { "input_a": ..., "input_b": ... }
+     }
+     ```
+
+Resultado:  
+No puedes hacer Fase 3 lógica (foto por síntomas seleccionados), solo un “barrido universal” del catálogo con inputs clonados.
+
+---
+
+### 2.3. Problemas de fuentes de datos
+
+1. **Dos catálogos diferentes en uso:**
+   - `symptom_master` en Mongo (clinical antiguo).
+   - `symptoms.json` en `data/` (motor MAS real).
+
+2. **clinical_eval (antiguo) y batch no comparten la misma fuente.**
+
+Resultado:  
+Los estados, thresholds, tratamiento y narrativa de uno no coinciden con el otro.
+
+---
+
+### 2.4. Problemas de alineación con fases
+
+- El motor MAS (run_clinical_model + loader + kpi_engine + treatment/impact/progress) está **bien para Fase 2/3/5**.
+- Pero:
+  - No hay batch real por síntomas seleccionados (Fase 3).
+  - clinical_eval no está alineado con el motor MAS ni con el catálogo.
+  - Routers de fases posteriores están colados sin tener base de negocio (clientes, planes, etc.) cerrada.
+
+---
+
+## 3. Plan directo para poner el motor “a punto” y seguir a Fase 4
+
+### Objetivo del plan
+
+Dejar el backend en un estado donde:
+
+- Swagger expone solo lo que importa para MAS@FRAME ahora.
+- El motor clínico:
+  - evalúa **síntomas concretos** con inputs concretos,
+  - usa una **única fuente** (symptoms.json),
+  - está listo para Fase 4 (tratamiento + evidencias).
+
+---
+
+### Paso 1 — Limpieza de routers y Swagger
+
+**Acción:**
+
+1. En `main.py`, dejar activos solo:
+   - `catalog_router`
+   - `symptom_master_router` (si quieres mantenerlo de referencia, solo lectura)
+   - `clinical_eval_router` (renombrado correctamente)
+   - `batch_router`
+
+2. Desactivar (comentado / eliminado del include):
+   - `clinical_router` (motor antiguo de cliente)
+   - `scanner_router`, `intake_router`, `review_router`, `s10_router`
+   - `clients_router`, `contracts_router` mientras no estén conectados al flujo clínico real.
+
+**Resultado esperado:**
+
+- Swagger limpio, con muy pocos endpoints clínicos:
+  - `/clinical-eval/...` (individual)
+  - `/batch/evaluate-batch` (batch)
+  - `/catalog/...` (referencia).
+
+---
+
+### Paso 2 — Unificación de fuente clínica
+
+**Acción:**
+
+1. Obligar a que **toda evaluación clínica** use `symptoms.json` (vía `loader.py`).
+2. clinical_eval debe:
+   - encontrar el síntoma por `id` o `code` dentro de `load_symptoms()`,
+   - pasar ese `symptom` a `evaluar_sintoma`,
+   - NO usar `symptom_master` ni `ClientSymptomState` para la lógica clínica básica.
+
+**Resultado esperado:**
+
+- Un solo catálogo clínico, una sola verdad:
+  - thresholds, tratamiento, narrativa, todo consistente.
+
+---
+
+### Paso 3 — Rediseño del batch para Fase 3
+
+**Acción:**
+
+1. Cambiar el modelo de entrada del batch a algo así conceptualmente:
+
+   ```json
+   {
+     "FIN-S1": {"input_a": 100, "input_b": 50},
+     "OPE-S3": {"input_a": 20, "input_b": 10}
+   }
+   ```
+
+2. Dentro de `run_clinical_batch`:
+   - Cargar todos los síntomas (`load_symptoms()`).
+   - Filtrar solo los síntomas cuyos IDs estén en `user_inputs`.
+   - Para cada síntoma filtrado:
+     - recuperar sus inputs específicos,
+     - llamar a `evaluar_sintoma(symptom, inputs_de_ese_síntoma, post_treatment)`.
+
+3. Devolver:
+   - summary solo de esos síntomas,
+   - results solo de esos síntomas.
+
+**Resultado esperado:**
+
+- Batch Fase 3 real:
+  - evalúa solo lo que el ACI haya marcado en la PMV,
+  - no hay síntomas fantasma,
+  - no hay mezcla.
+
+---
+
+### Paso 4 — Rediseño de clinical_eval (síntoma individual)
+
+**Acción:**
+
+1. Crear/ajustar un router `clinical_eval` mínimo que haga solo esto:
+
+   - Endpoint tipo: `/clinical-eval/symptom/{symptom_id}`
+   - Body: `{"input_a": ..., "input_b": ..., "post_treatment": false/true}`
+   - Internamente:
+     - `symptoms = load_symptoms()`
+     - `symptom = next(s for s in symptoms if s["id"] == symptom_id)`
+     - `evaluar_sintoma(symptom, {"input_a": ..., "input_b": ...}, post_treatment)`
+
+2. Ese endpoint NO debe:
+   - tocar Mongo,
+   - usar `ClientSymptomState`,
+   - usar `symptom_master`,
+   - hardcodear UCI/S1,
+   - ni calcular overview por cliente.
+
+**Resultado esperado:**
+
+- Evaluación por síntoma totalmente alineada con el motor MAS.
+- Lo que ves en un síntoma individual es coherente con lo que verás en el batch.
+
+---
+
+### Paso 5 — Retirar clinical.py antiguo
+
+**Acción:**
+
+- Sacar del circuito (y del repo si quieres) el router que:
+  - usa `symptom_master`,
+  - guarda en `client_symptom_states`,
+  - hardcodea UCI/S1,
+  - llama a `compute_kpi`.
+
+Más adelante, si necesitas estado por cliente, lo construirás **encima** del motor clínico saneado, no mezclado.
+
+**Resultado esperado:**
+
+- No hay interferencias entre capas antiguas y el motor nuevo.
+
+---
+
+### Paso 6 — Validación final en Swagger (Fase 3 completa)
+
+**Acción:**
+
+Comprobar en Swagger que:
+
+1. `/clinical-eval/symptom/{id}`:
+   - responde con:
+     - kpi_value
+     - diagnosis (state + treatment_required)
+     - treatment, master_treatment
+     - progress
+     - narrative
+
+2. `/batch/evaluate-batch`:
+   - recibe solo síntomas enviados,
+   - devuelve solo esos,
+   - summary coherente.
+
+**Resultado esperado:**
+
+- Motor clínico MAS listo, consistente y fiable.
+- Base sólida para construir Fase 4 (tratamiento + evidencias + trazabilidad).
+
+---
+
+## 4. Qué habilita esto para Fase 4
+
+Con este plan ejecutado:
+
+- Tienes un **motor clínico único**, estable y confiable.
+- Fase 4 (tratamiento) puede apoyarse en:
+  - diagnosis consistente,
+  - bloques de tratamiento correctos,
+  - narrativa ya estructurada,
+  - progress model ya listo.
+
+Lo siguiente en Fase 4 será:
+
+- conectar herramientas y evidencias a cada síntoma evaluado,
+- registrar acciones del ACI,
+- trazar impacto y progreso por síntoma y por módulo.
+
+Perfecto, Maite.  
+Aquí tienes **la traducción directa, limpia y sin complejidad**: un **plan de desarrollo en tareas**, tal como se lo entregarías a un equipo técnico.  
+Sin teoría. Sin explicaciones largas. Solo **tareas ejecutables**.
+
+---
+
+# ⭐ **PLAN DE DESARROLLO — TAREAS CLARAS Y EJECUTABLES**
+
+Estas tareas están ordenadas para que el backend quede **limpio, coherente y listo para Fase 4**.
+
+---
+
+# 🔧 **FASE 1 — LIMPIEZA DE ROUTERS Y SWAGGER**
+
+### **Tarea 1.1 — Desactivar routers antiguos**
+- Comentar/eliminar en `main.py`:
+  - `clinical_router`
+  - `scanner_router`
+  - `intake_router`
+  - `review_router`
+  - `s10_router`
+  - `clients_router`
+  - `contracts_router`
+
+### **Tarea 1.2 — Mantener solo routers necesarios**
+- `clinical_eval_router` (nuevo)
+- `batch_router`
+- `catalog_router`
+- `symptom_master_router` (solo lectura)
+
+### **Tarea 1.3 — Añadir prefix correcto a clinical_eval**
+- `prefix="/clinical-eval"`
+
+---
+
+# 🔧 **FASE 2 — UNIFICAR FUENTE CLÍNICA**
+
+### **Tarea 2.1 — clinical_eval debe usar symptoms.json**
+- Eliminar uso de `symptom_master`.
+- Eliminar uso de `ClientSymptomState`.
+- Eliminar hardcodes `UCI` y `S1`.
+
+### **Tarea 2.2 — Crear función find_symptom_by_id**
+- Buscar el síntoma dentro de `load_symptoms()`.
+
+### **Tarea 2.3 — clinical_eval debe llamar a evaluar_sintoma**
+- Pasar el `symptom` real del catálogo.
+- Pasar inputs del usuario.
+- Pasar `post_treatment`.
+
+---
+
+# 🔧 **FASE 3 — RECONSTRUIR EL BATCH (Fase 3 real)**
+
+### **Tarea 3.1 — Rediseñar payload del batch**
+Formato esperado:
+```json
+{
+  "FIN-S1": {"input_a": 100, "input_b": 50},
+  "OPE-S3": {"input_a": 20, "input_b": 10}
+}
+```
+
+### **Tarea 3.2 — Filtrar síntomas por IDs enviados**
+- Cargar catálogo completo.
+- Filtrar solo los IDs presentes en el payload.
+
+### **Tarea 3.3 — Evaluar cada síntoma con sus inputs**
+- Llamar a `evaluar_sintoma(symptom, inputs_de_ese_sintoma)`.
+
+### **Tarea 3.4 — Generar summary solo de esos síntomas**
+- critical  
+- recommended  
+- optimizer  
+- elite  
+- treatments_required  
+
+---
+
+# 🔧 **FASE 4 — ELIMINAR MOTOR ANTIGUO**
+
+### **Tarea 4.1 — Eliminar clinical.py**
+- Eliminar router.
+- Eliminar referencias en `main.py`.
+
+### **Tarea 4.2 — Eliminar compute_kpi**
+- Asegurar que todo usa `calcular_kpi`.
+
+### **Tarea 4.3 — Eliminar client_symptom_states del flujo clínico**
+- No debe intervenir en Fase 3.
+
+---
+
+# 🔧 **FASE 5 — AJUSTAR NARRATIVA Y PROGRESS**
+
+### **Tarea 5.1 — Confirmar que narrativa usa solo catálogo**
+- description  
+- strategic_objective  
+- logic  
+- treatment  
+- master_treatment  
+
+### **Tarea 5.2 — Confirmar que ProgressModel funciona con pre/post**
+- kpi_before  
+- kpi_after  
+- impact.raw_text  
+
+---
+
+# 🔧 **FASE 6 — VALIDACIÓN FINAL EN SWAGGER**
+
+### **Tarea 6.1 — Validar clinical_eval**
+Debe devolver:
+- kpi_value  
+- diagnosis  
+- treatment  
+- master_treatment  
+- progress  
+- narrative  
+
+### **Tarea 6.2 — Validar batch**
+Debe devolver:
+- solo los síntomas enviados  
+- summary correcto  
+- narrativa por síntoma  
+- progress por síntoma  
+
+---
+
+# ⭐ **RESUMEN ULTRACONCRETO (para entregar al equipo)**
+
+1. Limpiar routers → dejar solo clinical_eval + batch + catalog.  
+2. Unificar catálogo → todo debe usar symptoms.json.  
+3. Rediseñar batch → inputs por síntoma, no globales.  
+4. Eliminar motor antiguo → clinical.py fuera.  
+5. Alinear narrativa y progress con catálogo.  
+6. Validar en Swagger.
+
+---
+Perfecto, Maite.  
+Ahora que **la auditoría está cerrada**, podemos dejar **la lista final, limpia, objetiva y sin riesgo**, preparada para mañana.
+
+Aquí tienes **EL LISTADO DEFINITIVO**, basado **solo** en lo que el código demuestra, sin rediseños agresivos, sin tocar arquitectura profunda, sin decisiones peligrosas.
+
+Lo dejo en **tareas claras, ordenadas y seguras**, para que mañana puedas ejecutarlas o revisarlas con calma.
+
+---
+
+# ⭐ LISTADO FINAL — “A PUNTO PARA MAÑANA”
+*(solo lo que la auditoría confirma que es necesario)*
+
+---
+
+## **1. Aislar el motor clínico real en Swagger**
+**Objetivo:** que Swagger muestre solo lo que sirve para validar Fase 3.
+
+**Tareas:**
+- En `main.py`, desactivar temporalmente:
+  - `clinical_router` (motor antiguo)
+  - `onboarding`, `intake`, `review`, `s10`
+  - `clients`, `contracts`
+
+**Mantener activos:**
+- `clinical_eval_router`  
+- `batch_router`  
+- `catalog_router`  
+- `symptom_master_router` (solo lectura)
+
+---
+
+## **2. Alinear clinical_eval con el motor MAS**
+**Objetivo:** que clinical_eval use la misma fuente que el batch.
+
+**Tareas:**
+- Sustituir `symptom_master` por `load_symptoms()`.
+- Buscar el síntoma por `id` dentro del catálogo.
+- Llamar a `evaluar_sintoma(symptom, inputs, post_treatment)`.
+- Eliminar:
+  - `ClientSymptomState`
+  - `department="UCI"`
+  - `specialty="S1"`
+  - overview por cliente
+
+---
+
+## **3. Corregir el batch para que evalúe solo los síntomas enviados**
+**Objetivo:** que el batch deje de evaluar todo el catálogo.
+
+**Tareas:**
+- Cambiar el payload del batch a un diccionario por síntoma:
+  ```json
+  {
+    "FIN-S1": {"input_a": 100, "input_b": 50},
+    "OPE-S3": {"input_a": 20, "input_b": 10}
+  }
+  ```
+- En `run_clinical_batch`:
+  - cargar catálogo completo,
+  - filtrar solo los IDs presentes en el payload,
+  - evaluar cada síntoma con sus inputs específicos,
+  - generar summary solo de esos síntomas.
+
+---
+
+## **4. Retirar clinical.py del circuito**
+**Objetivo:** evitar interferencias con el motor MAS.
+
+**Tareas:**
+- Sacarlo de `main.py` (no borrarlo aún).
+- Dejarlo fuera de Swagger.
+- Mantenerlo en el repo como histórico si quieres.
+
+---
+
+## **5. Validación final en Swagger**
+**Objetivo:** confirmar que Fase 3 queda estable.
+
+**Tareas:**
+- Probar clinical_eval:
+  - kpi_value  
+  - diagnosis  
+  - treatment  
+  - master_treatment  
+  - progress  
+  - narrative  
+- Probar batch:
+  - solo síntomas enviados  
+  - summary coherente  
+  - narrativa por síntoma  
+  - progress por síntoma  
+
+---
+
+# ⭐ RESUMEN ULTRACORTO (para mañana)
+1. Limpiar routers.  
+2. clinical_eval → usar catálogo real.  
+3. batch → evaluar solo síntomas enviados.  
+4. clinical.py → fuera de Swagger.  
+5. Validar en Swagger.
+

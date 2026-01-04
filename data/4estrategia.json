@@ -1,0 +1,654 @@
+{  "specialty": "estrategia",
+  "symptoms": [
+  {
+  "id": "NEURO-S1",
+  "name": "Amnesia de Visión",
+  "specialty": "estrategia",
+  "plan": "PIE",
+  "domain": "visión",
+  "description": "El equipo no recuerda ni comparte el rumbo estratégico del negocio.",
+
+  "kpi": {
+    "question": "¿El equipo rema hacia el mismo lugar?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Fijación de rumbo",
+    "decision_explanation": "Recordar y comunicar el norte estratégico",
+    "action": "Entrevista de alineación con el comité",
+    "action_explanation": "Asegura claridad colectiva",
+    "tool": "Manifiesto de Visión 1-Page",
+    "tool_explanation": "Resume el rumbo en una sola página",
+
+    "objective": "Aumentar alineación estratégica",
+    "kpi_target": "% Alineación > 80%",
+    "activation_condition": "% Alineación < 60%",
+    "success_condition": "Equipo alineado con la visión anual",
+    "risk_if_ignored": "Descoordinación y pérdida de foco",
+    "sequence": [
+      "Definir visión anual",
+      "Comunicar visión al equipo",
+      "Validar comprensión"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Visión",
+    "master_decision_explanation": "Asegurar claridad estratégica permanente",
+    "master_action": "Reforzar visión trimestral",
+    "master_action_explanation": "Evita deriva estratégica",
+    "master_tool": "Radar de Alineación",
+    "master_tool_explanation": "Monitoriza comprensión del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Objetivos Año",
+    "input_b": "Objetivos Conocidos",
+    "formula": "(Conocidos / Año) x 100",
+    "impact": "% Alineación: Fuerza de empuje de la organización"
+  },
+
+  "review": {
+    "input_revised_1": "Objetivos Año Post",
+    "input_revised_2": "Objetivos Conocidos Post",
+    "result_revised": "Alineación Mejorada"
+  }
+},
+{
+  "id": "NEURO-S2",
+  "name": "Dispersión de Foco",
+  "specialty": "estrategia",
+  "plan": "PIE",
+  "domain": "priorización",
+  "description": "Demasiados proyectos abiertos sin impacto real.",
+
+  "kpi": {
+    "question": "¿Estás mirando el suelo o el horizonte?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Corte de ramas",
+    "decision_explanation": "Eliminar proyectos lastre",
+    "action": "Listar proyectos y filtrar por impacto",
+    "action_explanation": "Aumenta foco estratégico",
+    "tool": "Matriz de Priorización (Impacto/Esfuerzo)",
+    "tool_explanation": "Identifica proyectos clave",
+
+    "objective": "Aumentar tiempo estratégico",
+    "kpi_target": "Ratio de visión > 30%",
+    "activation_condition": "Horas estrategia < 15%",
+    "success_condition": "Foco estratégico recuperado",
+    "risk_if_ignored": "Agotamiento y falta de dirección",
+    "sequence": [
+      "Listar proyectos activos",
+      "Eliminar proyectos sin impacto",
+      "Priorizar proyectos clave"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Prioridades",
+    "master_decision_explanation": "Asegurar foco estratégico continuo",
+    "master_action": "Revisión mensual de prioridades",
+    "master_action_explanation": "Evita dispersión futura",
+    "master_tool": "Radar de Prioridades",
+    "master_tool_explanation": "Monitoriza foco real"
+  },
+
+  "inputs": {
+    "input_a": "Horas Operativa",
+    "input_b": "Horas Estrategia",
+    "formula": "(Estrategia / Operativa) x 100",
+    "impact": "Ratio de Visión: Capacidad de anticiparse a problemas"
+  },
+
+  "review": {
+    "input_revised_1": "Operativa Post",
+    "input_revised_2": "Estrategia Post",
+    "result_revised": "Foco Recuperado"
+  }
+},
+{
+  "id": "NEURO-S3",
+  "name": "Improvisación",
+  "specialty": "estrategia",
+  "plan": "PIE",
+  "domain": "planificación",
+  "description": "La empresa opera sin hoja de ruta clara.",
+
+  "kpi": {
+    "question": "¿Tu catálogo está alineado al futuro o al pasado?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Sincronización de agenda",
+    "decision_explanation": "Definir hitos innegociables",
+    "action": "Definir los 3 hitos del trimestre",
+    "action_explanation": "Aumenta claridad operativa",
+    "tool": "Roadmap Estratégico",
+    "tool_explanation": "Define ruta trimestral",
+
+    "objective": "Aumentar enfoque estratégico",
+    "kpi_target": "Índice de enfoque > 70%",
+    "activation_condition": "Índice < 50%",
+    "success_condition": "Catálogo alineado al futuro",
+    "risk_if_ignored": "Desorden y pérdida de competitividad",
+    "sequence": [
+      "Definir hitos trimestrales",
+      "Asignar responsables",
+      "Revisar avance semanal"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Ruta Estratégica",
+    "master_decision_explanation": "Asegurar avance continuo",
+    "master_action": "Revisión trimestral de roadmap",
+    "master_action_explanation": "Evita improvisación futura",
+    "master_tool": "Radar de Ruta",
+    "master_tool_explanation": "Monitoriza avance estratégico"
+  },
+
+  "inputs": {
+    "input_a": "Nº de Servicios",
+    "input_b": "Servicios Rentables",
+    "formula": "Rentables / Totales",
+    "impact": "Índice de Enfoque: Limpieza de la paja en el catálogo"
+  },
+
+  "review": {
+    "input_revised_1": "Servicios Post",
+    "input_revised_2": "Rentables Post",
+    "result_revised": "Enfoque Mejorado"
+  }
+},
+{
+  "id": "NEURO-S4",
+  "name": "Intuición sin Datos",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "datos",
+  "description": "Decisiones estratégicas basadas en intuición en lugar de datos reales.",
+
+  "kpi": {
+    "question": "¿Mides lo suficiente para tomar decisiones?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Objetivación del éxito",
+    "decision_explanation": "Medir o morir",
+    "action": "Identificar los 5 KPIs maestros",
+    "action_explanation": "Aumenta claridad estratégica",
+    "tool": "Dashboard de Mando Neuro",
+    "tool_explanation": "Centraliza datos clave",
+
+    "objective": "Aumentar diversificación estratégica",
+    "kpi_target": "% Diversificación > 30%",
+    "activation_condition": "% Diversificación < 15%",
+    "success_condition": "Negocio resistente a crisis sectoriales",
+    "risk_if_ignored": "Vulnerabilidad ante cambios del mercado",
+    "sequence": [
+      "Identificar KPIs maestros",
+      "Construir dashboard",
+      "Revisar datos semanalmente"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Datos",
+    "master_decision_explanation": "Asegurar decisiones basadas en evidencia",
+    "master_action": "Revisión mensual de KPIs",
+    "master_action_explanation": "Evita decisiones impulsivas",
+    "master_tool": "Radar de Datos",
+    "master_tool_explanation": "Monitoriza salud estratégica"
+  },
+
+  "inputs": {
+    "input_a": "Ventas Sector A",
+    "input_b": "Ventas Sector B",
+    "formula": "(Sector B / Total) x 100",
+    "impact": "% Diversificación: Seguro de vida ante crisis externas"
+  },
+
+  "review": {
+    "input_revised_1": "Sector A Post",
+    "input_revised_2": "Sector B Post",
+    "result_revised": "Diversificación Mejorada"
+  }
+},
+{
+  "id": "NEURO-S5",
+  "name": "Fatiga Decisoria",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "decisión",
+  "description": "El dueño toma demasiadas decisiones sin un sistema claro.",
+
+  "kpi": {
+    "question": "¿Innovas o repites lo mismo de hace 10 años?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Protocolo de decisión",
+    "decision_explanation": "Agilizar el juicio",
+    "action": "Implementar criterios para el SÍ",
+    "action_explanation": "Reduce desgaste mental",
+    "tool": "Árbol de Decisión MASESORA",
+    "tool_explanation": "Estandariza decisiones",
+
+    "objective": "Aumentar innovación",
+    "kpi_target": "Innovación > 20%",
+    "activation_condition": "Innovación < 10%",
+    "success_condition": "Decisiones rápidas y alineadas",
+    "risk_if_ignored": "Bloqueo mental y estancamiento",
+    "sequence": [
+      "Definir criterios de decisión",
+      "Aplicar árbol de decisión",
+      "Revisar impacto mensual"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Decisiones",
+    "master_decision_explanation": "Asegurar decisiones coherentes",
+    "master_action": "Optimizar sistema de decisión",
+    "master_action_explanation": "Evita desgaste mental",
+    "master_tool": "Radar de Decisión",
+    "master_tool_explanation": "Monitoriza calidad de decisiones"
+  },
+
+  "inputs": {
+    "input_a": "Ventas Productos Nuevos",
+    "input_b": "Venta Total",
+    "formula": "(Nuevos / Total) x 100",
+    "impact": "Ratio Innovación: Capacidad de no quedarse obsoleto"
+  },
+
+  "review": {
+    "input_revised_1": "Nuevos Post",
+    "input_revised_2": "Total Post",
+    "result_revised": "Innovación Mejorada"
+  }
+},
+{
+  "id": "NEURO-S6",
+  "name": "Silos Cognitivos",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "interconexión",
+  "description": "Departamentos que no comparten información ni trabajan alineados.",
+
+  "kpi": {
+    "question": "¿Tu empresa puede crecer sin que tú mueras en el intento?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Interconexión departamental",
+    "decision_explanation": "Crear sinapsis entre áreas",
+    "action": "Reunión de alineación cruzada",
+    "action_explanation": "Evita duplicidades y errores",
+    "tool": "Mapa de Dependencias",
+    "tool_explanation": "Visualiza conexiones entre áreas",
+
+    "objective": "Aumentar escalabilidad",
+    "kpi_target": "Índice de escala > 30%",
+    "activation_condition": "Índice de escala < 15%",
+    "success_condition": "Departamentos conectados y alineados",
+    "risk_if_ignored": "Crecimiento que aumenta el gasto más que la venta",
+    "sequence": [
+      "Mapear dependencias",
+      "Detectar cuellos de comunicación",
+      "Establecer reuniones cruzadas"
+    ],
+    "impact_level": "alto",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Sinapsis",
+    "master_decision_explanation": "Asegurar interconexión permanente",
+    "master_action": "Optimizar comunicación entre áreas",
+    "master_action_explanation": "Evita silos futuros",
+    "master_tool": "Radar de Sinapsis",
+    "master_tool_explanation": "Monitoriza conexiones reales"
+  },
+
+  "inputs": {
+    "input_a": "Nuevas Ventas",
+    "input_b": "Coste Estructura",
+    "formula": "Venta / Coste Estructura",
+    "impact": "Índice de Escala: Si el gasto sube más que la venta, no escalas"
+  },
+
+  "review": {
+    "input_revised_1": "Ventas Post",
+    "input_revised_2": "Coste Post",
+    "result_revised": "Escala Mejorada"
+  }
+},
+{
+  "id": "NEURO-S7",
+  "name": "Resistencia al Cambio",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "adaptabilidad",
+  "description": "El equipo o el dueño rechazan cambios necesarios para crecer.",
+
+  "kpi": {
+    "question": "¿Tu negocio depende de favores o de tu sistema?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Neuro-plasticidad",
+    "decision_explanation": "Aumentar adaptabilidad",
+    "action": "Taller de gestión del cambio",
+    "action_explanation": "Reduce resistencia",
+    "tool": "Plan de Adopción de Estrategia",
+    "tool_explanation": "Guía implementación del cambio",
+
+    "objective": "Aumentar autonomía del negocio",
+    "kpi_target": "Autonomía > 60%",
+    "activation_condition": "Autonomía < 40%",
+    "success_condition": "Negocio que funciona por sistema",
+    "risk_if_ignored": "Dependencia de contactos o favores",
+    "sequence": [
+      "Identificar resistencias",
+      "Aplicar taller de cambio",
+      "Revisar adopción"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Adaptación",
+    "master_decision_explanation": "Asegurar evolución continua",
+    "master_action": "Optimizar adopción estratégica",
+    "master_action_explanation": "Evita estancamiento",
+    "master_tool": "Radar de Adaptación",
+    "master_tool_explanation": "Monitoriza adopción real"
+  },
+
+  "inputs": {
+    "input_a": "Ventas por Contacto",
+    "input_b": "Ventas por Sistema",
+    "formula": "Sistema / Total",
+    "impact": "Grado de Autonomía: Valor real del negocio en el mercado"
+  },
+
+  "review": {
+    "input_revised_1": "Sistema Post",
+    "input_revised_2": "Total Post",
+    "result_revised": "Autonomía Mejorada"
+  }
+},
+{
+  "id": "NEURO-S8",
+  "name": "Incoherencia Táctica",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "alineación",
+  "description": "Las tareas del equipo no suman al KPI estratégico.",
+
+  "kpi": {
+    "question": "¿Cuánto tardas desde la idea hasta el cambio real?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Alineación vertical",
+    "decision_explanation": "Conectar tareas con objetivos",
+    "action": "Revisar que las tareas sumen al KPI",
+    "action_explanation": "Aumenta coherencia operativa",
+    "tool": "Cascada de Objetivos (OKR)",
+    "tool_explanation": "Alinea tareas con estrategia",
+
+    "objective": "Aumentar agilidad estratégica",
+    "kpi_target": "Agilidad < 10 días",
+    "activation_condition": "Agilidad > 20 días",
+    "success_condition": "Ejecución rápida y alineada",
+    "risk_if_ignored": "Ideas que nunca se ejecutan",
+    "sequence": [
+      "Revisar tareas actuales",
+      "Eliminar tareas incoherentes",
+      "Alinear tareas con OKR"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Alineación",
+    "master_decision_explanation": "Asegurar coherencia continua",
+    "master_action": "Optimizar OKRs trimestrales",
+    "master_action_explanation": "Evita incoherencias futuras",
+    "master_tool": "Radar de Alineación Táctica",
+    "master_tool_explanation": "Monitoriza velocidad de ejecución"
+  },
+
+  "inputs": {
+    "input_a": "Día de Idea",
+    "input_b": "Día de Ejecución",
+    "formula": "Día Ejecución - Día Idea",
+    "impact": "Agilidad Estratégica: Velocidad para pivotar y ganar"
+  },
+
+  "review": {
+    "input_revised_1": "Idea Post",
+    "input_revised_2": "Ejecución Post",
+    "result_revised": "Agilidad Mejorada"
+  }
+},
+{
+  "id": "NEURO-S9",
+  "name": "Cortoplacismo",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "visión",
+  "description": "El negocio toma decisiones mirando solo el corto plazo.",
+
+  "kpi": {
+    "question": "¿Cuál es tu ventaja real sobre los demás?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Visión prospectiva",
+    "decision_explanation": "Mirar al horizonte",
+    "action": "Sesión de análisis de amenazas y oportunidades",
+    "action_explanation": "Aumenta visión estratégica",
+    "tool": "Matriz DAFO Dinámica",
+    "tool_explanation": "Evalúa entorno competitivo",
+
+    "objective": "Aumentar ventaja competitiva",
+    "kpi_target": "Foso defensivo > 20%",
+    "activation_condition": "Foso < 10%",
+    "success_condition": "Ventaja competitiva clara",
+    "risk_if_ignored": "Ser copiable y perder mercado",
+    "sequence": [
+      "Analizar amenazas",
+      "Analizar oportunidades",
+      "Definir ventaja competitiva"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Competitivo",
+    "master_decision_explanation": "Asegurar ventaja sostenible",
+    "master_action": "Optimizar propuesta de valor",
+    "master_action_explanation": "Evita ser uno más",
+    "master_tool": "Radar Competitivo",
+    "master_tool_explanation": "Monitoriza diferenciación"
+  },
+
+  "inputs": {
+    "input_a": "Tu Valor Único",
+    "input_b": "Copias",
+    "formula": "1 / Copias",
+    "impact": "Foso Defensivo: Dificultad para quitarte el sitio"
+  },
+
+  "review": {
+    "input_revised_1": "Valor Post",
+    "input_revised_2": "Copias Post",
+    "result_revised": "Foso Mejorado"
+  }
+},
+{
+  "id": "NEURO-S10",
+  "name": "Cerebro Alineado",
+  "specialty": "estrategia",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: claridad total y alineación estratégica del 100% del equipo.",
+
+  "kpi": {
+    "question": "¿Qué multiplicador real tiene tu empresa?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación de foco estratégico",
+    "decision_explanation": "Asegurar claridad total",
+    "action": "Evaluación de alineación del 100% del equipo",
+    "action_explanation": "Garantiza coherencia total",
+    "tool": "Certificado de Foco Estratégico",
+    "tool_explanation": "Valida alineación real",
+
+    "objective": "Aumentar valor de venta del negocio",
+    "kpi_target": "Multiplicador > 3x",
+    "activation_condition": "Multiplicador < 2x",
+    "success_condition": "Empresa vendible como activo",
+    "risk_if_ignored": "Negocio dependiente del dueño",
+    "sequence": [
+      "Evaluar alineación del equipo",
+      "Corregir incoherencias",
+      "Certificar foco estratégico"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia Estratégica",
+    "master_decision_explanation": "Convertir la empresa en un activo vendible",
+    "master_action": "Optimizar valor de venta",
+    "master_action_explanation": "Aumenta riqueza real del dueño",
+    "master_tool": "Radar S10 Estrategia",
+    "master_tool_explanation": "Monitoriza multiplicador real"
+  },
+
+  "inputs": {
+    "input_a": "Valor de Venta",
+    "input_b": "Inversión Dueño",
+    "formula": "Valor / Inversión",
+    "impact": "Sello S10 Estrategia: Multiplicador de riqueza real"
+  },
+
+  "review": {
+    "input_revised_1": "Valor Post",
+    "input_revised_2": "Inversión Post",
+    "result_revised": "Multiplicador Mejorado"
+  }
+}
+  ]
+}

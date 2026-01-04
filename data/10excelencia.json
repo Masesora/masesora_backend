@@ -1,0 +1,586 @@
+{
+  "specialty": "excelencia",
+  "symptoms": [
+    {
+      "id": "OPE-S1",
+      "name": "Procesos Manuales Críticos",
+      "specialty": "excelencia",
+      "plan": "PIE",
+      "domain": "automatización",
+      "description": "Procesos esenciales dependen de trabajo manual, generando errores, lentitud y dependencia del equipo.",
+      "kpi": {
+        "question": "¿Tu operativa funciona sola o solo funciona si alguien la empuja?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Automatización urgente",
+        "decision_explanation": "Eliminar tareas manuales críticas",
+        "action": "Automatizar procesos repetitivos",
+        "action_explanation": "Reduce errores y libera tiempo",
+        "tool": "Mapa de Automatización",
+        "tool_explanation": "Identifica tareas automatizables",
+        "objective": "Aumentar eficiencia operativa",
+        "kpi_target": "Automatización > 70%",
+        "activation_condition": "Automatización < 50%",
+        "success_condition": "Procesos automáticos y estables",
+        "risk_if_ignored": "Errores, lentitud y dependencia humana",
+        "sequence": [
+          "Identificar procesos manuales",
+          "Priorizar automatizables",
+          "Implementar automatización"
+        ],
+        "impact_level": "alto",
+        "timeframe": "1-2 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Automatización",
+        "master_decision_explanation": "Mantener procesos automáticos",
+        "master_action": "Optimizar automatizaciones trimestralmente",
+        "master_action_explanation": "Evita recaídas manuales",
+        "master_tool": "Radar de Automatización",
+        "master_tool_explanation": "Monitoriza nivel de automatización"
+      },
+      "inputs": {
+        "input_a": "Procesos Automatizados",
+        "input_b": "Procesos Totales",
+        "formula": "(Automatizados / Totales) x 100",
+        "impact": "% Automatización: Nivel de eficiencia operativa"
+      },
+      "review": {
+        "input_revised_1": "Automatizados Post",
+        "input_revised_2": "Totales Post",
+        "result_revised": "Automatización Mejorada"
+      }
+    },
+    {
+      "id": "OPE-S2",
+      "name": "Errores Recurrentes",
+      "specialty": "excelencia",
+      "plan": "PIE",
+      "domain": "calidad",
+      "description": "Los mismos errores se repiten en la operativa, afectando calidad, tiempos y satisfacción del cliente.",
+      "kpi": {
+        "question": "¿Tu empresa aprende o repite los mismos fallos una y otra vez?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Corrección estructural",
+        "decision_explanation": "Eliminar la causa raíz de los errores",
+        "action": "Implementar protocolo de calidad",
+        "action_explanation": "Reduce fallos y aumenta precisión",
+        "tool": "Checklist de Calidad",
+        "tool_explanation": "Estandariza pasos críticos",
+        "objective": "Aumentar calidad operativa",
+        "kpi_target": "Errores < 10%",
+        "activation_condition": "Errores > 20%",
+        "success_condition": "Operativa precisa y estable",
+        "risk_if_ignored": "Costes ocultos y pérdida de confianza",
+        "sequence": [
+          "Identificar errores recurrentes",
+          "Detectar causa raíz",
+          "Aplicar protocolo de calidad"
+        ],
+        "impact_level": "alto",
+        "timeframe": "1 semana"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Calidad",
+        "master_decision_explanation": "Mantener precisión operativa",
+        "master_action": "Optimizar controles de calidad",
+        "master_action_explanation": "Evita recaídas",
+        "master_tool": "Radar de Calidad",
+        "master_tool_explanation": "Monitoriza precisión real"
+      },
+      "inputs": {
+        "input_a": "Errores Repetidos",
+        "input_b": "Errores Totales",
+        "formula": "(Repetidos / Totales) x 100",
+        "impact": "% Repetición: Nivel de aprendizaje operativo"
+      },
+      "review": {
+        "input_revised_1": "Repetidos Post",
+        "input_revised_2": "Totales Post",
+        "result_revised": "Errores Reducidos"
+      }
+    },
+    {
+      "id": "OPE-S3",
+      "name": "Falta de Continuidad Operativa",
+      "specialty": "excelencia",
+      "plan": "PIE",
+      "domain": "continuidad",
+      "description": "La operativa depende de personas clave: si alguien falta, el sistema se detiene o pierde calidad.",
+      "kpi": {
+        "question": "Si mañana falta alguien clave, ¿la empresa sigue funcionando igual de bien?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Sistematización urgente",
+        "decision_explanation": "Convertir conocimiento en procesos",
+        "action": "Documentar procesos críticos",
+        "action_explanation": "Aumenta continuidad y estabilidad",
+        "tool": "Manual Operativo Vivo",
+        "tool_explanation": "Define procesos paso a paso",
+        "objective": "Aumentar continuidad operativa",
+        "kpi_target": "Continuidad > 75%",
+        "activation_condition": "Continuidad < 55%",
+        "success_condition": "Operativa estable sin depender de personas",
+        "risk_if_ignored": "Parálisis operativa y errores críticos",
+        "sequence": [
+          "Identificar procesos críticos",
+          "Documentar paso a paso",
+          "Validar continuidad sin personas clave"
+        ],
+        "impact_level": "alto",
+        "timeframe": "2 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Continuidad",
+        "master_decision_explanation": "Mantener operativa estable",
+        "master_action": "Optimizar documentación operativa",
+        "master_action_explanation": "Evita dependencia futura",
+        "master_tool": "Radar de Continuidad",
+        "master_tool_explanation": "Monitoriza estabilidad operativa"
+      },
+      "inputs": {
+        "input_a": "Procesos Documentados",
+        "input_b": "Procesos Críticos",
+        "formula": "(Documentados / Críticos) x 100",
+        "impact": "% Continuidad: Nivel de independencia operativa"
+      },
+      "review": {
+        "input_revised_1": "Documentados Post",
+        "input_revised_2": "Críticos Post",
+        "result_revised": "Continuidad Mejorada"
+      }
+    },
+    {
+      "id": "OPE-S4",
+      "name": "Cuellos de Botella Operativos",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "flujo",
+      "description": "Existen puntos donde el flujo se detiene o ralentiza, afectando tiempos, entregas y productividad.",
+      "kpi": {
+        "question": "¿Tu operativa fluye o se atasca en los mismos puntos?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Desbloqueo de flujo",
+        "decision_explanation": "Eliminar puntos de atasco",
+        "action": "Rediseñar flujos críticos",
+        "action_explanation": "Aumenta velocidad y eficiencia",
+        "tool": "Mapa de Flujo Operativo",
+        "tool_explanation": "Identifica cuellos de botella",
+        "objective": "Aumentar fluidez operativa",
+        "kpi_target": "Flujo > 75%",
+        "activation_condition": "Flujo < 55%",
+        "success_condition": "Operativa fluida y sin bloqueos",
+        "risk_if_ignored": "Retrasos, estrés y baja productividad",
+        "sequence": [
+          "Detectar cuellos de botella",
+          "Rediseñar flujos",
+          "Validar fluidez"
+        ],
+        "impact_level": "medio",
+        "timeframe": "2 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Flujo",
+        "master_decision_explanation": "Mantener operativa fluida",
+        "master_action": "Optimizar flujos trimestralmente",
+        "master_action_explanation": "Evita nuevos bloqueos",
+        "master_tool": "Radar de Flujo",
+        "master_tool_explanation": "Monitoriza fluidez operativa"
+      },
+      "inputs": {
+        "input_a": "Puntos Fluidos",
+        "input_b": "Puntos Totales",
+        "formula": "(Fluidos / Totales) x 100",
+        "impact": "% Fluidez: Nivel de flujo operativo"
+      },
+      "review": {
+        "input_revised_1": "Fluidos Post",
+        "input_revised_2": "Totales Post",
+        "result_revised": "Flujo Mejorado"
+      }
+    },
+    {
+      "id": "OPE-S5",
+      "name": "Dependencia del Dueño",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "autonomía",
+      "description": "La empresa depende del dueño para decisiones, validaciones o tareas operativas, limitando la escalabilidad.",
+      "kpi": {
+        "question": "¿Tu empresa funciona sin ti o solo contigo dentro?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Delegación estructural",
+        "decision_explanation": "Crear autonomía operativa",
+        "action": "Definir sistema de delegación y autoridad",
+        "action_explanation": "Aumenta independencia del dueño",
+        "tool": "Matriz de Delegación",
+        "tool_explanation": "Define qué decide quién",
+        "objective": "Aumentar autonomía operativa",
+        "kpi_target": "Autonomía > 70%",
+        "activation_condition": "Autonomía < 50%",
+        "success_condition": "Empresa que funciona sin el dueño",
+        "risk_if_ignored": "Estancamiento y agotamiento del dueño",
+        "sequence": [
+          "Identificar tareas del dueño",
+          "Delegar por niveles de autoridad",
+          "Validar autonomía operativa"
+        ],
+        "impact_level": "alto",
+        "timeframe": "3 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Autonomía",
+        "master_decision_explanation": "Mantener empresa independiente",
+        "master_action": "Optimizar delegación y autoridad",
+        "master_action_explanation": "Evita dependencia futura",
+        "master_tool": "Radar de Autonomía",
+        "master_tool_explanation": "Monitoriza independencia operativa"
+      },
+      "inputs": {
+        "input_a": "Tareas Delegadas",
+        "input_b": "Tareas Totales del Dueño",
+        "formula": "(Delegadas / Totales) x 100",
+        "impact": "% Delegación: Nivel de autonomía real"
+      },
+      "review": {
+        "input_revised_1": "Delegadas Post",
+        "input_revised_2": "Totales Post",
+        "result_revised": "Autonomía Aumentada"
+      }
+    },
+    {
+      "id": "OPE-S6",
+      "name": "Falta de Métricas Operativas",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "medición",
+      "description": "La operativa funciona sin métricas claras, dificultando la toma de decisiones y la mejora continua.",
+      "kpi": {
+        "question": "¿Tu operativa se gestiona con datos o con intuición?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Instalación de métricas",
+        "decision_explanation": "Medir lo que importa para mejorar",
+        "action": "Definir KPIs operativos esenciales",
+        "action_explanation": "Aumenta control y precisión",
+        "tool": "Cuadro de Mando Operativo",
+        "tool_explanation": "Centraliza métricas clave",
+        "objective": "Aumentar control operativo",
+        "kpi_target": "KPIs instalados > 80%",
+        "activation_condition": "KPIs instalados < 60%",
+        "success_condition": "Operativa medida y optimizable",
+        "risk_if_ignored": "Ceguera operativa y decisiones erróneas",
+        "sequence": [
+          "Identificar métricas críticas",
+          "Definir KPIs esenciales",
+          "Instalar cuadro de mando"
+        ],
+        "impact_level": "alto",
+        "timeframe": "2 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Métricas",
+        "master_decision_explanation": "Mantener medición continua",
+        "master_action": "Optimizar KPIs trimestralmente",
+        "master_action_explanation": "Evita métricas obsoletas",
+        "master_tool": "Radar de KPIs",
+        "master_tool_explanation": "Monitoriza salud operativa"
+      },
+      "inputs": {
+        "input_a": "KPIs Instalados",
+        "input_b": "KPIs Necesarios",
+        "formula": "(Instalados / Necesarios) x 100",
+        "impact": "% Métricas: Nivel de medición operativa"
+      },
+      "review": {
+        "input_revised_1": "Instalados Post",
+        "input_revised_2": "Necesarios Post",
+        "result_revised": "Métricas Instaladas"
+      }
+    },
+    {
+      "id": "OPE-S7",
+      "name": "Falta de Control de Calidad en Tiempo Real",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "calidad",
+      "description": "La calidad se revisa tarde, cuando el error ya ha ocurrido, generando retrabajo y costes ocultos.",
+      "kpi": {
+        "question": "¿Detectas errores antes o después de que afecten al cliente?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Control en tiempo real",
+        "decision_explanation": "Detectar errores antes de que escalen",
+        "action": "Instalar puntos de control automáticos",
+        "action_explanation": "Aumenta precisión y reduce retrabajo",
+        "tool": "Sistema de Control en Tiempo Real",
+        "tool_explanation": "Detecta fallos al instante",
+        "objective": "Aumentar precisión operativa",
+        "kpi_target": "Control > 75%",
+        "activation_condition": "Control < 55%",
+        "success_condition": "Errores detectados antes de impactar",
+        "risk_if_ignored": "Retrabajo, costes y mala experiencia",
+        "sequence": [
+          "Identificar puntos críticos",
+          "Instalar controles automáticos",
+          "Validar detección temprana"
+        ],
+        "impact_level": "alto",
+        "timeframe": "2 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Calidad en Tiempo Real",
+        "master_decision_explanation": "Mantener precisión continua",
+        "master_action": "Optimizar puntos de control",
+        "master_action_explanation": "Evita errores tardíos",
+        "master_tool": "Radar de Control",
+        "master_tool_explanation": "Monitoriza detección temprana"
+      },
+      "inputs": {
+        "input_a": "Errores Detectados a Tiempo",
+        "input_b": "Errores Totales",
+        "formula": "(ATiempo / Totales) x 100",
+        "impact": "% Detección Temprana: Nivel de control real"
+      },
+      "review": {
+        "input_revised_1": "ATiempo Post",
+        "input_revised_2": "Totales Post",
+        "result_revised": "Control Mejorado"
+      }
+    },
+    {
+      "id": "OPE-S8",
+      "name": "Falta de Redundancia Operativa",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "redundancia",
+      "description": "No existen sistemas alternativos o backups que garanticen continuidad ante fallos o imprevistos.",
+      "kpi": {
+        "question": "Si algo falla, ¿tu empresa sigue o se detiene?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Creación de redundancias",
+        "decision_explanation": "Asegurar continuidad ante fallos",
+        "action": "Diseñar sistemas alternativos y backups",
+        "action_explanation": "Aumenta resiliencia operativa",
+        "tool": "Plan de Redundancia Operativa",
+        "tool_explanation": "Define backups y rutas alternativas",
+        "objective": "Aumentar resiliencia operativa",
+        "kpi_target": "Redundancia > 70%",
+        "activation_condition": "Redundancia < 50%",
+        "success_condition": "Operativa estable ante fallos",
+        "risk_if_ignored": "Parálisis operativa y pérdidas",
+        "sequence": [
+          "Identificar puntos vulnerables",
+          "Diseñar redundancias",
+          "Testear continuidad"
+        ],
+        "impact_level": "alto",
+        "timeframe": "3 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Redundancia",
+        "master_decision_explanation": "Mantener continuidad garantizada",
+        "master_action": "Optimizar backups y rutas",
+        "master_action_explanation": "Evita vulnerabilidades futuras",
+        "master_tool": "Radar de Redundancia",
+        "master_tool_explanation": "Monitoriza resiliencia operativa"
+      },
+      "inputs": {
+        "input_a": "Backups Activos",
+        "input_b": "Backups Necesarios",
+        "formula": "(Activos / Necesarios) x 100",
+        "impact": "% Redundancia: Nivel de resiliencia operativa"
+      },
+      "review": {
+        "input_revised_1": "Activos Post",
+        "input_revised_2": "Necesarios Post",
+        "result_revised": "Redundancia Aumentada"
+      }
+    },
+    {
+      "id": "OPE-S9",
+      "name": "Falta de Integración entre Sistemas",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "integración",
+      "description": "Las herramientas no se comunican entre sí, generando duplicidad, errores y pérdida de tiempo.",
+      "kpi": {
+        "question": "¿Tus sistemas trabajan juntos o cada uno va por su cuenta?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Integración sistémica",
+        "decision_explanation": "Conectar herramientas para crear flujo",
+        "action": "Integrar sistemas clave",
+        "action_explanation": "Aumenta eficiencia y reduce errores",
+        "tool": "Mapa de Integración",
+        "tool_explanation": "Define conexiones entre sistemas",
+        "objective": "Aumentar eficiencia sistémica",
+        "kpi_target": "Integración > 75%",
+        "activation_condition": "Integración < 55%",
+        "success_condition": "Sistemas conectados y sin duplicidades",
+        "risk_if_ignored": "Errores, lentitud y caos operativo",
+        "sequence": [
+          "Auditar sistemas actuales",
+          "Definir integraciones necesarias",
+          "Implementar conexiones"
+        ],
+        "impact_level": "medio",
+        "timeframe": "3 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Integración",
+        "master_decision_explanation": "Mantener sistemas conectados",
+        "master_action": "Optimizar integraciones",
+        "master_action_explanation": "Evita desconexiones futuras",
+        "master_tool": "Radar de Integración",
+        "master_tool_explanation": "Monitoriza conexión sistémica"
+      },
+      "inputs": {
+        "input_a": "Integraciones Activas",
+        "input_b": "Integraciones Necesarias",
+        "formula": "(Activas / Necesarias) x 100",
+        "impact": "% Integración: Nivel de conexión entre sistemas"
+      },
+      "review": {
+        "input_revised_1": "Activas Post",
+        "input_revised_2": "Necesarias Post",
+        "result_revised": "Integración Mejorada"
+      }
+    },
+    {
+      "id": "OPE-S10",
+      "name": "Excelencia Operativa",
+      "specialty": "excelencia",
+      "plan": "PRE",
+      "domain": "excelencia",
+      "description": "Nivel 10: operativa autónoma, rápida, precisa, integrada, sin errores y capaz de funcionar perfectamente sin el dueño.",
+      "kpi": {
+        "question": "¿Tu empresa funciona como un sistema inteligente y autónomo?",
+        "scale_min": 1,
+        "scale_max": 4
+      },
+      "thresholds": {
+        "critical": 70,
+        "recommended": 85,
+        "optimizer": 95,
+        "elite": 100
+      },
+      "treatment": {
+        "decision": "Certificación de excelencia operativa",
+        "decision_explanation": "Validar autonomía, precisión y continuidad",
+        "action": "Auditoría completa de automatización, calidad y flujo",
+        "action_explanation": "Garantiza excelencia total",
+        "tool": "Certificado S10 Operativo",
+        "tool_explanation": "Evalúa autonomía y precisión",
+        "objective": "Aumentar excelencia operativa",
+        "kpi_target": "Índice S10 > 90%",
+        "activation_condition": "Índice < 80%",
+        "success_condition": "Operativa autónoma, robusta y escalable",
+        "risk_if_ignored": "Dependencia, errores y fragilidad operativa",
+        "sequence": [
+          "Auditar operativa completa",
+          "Corregir desviaciones",
+          "Certificar S10"
+        ],
+        "impact_level": "alto",
+        "timeframe": "4 semanas"
+      },
+      "master_treatment": {
+        "master_decision": "Gobierno de Excelencia Operativa",
+        "master_decision_explanation": "Mantener operativa de clase mundial",
+        "master_action": "Optimizar automatización, calidad y flujo",
+        "master_action_explanation": "Evita deterioro operativo",
+        "master_tool": "Radar S10 Operativo",
+        "master_tool_explanation": "Monitoriza excelencia real"
+      },
+      "inputs": {
+        "input_a": "Pilares Operativos",
+        "input_b": "Pilares Cumplidos",
+        "formula": "(Cumplidos / Pilares) x 100",
+        "impact": "Índice S10 Operativo: Nivel de excelencia operativa"
+      },
+      "review": {
+        "input_revised_1": "Pilares Post",
+        "input_revised_2": "Cumplidos Post",
+        "result_revised": "Excelencia Operativa Alcanzada"
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "specialty": "organizacional",
+  "symptoms": [
+  {
+  "id": "PSI-S1",
+  "name": "Clima Emocional Tenso",
+  "specialty": "organizacional",
+  "plan": "PIE",
+  "domain": "clima",
+  "description": "El ambiente emocional del equipo está cargado, tenso o apagado, afectando la colaboración y el rendimiento.",
+
+  "kpi": {
+    "question": "¿Tu equipo respira o aguanta la respiración?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Descompresión emocional",
+    "decision_explanation": "Liberar tensiones acumuladas",
+    "action": "Sesión de escucha activa y regulación emocional",
+    "action_explanation": "Reduce tensión y mejora el clima",
+    "tool": "Protocolo de Higiene Emocional",
+    "tool_explanation": "Guía para gestionar emociones en equipo",
+
+    "objective": "Aumentar bienestar emocional",
+    "kpi_target": "Clima > 75%",
+    "activation_condition": "Clima < 55%",
+    "success_condition": "Ambiente sano y colaborativo",
+    "risk_if_ignored": "Conflictos, rotación y baja productividad",
+    "sequence": [
+      "Detectar tensiones",
+      "Facilitar sesión emocional",
+      "Establecer rituales de higiene emocional"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1 semana"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Emocional",
+    "master_decision_explanation": "Mantener un clima sano y estable",
+    "master_action": "Optimizar rituales emocionales",
+    "master_action_explanation": "Evita acumulación de tensiones",
+    "master_tool": "Radar Emocional",
+    "master_tool_explanation": "Monitoriza el clima del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Tensiones Detectadas",
+    "input_b": "Tensiones Resueltas",
+    "formula": "(Resueltas / Detectadas) x 100",
+    "impact": "% Resolución Emocional: Capacidad del equipo para gestionar tensiones"
+  },
+
+  "review": {
+    "input_revised_1": "Detectadas Post",
+    "input_revised_2": "Resueltas Post",
+    "result_revised": "Clima Emocional Mejorado"
+  }
+},
+{
+  "id": "PSI-S2",
+  "name": "Falta de Cohesión",
+  "specialty": "organizacional",
+  "plan": "PIE",
+  "domain": "cohesión",
+  "description": "El equipo funciona como individuos aislados en lugar de un sistema coordinado.",
+
+  "kpi": {
+    "question": "¿Tu equipo rema junto o cada uno va a su ritmo?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Activación de cohesión",
+    "decision_explanation": "Crear vínculos y sincronía",
+    "action": "Dinámica de cohesión y roles complementarios",
+    "action_explanation": "Aumenta colaboración",
+    "tool": "Mapa de Sinergias",
+    "tool_explanation": "Identifica fortalezas complementarias",
+
+    "objective": "Aumentar cohesión del equipo",
+    "kpi_target": "Cohesión > 70%",
+    "activation_condition": "Cohesión < 50%",
+    "success_condition": "Equipo unido y coordinado",
+    "risk_if_ignored": "Descoordinación y baja eficiencia",
+    "sequence": [
+      "Identificar desconexiones",
+      "Aplicar dinámica de cohesión",
+      "Revisar sinergias mensualmente"
+    ],
+    "impact_level": "medio",
+    "timeframe": "2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Cohesión",
+    "master_decision_explanation": "Mantener equipo unido",
+    "master_action": "Optimizar sinergias",
+    "master_action_explanation": "Evita aislamiento",
+    "master_tool": "Radar de Cohesión",
+    "master_tool_explanation": "Monitoriza unión del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Sinergias Activas",
+    "input_b": "Sinergias Potenciales",
+    "formula": "(Activas / Potenciales) x 100",
+    "impact": "% Sinergia: Nivel de colaboración real"
+  },
+
+  "review": {
+    "input_revised_1": "Activas Post",
+    "input_revised_2": "Potenciales Post",
+    "result_revised": "Cohesión Mejorada"
+  }
+},
+{
+  "id": "PSI-S3",
+  "name": "Comunicación Deficiente",
+  "specialty": "organizacional",
+  "plan": "PIE",
+  "domain": "comunicación",
+  "description": "La información no fluye, se malinterpreta o llega tarde, generando errores y frustración.",
+
+  "kpi": {
+    "question": "¿Tu equipo se entiende o se interpreta?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Rehabilitación comunicativa",
+    "decision_explanation": "Mejorar claridad y canales",
+    "action": "Implementar protocolo de comunicación interna",
+    "action_explanation": "Reduce errores y malentendidos",
+    "tool": "Guía de Comunicación Consciente",
+    "tool_explanation": "Define cómo comunicar y por qué canal",
+
+    "objective": "Aumentar claridad comunicativa",
+    "kpi_target": "Claridad > 75%",
+    "activation_condition": "Claridad < 55%",
+    "success_condition": "Comunicación clara y fluida",
+    "risk_if_ignored": "Errores, duplicidades y frustración",
+    "sequence": [
+      "Auditar comunicación actual",
+      "Definir protocolo",
+      "Aplicar rituales de comunicación"
+    ],
+    "impact_level": "alto",
+    "timeframe": "1-2 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Comunicación",
+    "master_decision_explanation": "Mantener comunicación clara",
+    "master_action": "Optimizar canales y rituales",
+    "master_action_explanation": "Evita recaídas comunicativas",
+    "master_tool": "Radar de Comunicación",
+    "master_tool_explanation": "Monitoriza claridad real"
+  },
+
+  "inputs": {
+    "input_a": "Mensajes Claros",
+    "input_b": "Mensajes Totales",
+    "formula": "(Claros / Totales) x 100",
+    "impact": "% Claridad: Nivel de comunicación efectiva"
+  },
+
+  "review": {
+    "input_revised_1": "Claros Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Comunicación Mejorada"
+  }
+},
+{
+  "id": "PSI-S4",
+  "name": "Liderazgo Emocional Débil",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "liderazgo",
+  "description": "El líder no gestiona emociones, tensiones ni motivación del equipo de forma efectiva.",
+
+  "kpi": {
+    "question": "¿Tu liderazgo calma o enciende incendios?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Entrenamiento emocional",
+    "decision_explanation": "Desarrollar liderazgo consciente",
+    "action": "Formación en inteligencia emocional aplicada",
+    "action_explanation": "Aumenta capacidad de guía",
+    "tool": "Modelo de Liderazgo Emocional",
+    "tool_explanation": "Define habilidades emocionales clave",
+
+    "objective": "Aumentar liderazgo emocional",
+    "kpi_target": "Liderazgo > 70%",
+    "activation_condition": "Liderazgo < 50%",
+    "success_condition": "Líder que regula, guía y motiva",
+    "risk_if_ignored": "Conflictos, tensión y baja moral",
+    "sequence": [
+      "Evaluar estilo emocional",
+      "Aplicar formación",
+      "Revisar impacto mensual"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3-4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Liderazgo Emocional",
+    "master_decision_explanation": "Mantener liderazgo sano",
+    "master_action": "Optimizar habilidades emocionales",
+    "master_action_explanation": "Evita liderazgo tóxico o ausente",
+    "master_tool": "Radar de Liderazgo Emocional",
+    "master_tool_explanation": "Monitoriza madurez emocional"
+  },
+
+  "inputs": {
+    "input_a": "Situaciones Reguladas",
+    "input_b": "Situaciones Totales",
+    "formula": "(Reguladas / Totales) x 100",
+    "impact": "% Regulación: Capacidad del líder para gestionar emociones"
+  },
+
+  "review": {
+    "input_revised_1": "Reguladas Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Liderazgo Emocional Mejorado"
+  }
+},
+{
+  "id": "PSI-S5",
+  "name": "Cultura Fragmentada",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "cultura",
+  "description": "Los valores no están claros, no se viven o cada persona interpreta la cultura de forma distinta.",
+
+  "kpi": {
+    "question": "¿Tu cultura se vive o solo se menciona?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Reprogramación cultural",
+    "decision_explanation": "Definir y activar valores reales",
+    "action": "Crear código cultural observable",
+    "action_explanation": "Aumenta coherencia",
+    "tool": "Manual Cultural Vivo",
+    "tool_explanation": "Traduce valores en comportamientos",
+
+    "objective": "Aumentar coherencia cultural",
+    "kpi_target": "Coherencia > 70%",
+    "activation_condition": "Coherencia < 50%",
+    "success_condition": "Cultura clara, viva y coherente",
+    "risk_if_ignored": "Incoherencia, conflictos y pérdida de identidad",
+    "sequence": [
+      "Definir valores reales",
+      "Traducirlos a comportamientos",
+      "Revisar coherencia mensual"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Cultural",
+    "master_decision_explanation": "Mantener cultura sólida",
+    "master_action": "Optimizar rituales culturales",
+    "master_action_explanation": "Evita fragmentación",
+    "master_tool": "Radar Cultural",
+    "master_tool_explanation": "Monitoriza coherencia real"
+  },
+
+  "inputs": {
+    "input_a": "Comportamientos Coherentes",
+    "input_b": "Comportamientos Totales",
+    "formula": "(Coherentes / Totales) x 100",
+    "impact": "% Coherencia Cultural: Nivel de cultura viva"
+  },
+
+  "review": {
+    "input_revised_1": "Coherentes Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Cultura Reforzada"
+  }
+},
+{
+  "id": "PSI-S6",
+  "name": "Desalineación DISC",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "perfiles",
+  "description": "Los roles y tareas no están alineados con los perfiles DISC del equipo, generando estrés, fricción y bajo rendimiento.",
+
+  "kpi": {
+    "question": "¿Tu equipo trabaja desde su fortaleza o desde su agotamiento?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Alineación de perfiles",
+    "decision_explanation": "Asignar tareas según fortalezas DISC",
+    "action": "Mapear perfiles y reasignar responsabilidades",
+    "action_explanation": "Aumenta rendimiento y bienestar",
+    "tool": "Mapa DISC Operativo",
+    "tool_explanation": "Conecta perfiles con tareas",
+
+    "objective": "Aumentar rendimiento natural",
+    "kpi_target": "Alineación > 75%",
+    "activation_condition": "Alineación < 55%",
+    "success_condition": "Personas trabajando desde su fortaleza",
+    "risk_if_ignored": "Estrés, errores y desgaste emocional",
+    "sequence": [
+      "Evaluar perfiles DISC",
+      "Mapear tareas por fortaleza",
+      "Reasignar responsabilidades"
+    ],
+    "impact_level": "alto",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Perfiles",
+    "master_decision_explanation": "Mantener roles alineados a fortalezas",
+    "master_action": "Optimizar asignación de tareas",
+    "master_action_explanation": "Evita desalineación futura",
+    "master_tool": "Radar DISC",
+    "master_tool_explanation": "Monitoriza alineación de perfiles"
+  },
+
+  "inputs": {
+    "input_a": "Tareas Alineadas",
+    "input_b": "Tareas Totales",
+    "formula": "(Alineadas / Totales) x 100",
+    "impact": "% Alineación DISC: Nivel de trabajo desde fortalezas"
+  },
+
+  "review": {
+    "input_revised_1": "Alineadas Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Alineación Mejorada"
+  }
+},
+{
+  "id": "PSI-S7",
+  "name": "Falta de Seguridad Psicológica",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "seguridad",
+  "description": "El equipo no se siente seguro para expresar ideas, errores o preocupaciones sin miedo a consecuencias.",
+
+  "kpi": {
+    "question": "¿Tu equipo habla sin miedo o se autocensura?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Creación de espacio seguro",
+    "decision_explanation": "Fomentar apertura y confianza",
+    "action": "Implementar ritual de conversación segura",
+    "action_explanation": "Aumenta participación y creatividad",
+    "tool": "Protocolo de Seguridad Psicológica",
+    "tool_explanation": "Define reglas de interacción segura",
+
+    "objective": "Aumentar confianza interna",
+    "kpi_target": "Seguridad > 70%",
+    "activation_condition": "Seguridad < 50%",
+    "success_condition": "Equipo que habla sin miedo",
+    "risk_if_ignored": "Ideas perdidas, errores ocultos y baja innovación",
+    "sequence": [
+      "Detectar barreras de seguridad",
+      "Aplicar ritual de conversación segura",
+      "Revisar participación mensual"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Seguridad Psicológica",
+    "master_decision_explanation": "Mantener un entorno seguro",
+    "master_action": "Optimizar dinámicas de confianza",
+    "master_action_explanation": "Evita silencios peligrosos",
+    "master_tool": "Radar de Seguridad Psicológica",
+    "master_tool_explanation": "Monitoriza apertura del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Participaciones Seguras",
+    "input_b": "Participaciones Totales",
+    "formula": "(Seguras / Totales) x 100",
+    "impact": "% Seguridad: Nivel de apertura emocional"
+  },
+
+  "review": {
+    "input_revised_1": "Seguras Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Seguridad Mejorada"
+  }
+},
+{
+  "id": "PSI-S8",
+  "name": "Motivación Irregular",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "motivación",
+  "description": "La motivación del equipo fluctúa sin patrón claro, afectando la constancia y el rendimiento.",
+
+  "kpi": {
+    "question": "¿Tu equipo mantiene la energía o vive en montaña rusa emocional?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Estabilización motivacional",
+    "decision_explanation": "Crear un sistema de motivación constante",
+    "action": "Implementar ritual de reconocimiento semanal",
+    "action_explanation": "Aumenta energía sostenida",
+    "tool": "Sistema de Motivación Continua",
+    "tool_explanation": "Define rituales y recompensas",
+
+    "objective": "Aumentar estabilidad emocional",
+    "kpi_target": "Motivación > 75%",
+    "activation_condition": "Motivación < 55%",
+    "success_condition": "Energía estable y predecible",
+    "risk_if_ignored": "Baja constancia y rendimiento irregular",
+    "sequence": [
+      "Detectar fluctuaciones",
+      "Aplicar ritual de reconocimiento",
+      "Revisar motivación semanal"
+    ],
+    "impact_level": "medio",
+    "timeframe": "3 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno Motivacional",
+    "master_decision_explanation": "Mantener energía estable",
+    "master_action": "Optimizar sistema de reconocimiento",
+    "master_action_explanation": "Evita bajones motivacionales",
+    "master_tool": "Radar de Motivación",
+    "master_tool_explanation": "Monitoriza energía del equipo"
+  },
+
+  "inputs": {
+    "input_a": "Semanas Estables",
+    "input_b": "Semanas Totales",
+    "formula": "(Estables / Totales) x 100",
+    "impact": "% Estabilidad: Nivel de constancia emocional"
+  },
+
+  "review": {
+    "input_revised_1": "Estables Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Motivación Estabilizada"
+  }
+},
+{
+  "id": "PSI-S9",
+  "name": "Falta de Autoconciencia",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "autoconciencia",
+  "description": "Las personas no identifican sus propios patrones emocionales, fortalezas o áreas de mejora.",
+
+  "kpi": {
+    "question": "¿Tu equipo se conoce o solo reacciona?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Despertar de autoconciencia",
+    "decision_explanation": "Aumentar comprensión personal",
+    "action": "Sesión de autoconocimiento guiado",
+    "action_explanation": "Aumenta madurez emocional",
+    "tool": "Cuaderno de Autoconciencia",
+    "tool_explanation": "Guía para identificar patrones personales",
+
+    "objective": "Aumentar madurez emocional",
+    "kpi_target": "Autoconciencia > 70%",
+    "activation_condition": "Autoconciencia < 50%",
+    "success_condition": "Personas que se conocen y regulan",
+    "risk_if_ignored": "Reacciones impulsivas y conflictos",
+    "sequence": [
+      "Evaluar nivel de autoconciencia",
+      "Aplicar sesión guiada",
+      "Revisar patrones mensualmente"
+    ],
+    "impact_level": "medio",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Autoconciencia",
+    "master_decision_explanation": "Mantener madurez emocional",
+    "master_action": "Optimizar rituales de autoconocimiento",
+    "master_action_explanation": "Evita reactividad emocional",
+    "master_tool": "Radar de Autoconciencia",
+    "master_tool_explanation": "Monitoriza madurez personal"
+  },
+
+  "inputs": {
+    "input_a": "Patrones Identificados",
+    "input_b": "Patrones Totales",
+    "formula": "(Identificados / Totales) x 100",
+    "impact": "% Autoconciencia: Nivel de comprensión personal"
+  },
+
+  "review": {
+    "input_revised_1": "Identificados Post",
+    "input_revised_2": "Totales Post",
+    "result_revised": "Autoconciencia Mejorada"
+  }
+},
+{
+  "id": "PSI-S10",
+  "name": "Salud Organizacional",
+  "specialty": "organizacional",
+  "plan": "PRE",
+  "domain": "excelencia",
+  "description": "Nivel 10: cultura sólida, liderazgo maduro, comunicación clara y equipo emocionalmente sano y cohesionado.",
+
+  "kpi": {
+    "question": "¿Tu organización funciona como un organismo sano y consciente?",
+    "scale_min": 1,
+    "scale_max": 4
+  },
+
+  "thresholds": {
+    "critical": 70,
+    "recommended": 85,
+    "optimizer": 95,
+    "elite": 100
+  },
+
+  "treatment": {
+    "decision": "Certificación organizacional",
+    "decision_explanation": "Validar salud emocional y cultural",
+    "action": "Auditoría completa de cultura, liderazgo y clima",
+    "action_explanation": "Garantiza excelencia organizacional",
+    "tool": "Certificado S10 Organizacional",
+    "tool_explanation": "Evalúa salud emocional y cultural",
+
+    "objective": "Aumentar madurez organizacional",
+    "kpi_target": "Índice S10 > 90%",
+    "activation_condition": "Índice < 80%",
+    "success_condition": "Organización sana, estable y consciente",
+    "risk_if_ignored": "Desgaste emocional y pérdida de talento",
+    "sequence": [
+      "Auditar salud organizacional",
+      "Corregir desviaciones",
+      "Certificar S10"
+    ],
+    "impact_level": "alto",
+    "timeframe": "4 semanas"
+  },
+
+  "master_treatment": {
+    "master_decision": "Gobierno de Excelencia Organizacional",
+    "master_decision_explanation": "Mantener salud emocional y cultural",
+    "master_action": "Optimizar cultura y liderazgo",
+    "master_action_explanation": "Evita deterioro organizacional",
+    "master_tool": "Radar S10 Organizacional",
+    "master_tool_explanation": "Monitoriza excelencia emocional y cultural"
+  },
+
+  "inputs": {
+    "input_a": "Pilares Organizacionales",
+    "input_b": "Pilares Cumplidos",
+    "formula": "(Cumplidos / Pilares) x 100",
+    "impact": "Índice S10 Organizacional: Nivel de salud emocional y cultural"
+  },
+
+  "review": {
+    "input_revised_1": "Pilares Post",
+    "input_revised_2": "Cumplidos Post",
+    "result_revised": "Excelencia Organizacional Alcanzada"
+  }
+}
+  ]
+}

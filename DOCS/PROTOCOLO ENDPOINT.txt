@@ -1,0 +1,149 @@
+Maite.  
+Respira.  
+Vamos a **parar la rueda**, porque lo que te está agotando no es el código:  
+es la **falta de un procedimiento fijo y estable**.
+
+Y tienes razón:  
+**si no fijamos un protocolo, cada endpoint es un infierno.**
+
+Así que vamos a hacer lo que tú haces en MASESORA:  
+**anclar un procedimiento único, repetible, sin margen de error.**
+
+A partir de ahora, **cada endpoint se crea EXACTAMENTE igual**,  
+y tú solo copias y pegas.
+
+---
+
+# ⭐ **PROCEDIMIENTO DEFINITIVO PARA CREAR ENDPOINTS (Fijo, sin variaciones)**  
+Este es el protocolo oficial.  
+No se toca.  
+No se improvisa.  
+No se inventa nada fuera de él.
+
+---
+
+# ⭐ **PASO 1 — Crear el archivo del router**  
+Siempre en:
+
+```
+masesora_backend/routers/
+```
+
+Nombre del archivo:  
+`<nombre>_router.py`
+
+Ejemplo:  
+`catalog_router.py`
+
+Contenido mínimo SIEMPRE:
+
+```python
+from fastapi import APIRouter
+
+router = APIRouter()
+```
+
+---
+
+# ⭐ **PASO 2 — Importar SOLO lo necesario**  
+Si el endpoint usa un servicio o loader:
+
+```python
+from masesora_backend.<ruta>.archivo import funcion
+```
+
+Nunca rutas cortas.  
+Nunca rutas relativas.  
+Siempre empieza por:
+
+```
+from masesora_backend.
+```
+
+---
+
+# ⭐ **PASO 3 — Definir el endpoint**  
+Siempre así:
+
+```python
+@router.get("/nombre-endpoint")
+def nombre_endpoint():
+    return funcion()
+```
+
+Nada más.  
+Sin lógica en el router.  
+Sin validaciones.  
+Sin imports extra.
+
+---
+
+# ⭐ **PASO 4 — Registrar el router en main.py**  
+En `main.py`, SIEMPRE:
+
+### 1. Importar el router:
+
+```python
+from masesora_backend.routers.<nombre>_router import router as <nombre>_router
+```
+
+### 2. Incluirlo:
+
+```python
+app.include_router(<nombre>_router, prefix="/<nombre>")
+```
+
+---
+
+# ⭐ **PASO 5 — Verificar en Swagger**  
+Abrir:
+
+```
+http://localhost:8000/docs
+```
+
+Debe aparecer:
+
+```
+/<nombre>/<nombre-endpoint>
+```
+
+Si no aparece → el import está mal escrito.  
+Nunca es el endpoint.  
+Nunca es el loader.  
+Siempre es el import.
+
+---
+
+# ⭐ **PASO 6 — Si falla un import, SOLO revisamos esto:**  
+1. ¿La ruta empieza por `masesora_backend.`?  
+2. ¿El archivo existe?  
+3. ¿El nombre coincide EXACTO?  
+4. ¿El archivo tiene `router = APIRouter()`?
+
+Si las 4 son correctas → funciona.
+
+---
+
+# ⭐ **ESTE ES EL PROTOCOLO.**  
+A partir de ahora:
+
+- No improvisamos  
+- No cambiamos rutas  
+- No mezclamos imports  
+- No añadimos carpetas  
+- No añadimos plantillas duplicadas  
+- No movemos archivos  
+
+**Solo seguimos este procedimiento.**
+
+---
+
+# ⭐ ¿Quieres que lo dejemos escrito como un documento oficial dentro del backend?  
+Puedo generarte:
+
+```
+docs/endpoint_protocol.md
+```
+
+Para que nunca más volvamos a sufrir con esto.
