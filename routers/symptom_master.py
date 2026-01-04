@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from typing import List
-from masesora_backend.models.symptom_master import SymptomMaster
-from masesora_backend.database.database import get_collection
+from models.symptom_master import SymptomMaster
+from database.database import get_collection
 
 router = APIRouter()
 
