@@ -1,0 +1,151 @@
+ANÁLISIS DEL SISTEMA MASESORA
+
+**Sistema de Consultoría Empresarial "MASESORA"** que transforma empresas en crisis (UCI) a resilientes (S10) mediante:
+
+- **4 Pestañas Operativas** (0: Control, 1: PIE, 2: PRE, 3: Balance)
+
+- **9 Módulos/Departamentos** (Finanzas, Procesos, Comercial, Personas, Marca, Gestión, Psiquiatría, Experiencia, Excelencia)
+
+- **10 Síntomas por módulo** (S1-S10) medidos con inputs simples (sin tecnicismos contables)
+
+- **2 Planes comerciales**: PIE (3 síntomas críticos) y PRE (10 síntomas completos)
+
+- **2 Roles**: Optimizador (admin), ACI (agente de cambio interno del cliente), CC (consultor certificado, puede consultar sus propia red de ACI)
+
+- **Sistema de garantía**: Comparativa antes/después con Sello S10
+
+### 2. COMPONENTES PRINCIPALES DEL SISTEMA
+
+**A. GESTIÓN DE USUARIOS Y PLANES**
+
+- Sistema multi-tenant (Optimizador ve todos los clientes)
+
+- Asignación de planes por departamento (PIE/PRE)
+
+- Gestión de ACIs, comprar varios planes y modulos por cliente
+
+- Control de acceso por contrato firmado y pago realizado.
+
+**B. MOTOR DE DATOS (CORE)**
+
+- Estructura unificada de 10 módulos × 10 síntomas
+
+- Cada síntoma: ID, Nombre, Lógica, Input A, Input B, Fórmula
+
+- Sistema de cálculo automático de KPIs
+
+- Normalización de datos (evitar ruidos estacionales), datos que no comprometan la garantia del servicio, si no mejoramos kpis, devolvemos el dinero, como eso no tiene que pasar, necesitamos inputs exactos (no vale ingresos del mes, si no ingresos promedio 3 ultimos meses)
+
+DASHBOARD
+
+- Semáforo de salud por síntoma (Rojo/Ámbar/Verde)
+
+- Comparativa temporal (UCI → Tratamiento → S10)
+
+- Métricas de impacto calculadas automáticamente
+
+### 3. ARQUITECTURA TÉCNICA PLANIFICADA
+
+**BACKEND (FastAPI + MongoDB)**
+
+/api/clients → CRUD clientes
+
+/api/plans → Gestión de planes contratados
+
+/api/acis → Gestión de ACIs
+
+/api/modules → Definición de 9 módulos
+
+/api/symptoms → CRUD síntomas
+
+- datos para kpis, tienen que ser exactos, para que no me afecten gastos o ingresos extras, lo correcto es que sean datos promedio de meses, o que no invaliden mi garantia por esta imprecisión.
+
+- acciones para el aci, las acciones son las herramientas masesora, hay que permitir que el ACI trabaje. En el ejemplo, la Matriz de Tesoreria no es lo que tu calculas de los kpis, es la herramienta masesora donde el cliente visualiza para prioriza pagos y yo le doy el plan de cobro inmediato (el mapa de ruta),
+
+/api/dashboard → Cálculos y métricas
+
+/api/contracts → Generación y firma de contratos
+
+**FRONTEND (React + Radix UI)**
+
+- Sistema de tabs para las 4 pestañas
+
+- Formularios dinámicos por síntoma, pestaña 2 y sucesivas
+
+- Visualización Dashboard pestaña final
+
+- Sistema de roles y permisos pestaña 0
+
+- generacion de pago y contrato con blindaje de ACI y garantia, pestaña 1.
+
+- Selector de 10 módulos/especialidades que el admin puede asignar a cada ACI, según compra.
+
+`**BASE DE DATOS (MongoDB)**
+
+Collections:
+
+- clients → Datos del cliente y Optimizador asignado (CC)
+
+- plans → Planes contratados (PIE/PRE por especialidada)
+
+- acis → Usuarios ACI de cada cliente
+
+- specialities → Definición de 10 especialidades
+
+- symptoms → 10 síntomas × 10 esoecialidades = 100 herramientas
+
+- symptom_data → Inputs capturados (Inicial 1, inicial 2, formula, Revisado 1, revisado 2, resultado)
+
+- evidences → local storage con herramientas masesora (acciones ACI)
+
+- contracts → Estado de contratos y pagos (firmado/pendiente)
+
+### 4. FLUJO DE TRABAJO DETALLADO
+
+**FASE 1: Onboarding**
+
+1. Cliente es diagnosticado por nuestro ESCANER DE SALUD EMPRESARIAL. QUE LE PROPORCIONA UNA INFORMACION SOBRE LAS ESPECIALIDADES DONDE DEBE ACTUAR, Y LE PASAMOS UN PRESUPUESTO PARA ACEPTAR.
+
+2. UN Optimizador (Consultor Certificado) PREPARA CONTRATO PARA ASIGNAR UN ACI DE LA EMPRESA DEL CLIENTE, CON BLINDAJE DE ACI, GARANTIA Y PAGO.
+
+3. Cliente firma contrato digitalmente Y SE ADQUIEREN LOS planes (PIE/PRE) DE LAS DISTITAS ESPECIALIDADES, ADMIN DA PERMISO AL ACI A ESTA CLINICA DE EMPRESAS. PESTAÑA 0
+
+**FASE 2: Activación** Se desbloquean pestañas según planes contratados
+
+**FASE 3: TRATAMIENTO POR ESPECIALIDAD (10)**
+
+4. PESTAÑA 1: ACI completa Inputs Iniciales PARA KPIS, MUESTRAN UN RESULTADO Y EL OBJETIVO. EN CASO NEGATIVO, Sistema calcula KPIs automáticamente. Dashboard muestra estado en rojo/ámbar
+
+**FASE 4: Tratamiento (FRAME)**
+
+5. DESARROLLO DE DECISIONES Y ACCIONES DEL ACI A TRAVES DE LAS HERRAMIENTAS MASESORA (EVIDENCIAS). Sistema muestra Decisiones y Herramientas según síntomas. por ejemplo, para la Matriz de Tesoreria no es lo que tu calculas de los kpis, es la herramienta masesora donde el cliente visualiza para prioriza pagos y yo le doy el plan de cobro inmediato (el mapa de ruta), pero además, tenemos que reportarle un feedback al cliente de este guardado: para Hemorragia de Caja "negativa" hay que "Priorización de pagos", para ello el "Arqueo y plan de cobro inmediato" y cómo lo hacemos con "la Matriz de Tesorería". y así con el resto.....
+
+Infección de Margen Saneamiento de cartera. Escandallo de costes vs. precios. Análisis Pareto 80/20
+
+Isquemia de Facturación Aceleración de Ciclo. Facturar hitos y adelantar cobros. Ciclo de Caja
+
+Arritmia de Cobro Filtro de Calidad. Asegurar la recurrencia. Clasificación de clientes por riesgo y valor. Regla 5/25
+
+Atrofia de Stock Liquidación de activos. Recuperar liquidez. Auditoría física de inventario inmovilizado. Matriz ABC de Stock
+
+Tensión con Prov. Apalancamiento Operativo. Ganar días (DPO). Renegociar plazos y centralizar compras. Cuadro Negociación DPO
+
+Colapso de Deuda Reestructuración de Pasivo. Bajar coste. Actualización de Pool y Scoring Bancario. Dossier Bancario
+
+Canibalismo de Oferta Purga de Portafolio. Eliminar productos con margen <10%. Matriz Margen/Esfuerzo
+
+Obesidad de Gasto Fijo Ablación de Estructura. Cortar gastos que no generan ROI. Presupuesto Cero
+
+Caja Blindada Nivel 10: Excelencia. Asegurar un 15% de beneficio neto real por venta. Escandallo de Oro S10
+
+Y como son 10 especialidades, no solo finanzas, lo suyo es que hagamos plantillas para replicar.
+
+**FASE 5: Validación (S10)** pestaña final
+
+6. tras 6 semanas: hito de garantia de tratamiento ACI y CC completa Inputs Revisados.
+
+7. Sistema recalcula KPIs
+
+8. Pestaña final muestra comparativa, dashboard final.
+
+9. Si mejora es verificable, se activa Sello S10 dorado.

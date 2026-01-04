@@ -1,0 +1,5 @@
+swagger 
+
+cd C:\Users\Masesora\OneDrive\MASESORA\CLINICA
+
+uvicorn main:app --reload
