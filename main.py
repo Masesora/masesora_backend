@@ -5,22 +5,22 @@ from fastapi.middleware.cors import CORSMiddleware
 # IMPORTS CORREGIDOS
 # -------------------------
 
-from database.database import connect_to_mongo, close_mongo_connection
+from masesora_backend.database.database import connect_to_mongo, close_mongo_connection
 
 # Routers oficiales
-from routers.clients import router as clients_router
-from routers.contracts import router as contracts_router
-from routers.symptom_master import router as symptom_master_router
-from routers.catalog import router as catalog_router
-from routers.clinical_eval import router as clinical_eval_router
-from routers.clinical import router as clinical_router
-from routers.batch_router import router as batch_router
+from masesora_backend.routers.clients import router as clients_router
+from masesora_backend.routers.contracts import router as contracts_router
+from masesora_backend.routers.symptom_master import router as symptom_master_router
+from masesora_backend.routers.catalog import router as catalog_router
+from masesora_backend.routers.clinical_eval import router as clinical_eval_router
+from masesora_backend.routers.clinical import router as clinical_router
+from masesora_backend.routers.batch_router import router as batch_router
 
 # Routers clínicos avanzados
-from onboarding.scanner_router import router as scanner_router
-from intake.intake_router import router as intake_router
-from clinical.progress.review_router import router as review_router
-from clinical.s10.s10_router import router as s10_router
+from masesora_backend.onboarding.scanner_router import router as scanner_router
+from masesora_backend.intake.intake_router import router as intake_router
+from masesora_backend.clinical.progress.review_router import router as review_router
+from masesora_backend.clinical.s10.s10_router import router as s10_router
 
 # -------------------------
 # APP
